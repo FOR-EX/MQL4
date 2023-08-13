@@ -2,9 +2,9 @@
 
 int initialArray = 100;
 double rsiArray[];
-double testArray[12];
 double bullishRsiArray[];
 double bearishRsiArray[];
+double thirdRsi;
 double lastRsi;
 double newRsi;
 double indexValue;
@@ -18,9 +18,9 @@ void OnStart() {
                  
    } 
          for (int j=100; j>=0; j--){
+            thirdRsi = rsiArray[j+2];
             lastRsi = rsiArray[j+1];
             newRsi = rsiArray[j];
-            Print(newRsi);
             double lastHighest;
             double newPeak;
             double newLow;            
@@ -41,6 +41,10 @@ void OnStart() {
             }
 
             if (isBullish){
+               if(lastRsi > thirdRsi && newRsi < lastRsi){
+                  newPeak = lastRsi;
+                  
+               }
                Print("Bearish Reset - RSI is now Bullish. New RSI is", newRsi);
             }
             
@@ -53,13 +57,14 @@ void OnStart() {
 
          }
             if(isBearish){
-               //Print("Bullish Reset - RSI is now Bearish. New RSI is", newRsi);
+               
             }
       }    
 }
 
 
-//CUSTOM FUNCTIONS                   
+//CUSTOM FUNCTIONS
+
 double addBullishArray(){
    for (int i=0; i<100 ;i++){
       indexValue = newRsi;
