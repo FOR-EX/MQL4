@@ -1,0 +1,50 @@
+//  This is a sample code about how to use ArrayResize and ArrayFill
+//+------------------------------------------------------------------+
+#property copyright "Your Name"
+#property link      "https://www.yourwebsite.com"
+#property version   "1.00"
+#property indicator_separate_window
+
+// Define the size of the initial array
+#define INITIAL_ARRAY_SIZE 5
+
+
+//+------------------------------------------------------------------+
+//| Expert initialization function                                   |
+//+------------------------------------------------------------------+
+int OnInit()
+  {
+   // Declare and initialize an array with some initial values
+   double myArray[];
+   ArrayResize(myArray, INITIAL_ARRAY_SIZE);
+   ArrayFill(myArray, 0, INITIAL_ARRAY_SIZE, 1.23);
+
+   // Print the original array
+   Print("Original Array:");
+   PrintArray(myArray);
+
+   // Resize the array to a larger size
+   int newSize = INITIAL_ARRAY_SIZE + 3;
+   ArrayResize(myArray, newSize);
+
+   // Fill the new elements with a different value
+   double newValue = 4.56;
+   ArrayFill(myArray, INITIAL_ARRAY_SIZE, newSize - INITIAL_ARRAY_SIZE, newValue);
+
+   // Print the modified array
+   Print("Modified Array:");
+   PrintArray(myArray);
+
+   return(INIT_SUCCEEDED);
+  }
+//+------------------------------------------------------------------+
+//| Custom function to print an array                                |
+//+------------------------------------------------------------------+
+void PrintArray(const double &arr[])
+  {
+   for (int i = 0; i < ArraySize(arr); i++)
+     {
+      Print("Element ", i, ": ", arr[i]);
+     }
+  }
+//+------------------------------------------------------------------+

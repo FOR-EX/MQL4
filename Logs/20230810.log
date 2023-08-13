@@ -1,0 +1,77 @@
+0	16:11:43.757	Script tester US100Cash,H1: loaded successfully
+0	16:11:43.768	tester US100Cash,H1: initialized
+0	16:11:43.768	tester US100Cash,H1: Alert: 0
+0	16:11:43.768	tester US100Cash,H1: Bearish Reset - RSI is now Bullish. New RSI is54.7987
+0	16:11:43.768	tester US100Cash,H1: Bearish Reset - RSI is now Bullish. New RSI is55.8362
+0	16:11:43.768	tester US100Cash,H1: Bearish Reset - RSI is now Bullish. New RSI is54.9589
+0	16:11:43.768	tester US100Cash,H1: Bearish Reset - RSI is now Bullish. New RSI is55.2709
+0	16:11:43.768	tester US100Cash,H1: Bearish Reset - RSI is now Bullish. New RSI is55.715
+0	16:11:43.768	tester US100Cash,H1: Bearish Reset - RSI is now Bullish. New RSI is60.8702
+0	16:11:43.768	tester US100Cash,H1: Bearish Reset - RSI is now Bullish. New RSI is57.2392
+0	16:11:43.768	tester US100Cash,H1: Bearish Reset - RSI is now Bullish. New RSI is56.0989
+0	16:11:43.768	tester US100Cash,H1: Bearish Reset - RSI is now Bullish. New RSI is54.4619
+0	16:11:43.768	tester US100Cash,H1: Bearish Reset - RSI is now Bullish. New RSI is55.0112
+0	16:11:43.768	tester US100Cash,H1: Bearish Reset - RSI is now Bullish. New RSI is52.6502
+0	16:11:43.768	tester US100Cash,H1: Bearish Reset - RSI is now Bullish. New RSI is53.2291
+0	16:11:43.768	tester US100Cash,H1: Bearish Reset - RSI is now Bullish. New RSI is58.6934
+0	16:11:43.768	tester US100Cash,H1: Bearish Reset - RSI is now Bullish. New RSI is61.1363
+0	16:11:43.768	tester US100Cash,H1: Bearish Reset - RSI is now Bullish. New RSI is52.1056
+0	16:11:43.768	tester US100Cash,H1: Bearish Reset - RSI is now Bullish. New RSI is51.5679
+0	16:11:43.768	tester US100Cash,H1: Bearish Reset - RSI is now Bullish. New RSI is51.4901
+0	16:11:43.768	tester US100Cash,H1: Bearish Reset - RSI is now Bullish. New RSI is51.9526
+0	16:11:43.768	tester US100Cash,H1: Bearish Reset - RSI is now Bullish. New RSI is57.6207
+0	16:11:43.768	tester US100Cash,H1: Bearish Reset - RSI is now Bullish. New RSI is58.169
+0	16:11:43.768	tester US100Cash,H1: Bearish Reset - RSI is now Bullish. New RSI is57.2587
+0	16:11:43.768	tester US100Cash,H1: Bearish Reset - RSI is now Bullish. New RSI is57.6199
+0	16:11:43.768	tester US100Cash,H1: Bearish Reset - RSI is now Bullish. New RSI is55.7688
+0	16:11:43.768	tester US100Cash,H1: Bearish Reset - RSI is now Bullish. New RSI is50.3792
+0	16:11:43.768	tester US100Cash,H1: Bearish Reset - RSI is now Bullish. New RSI is52.5108
+0	16:11:43.768	tester US100Cash,H1: Bearish Reset - RSI is now Bullish. New RSI is53.6509
+0	16:11:43.768	tester US100Cash,H1: Bearish Reset - RSI is now Bullish. New RSI is50.4588
+0	16:11:43.768	tester US100Cash,H1: Bearish Reset - RSI is now Bullish. New RSI is51.6713
+0	16:11:43.768	tester US100Cash,H1: Bearish Reset - RSI is now Bullish. New RSI is53.563
+0	16:11:43.768	tester US100Cash,H1: Bearish Reset - RSI is now Bullish. New RSI is56.3244
+0	16:11:43.768	tester US100Cash,H1: Bearish Reset - RSI is now Bullish. New RSI is56.1573
+0	16:11:43.768	tester US100Cash,H1: Bearish Reset - RSI is now Bullish. New RSI is60.2035
+0	16:11:43.768	tester US100Cash,H1: Bearish Reset - RSI is now Bullish. New RSI is54.5429
+0	16:11:43.768	tester US100Cash,H1: Bearish Reset - RSI is now Bullish. New RSI is50.3666
+0	16:11:43.768	tester US100Cash,H1: Bearish Reset - RSI is now Bullish. New RSI is53.6876
+0	16:11:43.768	tester US100Cash,H1: Bearish Reset - RSI is now Bullish. New RSI is51.2901
+0	16:11:43.768	tester US100Cash,H1: uninit reason 0
+0	16:11:43.770	Script tester US100Cash,H1: removed
+0	16:11:53.725	Script tester US100Cash,H1: loaded successfully
+0	16:11:53.738	tester US100Cash,H1: initialized
+0	16:11:53.738	tester US100Cash,H1: Alert: 1
+0	16:11:53.738	tester US100Cash,H1: uninit reason 0
+0	16:11:53.741	Script tester US100Cash,H1: removed
+0	16:13:29.932	Script tester US100Cash,H1: loaded successfully
+0	16:13:29.946	tester US100Cash,H1: initialized
+0	16:13:29.946	tester US100Cash,H1: Alert: 1
+0	16:13:29.946	tester US100Cash,H1: Alert: 0
+0	16:13:29.946	tester US100Cash,H1: uninit reason 0
+0	16:13:29.948	Script tester US100Cash,H1: removed
+0	16:42:41.140	Script tester US100Cash,H1: loaded successfully
+0	16:42:41.167	tester US100Cash,H1: initialized
+0	16:42:41.170	tester US100Cash,H1: Alert: 1
+0	16:42:41.174	tester US100Cash,H1: Alert: 0
+0	16:42:41.174	tester US100Cash,H1: uninit reason 0
+0	16:42:41.177	Script tester US100Cash,H1: removed
+0	16:42:50.849	Script tester US100Cash,H1: loaded successfully
+0	16:42:50.864	tester US100Cash,H1: initialized
+0	16:42:50.865	tester US100Cash,H1: Alert: 1
+0	16:42:50.865	tester US100Cash,H1: Alert: 0
+0	16:42:50.865	tester US100Cash,H1: uninit reason 0
+0	16:42:50.866	Script tester US100Cash,H1: removed
+0	16:49:06.305	Script tester US100Cash,H1: loaded successfully
+0	16:49:06.316	tester US100Cash,H1: initialized
+0	16:49:06.317	tester US100Cash,H1: Dimension of num_array=2
+0	16:49:06.317	tester US100Cash,H1: uninit reason 0
+0	16:49:06.319	Script tester US100Cash,H1: removed
+0	16:51:42.520	Script tester US100Cash,H1: loaded successfully
+0	16:51:42.532	tester US100Cash,H1: initialized
+0	16:51:42.541	tester US100Cash,H1: dim = 0, range = 10
+0	16:51:42.541	tester US100Cash,H1: dim = 1, range = 5
+0	16:51:42.541	tester US100Cash,H1: dim = 2, range = 2
+0	16:51:42.541	tester US100Cash,H1: dim = 3, range = 4
+0	16:51:42.541	tester US100Cash,H1: uninit reason 0
+0	16:51:42.542	Script tester US100Cash,H1: removed
