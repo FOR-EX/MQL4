@@ -1,5 +1,4 @@
 
-
 int initialArray = 100;
 int initialPeaksArray = 1;
 int startingIndex = 0;
@@ -16,9 +15,7 @@ double lastRsi;
 double newRsi;
 double indexValue;
 
-
-
-void OnStart() {
+void OnTick() {
    for (int i=0; i<100;i++){
       indexValue = iRSI(Symbol(),60,14,PRICE_CLOSE,(i+1));
       ArrayResize(rsiArray,initialArray);
