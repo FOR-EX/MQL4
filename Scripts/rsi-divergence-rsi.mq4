@@ -21,7 +21,8 @@ double indexValuePrice;
 double priceArray [];
 int initialPricePeaksArray = 1;
 int startingPriceIndex = 0;
-
+double lastHighestPrice = 0;
+double lastLowestPrice = 9999999 * 9999999;
 double bullishPriceArray[];
 double bearishPriceArray[];
 double newPricePeak;
@@ -99,6 +100,7 @@ void OnStart() {
          isBearish = true;
          //Impliment a function that deletes previous bullishArray's...
          resetBullishRsiArray();
+         resetBullishPriceArray();
          //Impliment a function that pushes an bearishArray...
          addBearishRsiArray();
       }
@@ -120,16 +122,23 @@ void OnStart() {
 
 //CUSTOM FUNCTIONS
 bool IsNewPriceHigh(){
-   //if(bullPricePeaks[startingPriceIndex] > las)
+   if(bullPricePeaks[startingPriceIndex] > lastHighestPrice){
+      lastHighestPrice = bullPricePeaks [startingPriceIndex];
+      Print("This is the last highest PRICE:", lastHighestPrice);
+      return true;
+   } else {
+      Print(bullPricePeaks[startingPriceIndex], "- is not a new PRICE high");
+      return false;
+   }
 }
 
 bool IsNewRsiHigh(){
    if(bullRsiPeaks[startingRsiIndex] > lastHighestRsi){
       lastHighestRsi = bullRsiPeaks[startingRsiIndex];
-      Print("This is the last highest:", lastHighestRsi);
+      Print("This is the last highest RSI:", lastHighestRsi);
       return true;      
    } else {
-      Print(bullRsiPeaks[startingRsiIndex], "- is not a new  high...");
+      Print(bullRsiPeaks[startingRsiIndex], "- is not a new RSI high...");
       return false;
    }
 }
@@ -137,10 +146,10 @@ bool IsNewRsiHigh(){
 bool isNewRsiLow(){
    if(bearRsiPeaks[startingRsiIndex] < lastLowestRsi){
       lastLowestRsi = bearRsiPeaks[startingRsiIndex];
-      Print("This is the last lowest", lastLowestRsi);
+      Print("This is the last lowest RSI", lastLowestRsi);
       return true;
    } else {
-      Print(bearRsiPeaks[startingRsiIndex], "- is not a new low");
+      Print(bearRsiPeaks[startingRsiIndex], "- is not a new RSI low");
       return false;
    }
 }
@@ -174,7 +183,7 @@ double addBullishPriceArray(){
       indexValuePrice = newPrice;
       ArrayResize(bullishPriceArray, initialArray);
       ArrayFill(bullishPriceArray, i, 1,indexValuePrice);
-      Print(indexValuePrice);
+      //Print(indexValuePrice);
    }
 }
 
