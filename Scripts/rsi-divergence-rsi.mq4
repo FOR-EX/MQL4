@@ -88,8 +88,13 @@ void OnStart() {
          //Impliment a function that pushes bullPricePeaks...
             addBullPricePeaks();
          //Impliment a function that checks if it's a new high...
-            IsNewRsiHigh();
-            IsNewPriceHigh();
+            //IsNewRsiHigh();
+            //IsNewPriceHigh();
+            if (IsNewRsiHigh() == IsNewPriceHigh()){
+               Print("no bullish divergence...");
+            } else {
+               Print("There is a bullish divergence...");
+            }
          }
          
       }
@@ -118,8 +123,13 @@ void OnStart() {
          //Impliment a function that pushes bearPricePeaks...
             addBearPricePeaks();
          //Impliment a function that checks if it's a new low...
-            isNewRsiLow();
-            isNewPriceLow();
+            //isNewRsiLow();
+            //isNewPriceLow();
+            if(isNewRsiLow() == isNewPriceLow()){
+               Print("no bearish divergence...");
+            } else {
+               Print("There is a bearish divergence...");
+            }
 
          }
       }
@@ -131,10 +141,10 @@ void OnStart() {
 bool IsNewPriceHigh(){
    if(bullPricePeaks[startingPriceIndex] > lastHighestPrice){
       lastHighestPrice = bullPricePeaks [startingPriceIndex];
-      Print("This is the last highest PRICE:", lastHighestPrice);
+      //Print("This is the last highest PRICE:", lastHighestPrice);
       return true;
    } else {
-      Print(bullPricePeaks[startingPriceIndex], "- is not a new PRICE high");
+      //Print(bullPricePeaks[startingPriceIndex], "- is not a new PRICE high");
       return false;
    }
 }
@@ -142,10 +152,10 @@ bool IsNewPriceHigh(){
 bool IsNewRsiHigh(){
    if(bullRsiPeaks[startingRsiIndex] > lastHighestRsi){
       lastHighestRsi = bullRsiPeaks[startingRsiIndex];
-      Print("This is the last highest RSI:", lastHighestRsi);
+      //Print("This is the last highest RSI:", lastHighestRsi);
       return true;      
    } else {
-      Print(bullRsiPeaks[startingRsiIndex], "- is not a new RSI high...");
+      //Print(bullRsiPeaks[startingRsiIndex], "- is not a new RSI high...");
       return false;
    }
 }
@@ -153,10 +163,10 @@ bool IsNewRsiHigh(){
 bool isNewPriceLow(){
    if(bullPricePeaks[startingPriceIndex] < lastLowestPrice){
       lastLowestPrice = bullPricePeaks[startingPriceIndex];
-      Print("This is the last lowest PRICE:", lastLowestPrice);
+      //Print("This is the last lowest PRICE:", lastLowestPrice);
       return true;
    } else {
-      Print(bullPricePeaks[startingPriceIndex], "- is not a new PRICE Low");
+      //Print(bullPricePeaks[startingPriceIndex], "- is not a new PRICE Low");
       return false;
    }
 }
@@ -164,10 +174,10 @@ bool isNewPriceLow(){
 bool isNewRsiLow(){
    if(bearRsiPeaks[startingRsiIndex] < lastLowestRsi){
       lastLowestRsi = bearRsiPeaks[startingRsiIndex];
-      Print("This is the last lowest RSI", lastLowestRsi);
+      //Print("This is the last lowest RSI", lastLowestRsi);
       return true;
    } else {
-      Print(bearRsiPeaks[startingRsiIndex], "- is not a new RSI low");
+      //Print(bearRsiPeaks[startingRsiIndex], "- is not a new RSI low");
       return false;
    }
 }
