@@ -39,7 +39,8 @@ void OnStart() {
          bearishReset = true;
          bullishReset = false;
          isBearish = false;
-         isBullish = true;                           
+         isBullish = true;
+         //Impliment a function that deletes previous bearishArray's...                           
          //Impliment a function that pushes an bullishArray...
          addBullishArray();   
       }
@@ -48,7 +49,8 @@ void OnStart() {
          //This the condition for newPeaks...
          if(lastRsi > thirdRsi && newRsi < lastRsi){
             newPeak = lastRsi;
-            addPeaks();
+         //Impliment a function that pushes bullPeaks...
+            addBullPeaks();
          //Impliment a function that checks if it's a new high...
             rsi_IsNewHigh();
          }
@@ -60,11 +62,21 @@ void OnStart() {
          bearishReset = false;
          isBullish =false;
          isBearish = true;
+         //Impliment a function that deletes previous bullishArray's...
          resetBullishArray();
+         //Impliment a function that pushes an bearishArray...
+         addBearishArray();
       }
       
       if (isBearish){
+         ////This the condition for newLows...
+         if(lastRsi<thirdRsi && newRsi > lastRsi){
+            newLow = lastRsi;
+         //Impliment a function that pushes bearPeaks...
+            addBearPeaks();
+         //Impliment a function that checks if it's a new low...
 
+         }
       }
    }    
 }
@@ -84,11 +96,19 @@ bool rsi_IsNewHigh(){
 }
 
 
-double addPeaks(){
+double addBullPeaks(){
 
    ArrayResize(bullPeaks,initialPeaksArray);
    ArrayFill(bullPeaks,startingIndex,1,newPeak);
    //Print("bullPeaks are" , bullPeaks[startingIndex]); 
+   initialPeaksArray = initialPeaksArray++;
+   startingIndex = startingIndex++;
+}
+
+double addBearPeaks(){
+   ArrayResize(bearPeaks, initialArray);
+   ArrayFill(bearPeaks, startingIndex, 1, newLow);
+   Print("bearPeaks are" , bearPeaks[startingIndex]);
    initialPeaksArray = initialPeaksArray++;
    startingIndex = startingIndex++;
 }
@@ -102,10 +122,10 @@ double addBullishArray(){
 }
 
 double addBearishArray(){
-   for (int i=0; i<=1 ;i++){
+   for (int i=0; i<100 ;i++){
       indexValue = newRsi;
       ArrayResize(bearishRsiArray, initialArray);
-      ArrayFill(bullishRsiArray,i,1,indexValue);
+      ArrayFill(bearishRsiArray,i,1,indexValue);
    }
 }
 
@@ -118,6 +138,8 @@ double printAllArray(){
 double resetBullishArray () {
        ArrayFree(bullishRsiArray);
        lastHighest = 50;
+       startingIndex = 0;
+       initialPeaksArray = 1;
        //Alert("Reset Sucessful"); 
    }
 
