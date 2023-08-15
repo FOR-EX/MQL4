@@ -1,5 +1,5 @@
 
-
+int timeFrame = 60; //60 minutes
 int initialArray = 100;
 int initialPeaksArray = 1;
 int startingIndex = 0;
@@ -20,8 +20,9 @@ double indexValue;
 
 
 void OnStart() {
+
    for (int i=0; i<100;i++){
-      indexValue = iRSI(Symbol(),60,14,PRICE_CLOSE,(i+1));
+      indexValue = iRSI(Symbol(),timeFrame,14,PRICE_CLOSE,(i+1));
       ArrayResize(rsiArray,initialArray);
       ArrayFill(rsiArray,i,1,indexValue);
                
