@@ -4,6 +4,7 @@ int initialArray = 100;
 int initialPeaksArray = 1;
 int startingIndex = 0;
 double lastHighest = 50;  //this is the initial highest
+double lastLowest = 50;    //this is the initial lowest
 double rsiArray[];
 double bullishRsiArray[];
 double bearishRsiArray[];
@@ -75,6 +76,7 @@ void OnStart() {
          //Impliment a function that pushes bearPeaks...
             addBearPeaks();
          //Impliment a function that checks if it's a new low...
+            rsi_isNewLow();
 
          }
       }
@@ -90,7 +92,18 @@ bool rsi_IsNewHigh(){
       Print("This is the last highest:", lastHighest);
       return true;      
    } else {
-      Print(bullPeaks[startingIndex], "is not a new  high...");
+      Print(bullPeaks[startingIndex], "- is not a new  high...");
+      return false;
+   }
+}
+
+bool rsi_isNewLow(){
+   if(bearPeaks[startingIndex] < lastLowest){
+      lastLowest = bearPeaks[startingIndex];
+      Print("This is the last lowest", lastLowest);
+      return true;
+   } else {
+      Print(bearPeaks[startingIndex], "- is not a new low");
       return false;
    }
 }
