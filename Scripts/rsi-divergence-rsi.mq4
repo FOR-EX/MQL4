@@ -1,5 +1,5 @@
 
-int timeFrame = 60; //60 minutes
+int timeFrame = 1; //60 minutes
 int initialArray = 100;
 int initialRsiPeaksArray = 1;
 int startingRsiIndex = 0;
@@ -22,7 +22,7 @@ double priceArray [];
 int initialPricePeaksArray = 1;
 int startingPriceIndex = 0;
 double lastHighestPrice = 0;
-double lastLowestPrice = 9999999 * 9999999;
+double lastLowestPrice = 9999999;
 double bullishPriceArray[];
 double bearishPriceArray[];
 double newPricePeak;
@@ -88,13 +88,13 @@ void OnStart() {
          //Impliment a function that pushes bullPricePeaks...
             addBullPricePeaks();
          //Impliment a function that checks if it's a new high...
-            //IsNewRsiHigh();
-            //IsNewPriceHigh();
-            if (IsNewRsiHigh() == IsNewPriceHigh()){
-               Print("no bullish divergence...");
-            } else {
-               Print("There is a bullish divergence...");
-            }
+            // IsNewRsiHigh();
+            // IsNewPriceHigh();
+             if (IsNewRsiHigh() == IsNewPriceHigh()){
+                Print("no bullish divergence...");
+             } else {
+                Print("There is a bullish divergence...");
+             }
          }
          
       }
@@ -123,13 +123,13 @@ void OnStart() {
          //Impliment a function that pushes bearPricePeaks...
             addBearPricePeaks();
          //Impliment a function that checks if it's a new low...
-            //isNewRsiLow();
-            //isNewPriceLow();
-            if(isNewRsiLow() == isNewPriceLow()){
-               Print("no bearish divergence...");
-            } else {
-               Print("There is a bearish divergence...");
-            }
+            // isNewRsiLow();
+            // isNewPriceLow();
+             if(isNewRsiLow() == isNewPriceLow()){
+                Print("no bearish divergence...");
+             } else {
+                Print("There is a bearish divergence...");
+             }
 
          }
       }
@@ -141,10 +141,10 @@ void OnStart() {
 bool IsNewPriceHigh(){
    if(bullPricePeaks[startingPriceIndex] > lastHighestPrice){
       lastHighestPrice = bullPricePeaks [startingPriceIndex];
-      //Print("This is the last highest PRICE:", lastHighestPrice);
+      Print("This is the last highest PRICE:", lastHighestPrice);
       return true;
    } else {
-      //Print(bullPricePeaks[startingPriceIndex], "- is not a new PRICE high");
+      Print(bullPricePeaks[startingPriceIndex], "- is not a new PRICE high");
       return false;
    }
 }
@@ -152,10 +152,10 @@ bool IsNewPriceHigh(){
 bool IsNewRsiHigh(){
    if(bullRsiPeaks[startingRsiIndex] > lastHighestRsi){
       lastHighestRsi = bullRsiPeaks[startingRsiIndex];
-      //Print("This is the last highest RSI:", lastHighestRsi);
+      Print("This is the last highest RSI:", lastHighestRsi);
       return true;      
    } else {
-      //Print(bullRsiPeaks[startingRsiIndex], "- is not a new RSI high...");
+      Print(bullRsiPeaks[startingRsiIndex], "- is not a new RSI high...");
       return false;
    }
 }
@@ -262,7 +262,7 @@ double resetBullishRsiArray (){
 
 double resetBearishPriceArray(){
    ArrayFree(bearishPriceArray);
-   lastLowestPrice = 9999999 * 9999999;
+   lastLowestPrice = 9999999;
    startingPriceIndex = 0;
    initialPricePeaksArray = 1;
 }
