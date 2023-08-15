@@ -41,7 +41,8 @@ void OnStart() {
          bullishReset = false;
          isBearish = false;
          isBullish = true;
-         //Impliment a function that deletes previous bearishArray's...                           
+         //Impliment a function that deletes previous bearishArray's...
+         resetBearishArray();                           
          //Impliment a function that pushes an bullishArray...
          addBullishArray();   
       }
@@ -121,7 +122,7 @@ double addBullPeaks(){
 double addBearPeaks(){
    ArrayResize(bearPeaks, initialArray);
    ArrayFill(bearPeaks, startingIndex, 1, newLow);
-   Print("bearPeaks are" , bearPeaks[startingIndex]);
+   //Print("bearPeaks are" , bearPeaks[startingIndex]);
    initialPeaksArray = initialPeaksArray++;
    startingIndex = startingIndex++;
 }
@@ -157,7 +158,8 @@ double resetBullishArray () {
    }
 
 double resetBearishArray () {
-      for (int i=0; i<100;i++){
       ArrayFree(bearishRsiArray);
-      } 
+      lastLowest = 50;
+      startingIndex = 0;
+      initialPeaksArray = 1;
    }
