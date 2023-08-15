@@ -1,37 +1,63 @@
 
 int timeFrame = 60; //60 minutes
 int initialArray = 100;
-int initialPeaksArray = 1;
-int startingIndex = 0;
-double lastHighest = 50;  //this is the initial highest
-double lastLowest = 50;    //this is the initial lowest
+int initialRsiPeaksArray = 1;
+int startingRsiIndex = 0;
+double lastHighestRsi = 50;  //this is the initial highest Rsi
+double lastLowestRsi = 50;    //this is the initial lowest Rsi
 double rsiArray[];
 double bullishRsiArray[];
 double bearishRsiArray[];
-double newPeak;
-double newLow; 
-double bullPeaks [];
-double bearPeaks [];
+double newRsiPeak;
+double newRsiLow; 
+double bullRsiPeaks [];
+double bearRsiPeaks [];
 double thirdRsi;
 double lastRsi;
 double newRsi;
-double indexValue;
+double indexValueRsi;
+//Price vars
+double indexValuePrice;
+double priceArray [];
+int initialPricePeaksArray = 1;
+int startingPriceIndex = 0;
+
+double bullishPriceArray[];
+double bearishPriceArray[];
+double newPricePeak;
+double newPriceLow; 
+double bullPricePeaks [];
+double bearPricePeaks [];
+double thirdPrice;
+double lastPrice;
+double newPrice;
 
 
 
 void OnStart() {
 
    for (int i=0; i<100;i++){
-      indexValue = iRSI(Symbol(),timeFrame,14,PRICE_CLOSE,(i+1));
-      ArrayResize(rsiArray,initialArray);
-      ArrayFill(rsiArray,i,1,indexValue);
+      //This is to push rsiArray
+      indexValueRsi = iRSI(Symbol(),timeFrame,14,PRICE_CLOSE,(i+1));
+         ArrayResize(rsiArray,initialArray);
+         ArrayFill(rsiArray,i,1,indexValueRsi);
+      //This is to push priceArray
+      indexValuePrice = iClose(Symbol(), timeFrame, (i+1));
+         ArrayResize(priceArray,initialArray);
+         ArrayFill(priceArray,i,1,indexValuePrice);
                
    }
 
    for (int j=100; j>=0; j--){
+      //for RSI
       thirdRsi = rsiArray[j+2];
       lastRsi = rsiArray[j+1];
-      newRsi = rsiArray[j];         
+      newRsi = rsiArray[j];
+      //for PRICE
+      thirdPrice = priceArray[j+2];
+      lastPrice = priceArray[j+1];
+      newPrice = priceArray[j];
+
       bool isBullish = false;
       bool isBearish = false;
       bool bullishReset = false;
@@ -43,19 +69,25 @@ void OnStart() {
          isBearish = false;
          isBullish = true;
          //Impliment a function that deletes previous bearishArray's...
-         resetBearishArray();                           
-         //Impliment a function that pushes an bullishArray...
-         addBullishArray();   
+         resetBearishRsiArray();                           
+         //Impliment a function that pushes an bullishRsiArray...
+         addBullishRsiArray();
+         //function that pushes a bullishPriceArray...
+         addBullishPriceArray();  
       }
 
       if (isBullish){
-         //This the condition for newPeaks...
+         //This the condition for newRsiPeaks...
          if(lastRsi > thirdRsi && newRsi < lastRsi){
-            newPeak = lastRsi;
-         //Impliment a function that pushes bullPeaks...
-            addBullPeaks();
+            newRsiPeak = lastRsi;
+            newPricePeak = lastPrice;
+         //Impliment a function that pushes bullRsiPeaks...            
+            addBullRsiPeaks();
+         //Impliment a function that pushes bullPricePeaks...
+            addBullPricePeaks();
          //Impliment a function that checks if it's a new high...
-            rsi_IsNewHigh();
+            IsNewRsiHigh();
+            IsNewPriceHigh();
          }
          
       }
@@ -66,19 +98,19 @@ void OnStart() {
          isBullish =false;
          isBearish = true;
          //Impliment a function that deletes previous bullishArray's...
-         resetBullishArray();
+         resetBullishRsiArray();
          //Impliment a function that pushes an bearishArray...
-         addBearishArray();
+         addBearishRsiArray();
       }
       
       if (isBearish){
-         ////This the condition for newLows...
+         ////This the condition for newRsiLows...
          if(lastRsi<thirdRsi && newRsi > lastRsi){
-            newLow = lastRsi;
-         //Impliment a function that pushes bearPeaks...
-            addBearPeaks();
+            newRsiLow = lastRsi;
+         //Impliment a function that pushes bearRsiPeaks...
+            addBearRsiPeaks();
          //Impliment a function that checks if it's a new low...
-            rsi_isNewLow();
+            isNewRsiLow();
 
          }
       }
@@ -87,80 +119,92 @@ void OnStart() {
 
 
 //CUSTOM FUNCTIONS
+bool IsNewPriceHigh(){
+   //if(bullPricePeaks[startingPriceIndex] > las)
+}
 
-bool rsi_IsNewHigh(){
-   if(bullPeaks[startingIndex] > lastHighest){
-      lastHighest = bullPeaks[startingIndex];
-      Print("This is the last highest:", lastHighest);
+bool IsNewRsiHigh(){
+   if(bullRsiPeaks[startingRsiIndex] > lastHighestRsi){
+      lastHighestRsi = bullRsiPeaks[startingRsiIndex];
+      Print("This is the last highest:", lastHighestRsi);
       return true;      
    } else {
-      Print(bullPeaks[startingIndex], "- is not a new  high...");
+      Print(bullRsiPeaks[startingRsiIndex], "- is not a new  high...");
       return false;
    }
 }
 
-bool rsi_isNewLow(){
-   if(bearPeaks[startingIndex] < lastLowest){
-      lastLowest = bearPeaks[startingIndex];
-      Print("This is the last lowest", lastLowest);
+bool isNewRsiLow(){
+   if(bearRsiPeaks[startingRsiIndex] < lastLowestRsi){
+      lastLowestRsi = bearRsiPeaks[startingRsiIndex];
+      Print("This is the last lowest", lastLowestRsi);
       return true;
    } else {
-      Print(bearPeaks[startingIndex], "- is not a new low");
+      Print(bearRsiPeaks[startingRsiIndex], "- is not a new low");
       return false;
    }
 }
 
-
-double addBullPeaks(){
-
-   ArrayResize(bullPeaks,initialPeaksArray);
-   ArrayFill(bullPeaks,startingIndex,1,newPeak);
-   //Print("bullPeaks are" , bullPeaks[startingIndex]); 
-   initialPeaksArray = initialPeaksArray++;
-   startingIndex = startingIndex++;
+double addBullPricePeaks(){
+   ArrayResize(bullPricePeaks, initialPricePeaksArray);
+   ArrayFill(bullPricePeaks, startingPriceIndex, 1, newPricePeak);
+   initialPricePeaksArray = initialPricePeaksArray++;
+   startingPriceIndex = startingPriceIndex++;
 }
 
-double addBearPeaks(){
-   ArrayResize(bearPeaks, initialArray);
-   ArrayFill(bearPeaks, startingIndex, 1, newLow);
-   //Print("bearPeaks are" , bearPeaks[startingIndex]);
-   initialPeaksArray = initialPeaksArray++;
-   startingIndex = startingIndex++;
+double addBullRsiPeaks(){
+
+   ArrayResize(bullRsiPeaks,initialRsiPeaksArray);
+   ArrayFill(bullRsiPeaks,startingRsiIndex,1,newRsiPeak);
+   //Print("bullRsiPeaks are" , bullRsiPeaks[startingRsiIndex]); 
+   initialRsiPeaksArray = initialRsiPeaksArray++;
+   startingRsiIndex = startingRsiIndex++;
 }
 
-double addBullishArray(){
+double addBearRsiPeaks(){
+   ArrayResize(bearRsiPeaks, initialArray);
+   ArrayFill(bearRsiPeaks, startingRsiIndex, 1, newRsiLow);
+   //Print("bearRsiPeaks are" , bearRsiPeaks[startingRsiIndex]);
+   initialRsiPeaksArray = initialRsiPeaksArray++;
+   startingRsiIndex = startingRsiIndex++;
+}
+
+double addBullishPriceArray(){
+   for (int i=0; i<100 ; i++){
+      indexValuePrice = newPrice;
+      ArrayResize(bullishPriceArray, initialArray);
+      ArrayFill(bullishPriceArray, i, 1,indexValuePrice);
+      Print(indexValuePrice);
+   }
+}
+
+double addBullishRsiArray(){
    for (int i=0; i<100 ;i++){
-      indexValue = newRsi;
+      indexValueRsi = newRsi;
       ArrayResize(bullishRsiArray,initialArray);
-      ArrayFill(bullishRsiArray,i,1,indexValue);
+      ArrayFill(bullishRsiArray,i,1,indexValueRsi);
    }
 }
 
-double addBearishArray(){
+double addBearishRsiArray(){
    for (int i=0; i<100 ;i++){
-      indexValue = newRsi;
+      indexValueRsi = newRsi;
       ArrayResize(bearishRsiArray, initialArray);
-      ArrayFill(bearishRsiArray,i,1,indexValue);
+      ArrayFill(bearishRsiArray,i,1,indexValueRsi);
    }
 }
 
-double printAllArray(){
-   for (int i=0; i<100 ;i++){
-      Alert(bullishRsiArray[i]);
-   }
-}
-
-double resetBullishArray () {
+double resetBullishRsiArray () {
        ArrayFree(bullishRsiArray);
-       lastHighest = 50;
-       startingIndex = 0;
-       initialPeaksArray = 1;
+       lastHighestRsi = 50;
+       startingRsiIndex = 0;
+       initialRsiPeaksArray = 1;
        //Alert("Reset Sucessful"); 
    }
 
-double resetBearishArray () {
+double resetBearishRsiArray () {
       ArrayFree(bearishRsiArray);
-      lastLowest = 50;
-      startingIndex = 0;
-      initialPeaksArray = 1;
+      lastLowestRsi = 50;
+      startingRsiIndex = 0;
+      initialRsiPeaksArray = 1;
    }

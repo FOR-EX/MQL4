@@ -1,6 +1,6 @@
 int timeFrame = 60; //60 minutes
 int initialArray = 100;
-double indexValue;
+double indexValuePrice;
 double priceArray [];
 double thirdPrice;
 double lastPrice;
@@ -9,9 +9,9 @@ double newPrice;
 void OnStart (){
 
     for (int i=0; i<100;i++){        
-        indexValue = iClose(Symbol(), 60, (i+1));
+        indexValuePrice = iClose(Symbol(), timeFrame, (i+1));
         ArrayResize(priceArray,initialArray);
-        ArrayFill(priceArray,i,1,indexValue);                       
+        ArrayFill(priceArray,i,1,indexValuePrice);                       
     }
 
     for (int j=100; j>=0; j--){
