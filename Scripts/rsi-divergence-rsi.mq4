@@ -70,6 +70,7 @@ void OnStart() {
          isBearish = false;
          isBullish = true;
          //Impliment a function that deletes previous bearishArray's...
+         resetBearishPriceArray();
          resetBearishRsiArray();                           
          //Impliment a function that pushes an bullishRsiArray...
          addBullishRsiArray();
@@ -103,16 +104,22 @@ void OnStart() {
          resetBullishPriceArray();
          //Impliment a function that pushes an bearishArray...
          addBearishRsiArray();
+         //function that pushes a bearishPriceArray...
+         addBearishPriceArray();
       }
       
       if (isBearish){
          ////This the condition for newRsiLows...
          if(lastRsi<thirdRsi && newRsi > lastRsi){
             newRsiLow = lastRsi;
+            newPriceLow = lastRsi;
          //Impliment a function that pushes bearRsiPeaks...
             addBearRsiPeaks();
+         //Impliment a function that pushes bearPricePeaks...
+            addBearPricePeaks();
          //Impliment a function that checks if it's a new low...
             isNewRsiLow();
+            isNewPriceLow();
 
          }
       }
@@ -139,6 +146,17 @@ bool IsNewRsiHigh(){
       return true;      
    } else {
       Print(bullRsiPeaks[startingRsiIndex], "- is not a new RSI high...");
+      return false;
+   }
+}
+
+bool isNewPriceLow(){
+   if(bullPricePeaks[startingPriceIndex] < lastLowestPrice){
+      lastLowestPrice = bullPricePeaks[startingPriceIndex];
+      Print("This is the last lowest PRICE:", lastLowestPrice);
+      return true;
+   } else {
+      Print(bullPricePeaks[startingPriceIndex], "- is not a new PRICE Low");
       return false;
    }
 }
@@ -170,6 +188,13 @@ double addBullRsiPeaks(){
    startingRsiIndex = startingRsiIndex++;
 }
 
+double addBearPricePeaks(){
+   ArrayResize(bearPricePeaks, initialPricePeaksArray);
+   ArrayFill(bearPricePeaks, startingPriceIndex, 1, newPriceLow);
+   initialPricePeaksArray = initialPricePeaksArray++;
+   startingPriceIndex = startingPriceIndex++;
+}
+
 double addBearRsiPeaks(){
    ArrayResize(bearRsiPeaks, initialArray);
    ArrayFill(bearRsiPeaks, startingRsiIndex, 1, newRsiLow);
@@ -183,7 +208,6 @@ double addBullishPriceArray(){
       indexValuePrice = newPrice;
       ArrayResize(bullishPriceArray, initialArray);
       ArrayFill(bullishPriceArray, i, 1,indexValuePrice);
-      //Print(indexValuePrice);
    }
 }
 
@@ -195,6 +219,14 @@ double addBullishRsiArray(){
    }
 }
 
+double addBearishPriceArray(){
+   for (int i=0; i<100 ; i++){
+      indexValuePrice = newPrice;
+      ArrayResize(bearishPriceArray, initialArray);
+      ArrayFill(bearishPriceArray, i, 1,indexValuePrice);
+   }
+}
+
 double addBearishRsiArray(){
    for (int i=0; i<100 ;i++){
       indexValueRsi = newRsi;
@@ -203,13 +235,27 @@ double addBearishRsiArray(){
    }
 }
 
-double resetBullishRsiArray () {
-       ArrayFree(bullishRsiArray);
-       lastHighestRsi = 50;
-       startingRsiIndex = 0;
-       initialRsiPeaksArray = 1;
-       //Alert("Reset Sucessful"); 
-   }
+double resetBullishPriceArray(){
+   ArrayFree(bullishPriceArray);
+   lastHighestPrice = 0;
+   startingPriceIndex = 0;
+   initialPricePeaksArray = 1;
+}
+
+double resetBullishRsiArray (){
+   ArrayFree(bullishRsiArray);
+   lastHighestRsi = 50;
+   startingRsiIndex = 0;
+   initialRsiPeaksArray = 1;
+   //Alert("Reset Sucessful"); 
+}
+
+double resetBearishPriceArray(){
+   ArrayFree(bearishPriceArray);
+   lastLowestPrice = 9999999 * 9999999;
+   startingPriceIndex = 0;
+   initialPricePeaksArray = 1;
+}
 
 double resetBearishRsiArray () {
       ArrayFree(bearishRsiArray);
