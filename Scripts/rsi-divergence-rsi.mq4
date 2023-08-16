@@ -33,6 +33,8 @@ double thirdPrice;
 double lastPrice;
 double newPrice;
 
+bool isDivergence = false;
+
 
 
 void OnStart() {
@@ -61,12 +63,10 @@ void OnStart() {
 
       bool isBullish = false;
       bool isBearish = false;
-      bool bullishReset = false;
-      bool bearishReset = false;
+      
 
       if(newRsi >= 50){              
-         bearishReset = true;
-         bullishReset = false;
+         isDivergence = false;
          isBearish = false;
          isBullish = true;
          //Impliment a function that deletes previous bearishArray's...
@@ -90,11 +90,9 @@ void OnStart() {
          //Impliment a function that checks if it's a new high...
             // IsNewRsiHigh();
             // IsNewPriceHigh();
-             if (IsNewRsiHigh() == IsNewPriceHigh()){
-                Print("no bullish divergence...");
-             } else {
-                Print("There is a bullish divergence...");
-             }
+             if (IsNewRsiHigh() != IsNewPriceHigh()){
+                isDivergence = true;
+             } 
             // if there is a divergence, the code need to wait for it to reset before it allows to place an order
             // one of the conditions to place an order is if(!divergence) 
          }
@@ -102,8 +100,7 @@ void OnStart() {
       }
       
       if (newRsi < 50) {
-         bullishReset = true;
-         bearishReset = false;
+         isDivergence = false;
          isBullish =false;
          isBearish = true;
          //Impliment a function that deletes previous bullishArray's...
@@ -140,6 +137,7 @@ void OnStart() {
 
 
 //CUSTOM FUNCTIONS
+
 bool IsNewPriceHigh(){
    if(bullPricePeaks[startingPriceIndex] > lastHighestPrice){
       lastHighestPrice = bullPricePeaks [startingPriceIndex];
