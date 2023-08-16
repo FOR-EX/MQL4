@@ -1,5 +1,5 @@
 
-int timeFrame = 1; //60 minutes
+int timeFrame = 60; //60 minutes
 int initialArray = 100;
 int initialRsiPeaksArray = 1;
 int startingRsiIndex = 0;
@@ -95,6 +95,8 @@ void OnStart() {
              } else {
                 Print("There is a bullish divergence...");
              }
+            // if there is a divergence, the code need to wait for it to reset before it allows to place an order
+            // one of the conditions to place an order is if(!divergence) 
          }
          
       }
