@@ -1,4 +1,4 @@
-
+//Declare the Variables
 int timeFrame = 60; //60 minutes
 int initialArray = 100;
 int initialRsiPeaksArray = 1;
@@ -34,12 +34,9 @@ double lastPrice;
 double newPrice;
 
 bool isDivergence = false;
-
-
-
-void OnStart() {
-
-   for (int i=0; i<100;i++){
+//This is the price and rsi scanner wrapped in a function
+double runDivergenceMonitor(){
+    for (int i=0; i<100;i++){
       //This is to push rsiArray
       indexValueRsi = iRSI(Symbol(),timeFrame,14,PRICE_CLOSE,(i+1));
          ArrayResize(rsiArray,initialArray);
@@ -136,24 +133,7 @@ void OnStart() {
          }
       }      
    }
-   Print(isDivergence);
-   //Condition to place an order
-   if(!isDivergence){
-      //this is the condition for placing order during bullish conditions
-      /*if(newOpeningPrice > sessionResistance && bullishEngulfing && bullishEngulfingBase > highestHighonBullBreak){
-         placeBullishOrder();
-         }      
-      */
-      //this is the condition for placing order during bullish conditions
-      /*if(newOpeningPrice < sessionSupport && bearishEngulfing && bearishEngulfingHead < lowestLowonBearBreak){
-         placeBearishOrder();
-         }
-      
-      */
-   }    
 }
-
-
 //CUSTOM FUNCTIONS
 
 bool IsNewPriceHigh(){
@@ -275,9 +255,8 @@ double resetBullishRsiArray (){
    lastHighestRsi = 50;
    startingRsiIndex = 0;
    initialRsiPeaksArray = 1;
-   //Alert("Reset Sucessful"); 
 }
-
+  
 double resetBearishPriceArray(){
    ArrayFree(bearishPriceArray);
    lastLowestPrice = 9999999;
