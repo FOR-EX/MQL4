@@ -1,5 +1,5 @@
 
-int timeFrame = 1; //60 minutes
+int timeFrame = 60; //60 minutes
 int initialArray = 100;
 int initialRsiPeaksArray = 1;
 int startingRsiIndex = 0;
@@ -134,7 +134,22 @@ void OnStart() {
              }
 
          }
-      }
+      }      
+   }
+   Print(isDivergence);
+   //Condition to place an order
+   if(!isDivergence){
+      //this is the condition for placing order during bullish conditions
+      /*if(newOpeningPrice > sessionResistance && bullishEngulfing && bullishEngulfingBase > highestHighonBullBreak){
+         placeBullishOrder();
+         }      
+      */
+      //this is the condition for placing order during bullish conditions
+      /*if(newOpeningPrice < sessionSupport && bearishEngulfing && bearishEngulfingHead < lowestLowonBearBreak){
+         placeBearishOrder();
+         }
+      
+      */
    }    
 }
 
