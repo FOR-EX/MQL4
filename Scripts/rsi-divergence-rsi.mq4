@@ -124,10 +124,8 @@ void OnStart() {
          //Impliment a function that checks if it's a new low...
             // isNewRsiLow();
             // isNewPriceLow();
-             if(isNewRsiLow() == isNewPriceLow()){
-                Print("no bearish divergence...");
-             } else {
-                Print("There is a bearish divergence...");
+             if(isNewRsiLow() != isNewPriceLow()){
+                isDivergence = true;
              }
 
          }
