@@ -65,10 +65,12 @@ void OnStart() {
       bool isBearish = false;
       
 
-      if(newRsi >= 50){              
-         isDivergence = false;
+      if(newRsi >= 50){               
          isBearish = false;
          isBullish = true;
+         if(lastRsi < 50){
+            isDivergence = false;
+         }         
          //Impliment a function that deletes previous bearishArray's...
          resetBearishPriceArray();
          resetBearishRsiArray();                           
@@ -80,7 +82,7 @@ void OnStart() {
 
       if (isBullish){
          //This the condition for newRsiPeaks...
-         if(lastRsi > thirdRsi && newRsi < lastRsi){
+         if(lastRsi > thirdRsi && newRsi < lastRsi && isDivergence == 0){
             newRsiPeak = lastRsi;
             newPricePeak = lastPrice;
          //Impliment a function that pushes bullRsiPeaks...            
@@ -92,6 +94,7 @@ void OnStart() {
             // IsNewPriceHigh();
              if (IsNewRsiHigh() != IsNewPriceHigh()){
                 isDivergence = true;
+
              } 
             // if there is a divergence, the code need to wait for it to reset before it allows to place an order
             // one of the conditions to place an order is if(!divergence) 
@@ -100,9 +103,11 @@ void OnStart() {
       }
       
       if (newRsi < 50) {
-         isDivergence = false;
          isBullish =false;
          isBearish = true;
+         if(lastRsi >= 50){
+            isDivergence = false;
+         }    
          //Impliment a function that deletes previous bullishArray's...
          resetBullishRsiArray();
          resetBullishPriceArray();
@@ -114,7 +119,7 @@ void OnStart() {
       
       if (isBearish){
          ////This the condition for newRsiLows...
-         if(lastRsi<thirdRsi && newRsi > lastRsi){
+         if(lastRsi<thirdRsi && newRsi > lastRsi && isDivergence == 0){
             newRsiLow = lastRsi;
             newPriceLow = lastRsi;
          //Impliment a function that pushes bearRsiPeaks...
