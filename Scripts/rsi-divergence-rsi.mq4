@@ -1,5 +1,5 @@
 
-int timeFrame = 60; //60 minutes
+int timeFrame = 1; //60 minutes
 int initialArray = 100;
 int initialRsiPeaksArray = 1;
 int startingRsiIndex = 0;
@@ -121,7 +121,7 @@ void OnStart() {
          ////This the condition for newRsiLows...
          if(lastRsi<thirdRsi && newRsi > lastRsi && isDivergence == 0){
             newRsiLow = lastRsi;
-            newPriceLow = lastRsi;
+            newPriceLow = lastPrice;
          //Impliment a function that pushes bearRsiPeaks...
             addBearRsiPeaks();
          //Impliment a function that pushes bearPricePeaks...
@@ -164,12 +164,12 @@ bool IsNewRsiHigh(){
 }
 
 bool isNewPriceLow(){
-   if(bullPricePeaks[startingPriceIndex] < lastLowestPrice){
-      lastLowestPrice = bullPricePeaks[startingPriceIndex];
-      //Print("This is the last lowest PRICE:", lastLowestPrice);
+   if(bearPricePeaks[startingPriceIndex] < lastLowestPrice){
+      lastLowestPrice = bearPricePeaks[startingPriceIndex];
+      Print("This is the last lowest PRICE:", lastLowestPrice);
       return true;
    } else {
-      //Print(bullPricePeaks[startingPriceIndex], "- is not a new PRICE Low");
+      Print(bearPricePeaks[startingPriceIndex], "- is not a new PRICE Low");
       return false;
    }
 }
@@ -177,10 +177,10 @@ bool isNewPriceLow(){
 bool isNewRsiLow(){
    if(bearRsiPeaks[startingRsiIndex] < lastLowestRsi){
       lastLowestRsi = bearRsiPeaks[startingRsiIndex];
-      //Print("This is the last lowest RSI", lastLowestRsi);
+      Print("This is the last lowest RSI", lastLowestRsi);
       return true;
    } else {
-      //Print(bearRsiPeaks[startingRsiIndex], "- is not a new RSI low");
+      Print(bearRsiPeaks[startingRsiIndex], "- is not a new RSI low");
       return false;
    }
 }
