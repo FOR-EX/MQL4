@@ -1168,3 +1168,786 @@
 0	15:49:49.187	Script rsi-divergence-rsi USDJPY#,H1: removed
 0	16:16:09.414	Compiling 'rsi-divergence-rsi'
 0	16:16:09.414	Compiling 'rsi-divergence-rsi-cleaning-attempt'
+0	16:16:40.671	Script cleaning-attempt\rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: loaded successfully
+0	16:16:40.683	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: initialized
+0	16:16:40.683	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: This is the last highest RSI:69.2794
+0	16:16:40.683	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: This is the last highest PRICE:144.753
+0	16:16:40.683	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: 58.3087- is not a new RSI high...
+0	16:16:40.683	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: 144.6- is not a new PRICE high
+0	16:16:40.683	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: 64.0374- is not a new RSI high...
+0	16:16:40.683	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: This is the last highest PRICE:144.79
+0	16:16:40.683	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: This is the last highest RSI:58.1711
+0	16:16:40.683	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: This is the last highest PRICE:144.943
+0	16:16:40.683	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: This is the last highest RSI:77.8224
+0	16:16:40.683	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: This is the last highest PRICE:145.528
+0	16:16:40.683	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: 69.1621- is not a new RSI high...
+0	16:16:40.683	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: 145.499- is not a new PRICE high
+0	16:16:40.683	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: 68.8162- is not a new RSI high...
+0	16:16:40.683	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: This is the last highest PRICE:145.542
+0	16:16:40.683	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: This is the last lowest RSI39.2718
+0	16:16:40.683	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: This is the last lowest PRICE:145.132
+0	16:16:40.683	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: This is the last highest RSI:55.0991
+0	16:16:40.683	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: This is the last highest PRICE:145.557
+0	16:16:40.683	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: This is the last highest RSI:57.851
+0	16:16:40.683	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: This is the last highest PRICE:145.659
+0	16:16:40.683	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: 54.2185- is not a new RSI high...
+0	16:16:40.683	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: 145.565- is not a new PRICE high
+0	16:16:40.683	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: 55.9413- is not a new RSI high...
+0	16:16:40.683	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: 145.616- is not a new PRICE high
+0	16:16:40.683	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: This is the last lowest RSI42.7646
+0	16:16:40.683	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: This is the last lowest PRICE:145.345
+0	16:16:40.683	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: This is the last highest RSI:66.5001
+0	16:16:40.683	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: This is the last highest PRICE:145.861
+0	16:16:40.683	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: This is the last highest RSI:78.2968
+0	16:16:40.683	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: This is the last highest PRICE:146.34
+0	16:16:40.683	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: 76.3498- is not a new RSI high...
+0	16:16:40.683	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: This is the last highest PRICE:146.419
+0	16:16:40.683	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: 1
+0	16:16:40.683	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: uninit reason 0
+0	16:16:40.684	Script rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: removed
+0	16:16:42.043	Script cleaning-attempt\rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: loaded successfully
+0	16:16:42.056	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: initialized
+0	16:16:42.057	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: This is the last highest RSI:69.2794
+0	16:16:42.057	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: This is the last highest PRICE:144.753
+0	16:16:42.057	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: 58.3087- is not a new RSI high...
+0	16:16:42.057	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: 144.6- is not a new PRICE high
+0	16:16:42.057	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: 64.0374- is not a new RSI high...
+0	16:16:42.057	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: This is the last highest PRICE:144.79
+0	16:16:42.057	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: This is the last highest RSI:58.1711
+0	16:16:42.057	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: This is the last highest PRICE:144.943
+0	16:16:42.057	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: This is the last highest RSI:77.8224
+0	16:16:42.057	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: This is the last highest PRICE:145.528
+0	16:16:42.057	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: 69.1621- is not a new RSI high...
+0	16:16:42.057	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: 145.499- is not a new PRICE high
+0	16:16:42.057	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: 68.8162- is not a new RSI high...
+0	16:16:42.057	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: This is the last highest PRICE:145.542
+0	16:16:42.057	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: This is the last lowest RSI39.2718
+0	16:16:42.057	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: This is the last lowest PRICE:145.132
+0	16:16:42.057	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: This is the last highest RSI:55.0991
+0	16:16:42.057	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: This is the last highest PRICE:145.557
+0	16:16:42.057	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: This is the last highest RSI:57.851
+0	16:16:42.057	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: This is the last highest PRICE:145.659
+0	16:16:42.057	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: 54.2185- is not a new RSI high...
+0	16:16:42.057	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: 145.565- is not a new PRICE high
+0	16:16:42.057	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: 55.9413- is not a new RSI high...
+0	16:16:42.057	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: 145.616- is not a new PRICE high
+0	16:16:42.057	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: This is the last lowest RSI42.7646
+0	16:16:42.057	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: This is the last lowest PRICE:145.345
+0	16:16:42.057	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: This is the last highest RSI:66.5001
+0	16:16:42.057	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: This is the last highest PRICE:145.861
+0	16:16:42.057	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: This is the last highest RSI:78.2968
+0	16:16:42.057	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: This is the last highest PRICE:146.34
+0	16:16:42.057	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: 76.3498- is not a new RSI high...
+0	16:16:42.057	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: This is the last highest PRICE:146.419
+0	16:16:42.057	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: 1
+0	16:16:42.057	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: uninit reason 0
+0	16:16:42.058	Script rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: removed
+0	16:16:43.027	Script cleaning-attempt\rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: loaded successfully
+0	16:16:43.040	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: initialized
+0	16:16:43.040	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: This is the last highest RSI:69.2794
+0	16:16:43.040	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: This is the last highest PRICE:144.753
+0	16:16:43.040	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: 58.3087- is not a new RSI high...
+0	16:16:43.040	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: 144.6- is not a new PRICE high
+0	16:16:43.040	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: 64.0374- is not a new RSI high...
+0	16:16:43.040	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: This is the last highest PRICE:144.79
+0	16:16:43.040	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: This is the last highest RSI:58.1711
+0	16:16:43.040	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: This is the last highest PRICE:144.943
+0	16:16:43.040	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: This is the last highest RSI:77.8224
+0	16:16:43.040	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: This is the last highest PRICE:145.528
+0	16:16:43.040	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: 69.1621- is not a new RSI high...
+0	16:16:43.040	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: 145.499- is not a new PRICE high
+0	16:16:43.040	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: 68.8162- is not a new RSI high...
+0	16:16:43.040	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: This is the last highest PRICE:145.542
+0	16:16:43.040	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: This is the last lowest RSI39.2718
+0	16:16:43.040	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: This is the last lowest PRICE:145.132
+0	16:16:43.040	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: This is the last highest RSI:55.0991
+0	16:16:43.040	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: This is the last highest PRICE:145.557
+0	16:16:43.040	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: This is the last highest RSI:57.851
+0	16:16:43.040	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: This is the last highest PRICE:145.659
+0	16:16:43.040	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: 54.2185- is not a new RSI high...
+0	16:16:43.040	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: 145.565- is not a new PRICE high
+0	16:16:43.040	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: 55.9413- is not a new RSI high...
+0	16:16:43.040	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: 145.616- is not a new PRICE high
+0	16:16:43.040	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: This is the last lowest RSI42.7646
+0	16:16:43.040	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: This is the last lowest PRICE:145.345
+0	16:16:43.040	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: This is the last highest RSI:66.5001
+0	16:16:43.040	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: This is the last highest PRICE:145.861
+0	16:16:43.040	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: This is the last highest RSI:78.2968
+0	16:16:43.040	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: This is the last highest PRICE:146.34
+0	16:16:43.040	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: 76.3498- is not a new RSI high...
+0	16:16:43.040	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: This is the last highest PRICE:146.419
+0	16:16:43.040	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: 1
+0	16:16:43.040	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: uninit reason 0
+0	16:16:43.041	Script rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: removed
+0	16:16:45.204	Script cleaning-attempt\rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: loaded successfully
+0	16:16:45.216	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: initialized
+0	16:16:45.216	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: This is the last highest RSI:69.2794
+0	16:16:45.216	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: This is the last highest PRICE:144.753
+0	16:16:45.216	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: 58.3087- is not a new RSI high...
+0	16:16:45.216	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: 144.6- is not a new PRICE high
+0	16:16:45.216	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: 64.0374- is not a new RSI high...
+0	16:16:45.216	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: This is the last highest PRICE:144.79
+0	16:16:45.216	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: This is the last highest RSI:58.1711
+0	16:16:45.216	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: This is the last highest PRICE:144.943
+0	16:16:45.216	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: This is the last highest RSI:77.8224
+0	16:16:45.216	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: This is the last highest PRICE:145.528
+0	16:16:45.216	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: 69.1621- is not a new RSI high...
+0	16:16:45.216	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: 145.499- is not a new PRICE high
+0	16:16:45.216	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: 68.8162- is not a new RSI high...
+0	16:16:45.216	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: This is the last highest PRICE:145.542
+0	16:16:45.216	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: This is the last lowest RSI39.2718
+0	16:16:45.216	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: This is the last lowest PRICE:145.132
+0	16:16:45.216	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: This is the last highest RSI:55.0991
+0	16:16:45.216	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: This is the last highest PRICE:145.557
+0	16:16:45.217	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: This is the last highest RSI:57.851
+0	16:16:45.217	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: This is the last highest PRICE:145.659
+0	16:16:45.217	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: 54.2185- is not a new RSI high...
+0	16:16:45.217	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: 145.565- is not a new PRICE high
+0	16:16:45.217	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: 55.9413- is not a new RSI high...
+0	16:16:45.217	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: 145.616- is not a new PRICE high
+0	16:16:45.217	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: This is the last lowest RSI42.7646
+0	16:16:45.217	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: This is the last lowest PRICE:145.345
+0	16:16:45.217	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: This is the last highest RSI:66.5001
+0	16:16:45.217	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: This is the last highest PRICE:145.861
+0	16:16:45.217	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: This is the last highest RSI:78.2968
+0	16:16:45.217	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: This is the last highest PRICE:146.34
+0	16:16:45.217	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: 76.3498- is not a new RSI high...
+0	16:16:45.217	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: This is the last highest PRICE:146.419
+0	16:16:45.217	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: 1
+0	16:16:45.217	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: uninit reason 0
+0	16:16:45.218	Script rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: removed
+0	16:24:22.242	Script cleaning-attempt\rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: loaded successfully
+0	16:24:22.257	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: initialized
+0	16:24:22.258	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: This is the last highest RSI:69.2794
+0	16:24:22.258	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: This is the last highest PRICE:144.753
+0	16:24:22.258	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: 58.3087- is not a new RSI high...
+0	16:24:22.258	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: 144.6- is not a new PRICE high
+0	16:24:22.258	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: 64.0374- is not a new RSI high...
+0	16:24:22.258	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: This is the last highest PRICE:144.79
+0	16:24:22.258	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: This is the last highest RSI:58.1711
+0	16:24:22.258	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: This is the last highest PRICE:144.943
+0	16:24:22.259	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: This is the last highest RSI:77.8224
+0	16:24:22.259	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: This is the last highest PRICE:145.528
+0	16:24:22.259	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: 69.1621- is not a new RSI high...
+0	16:24:22.259	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: 145.499- is not a new PRICE high
+0	16:24:22.259	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: 68.8162- is not a new RSI high...
+0	16:24:22.259	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: This is the last highest PRICE:145.542
+0	16:24:22.259	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: This is the last lowest RSI39.2718
+0	16:24:22.259	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: This is the last lowest PRICE:145.132
+0	16:24:22.259	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: This is the last highest RSI:55.0991
+0	16:24:22.259	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: This is the last highest PRICE:145.557
+0	16:24:22.259	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: This is the last highest RSI:57.851
+0	16:24:22.259	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: This is the last highest PRICE:145.659
+0	16:24:22.259	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: 54.2185- is not a new RSI high...
+0	16:24:22.259	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: 145.565- is not a new PRICE high
+0	16:24:22.259	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: 55.9413- is not a new RSI high...
+0	16:24:22.259	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: 145.616- is not a new PRICE high
+0	16:24:22.259	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: This is the last lowest RSI42.7646
+0	16:24:22.259	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: This is the last lowest PRICE:145.345
+0	16:24:22.259	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: This is the last highest RSI:66.5001
+0	16:24:22.259	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: This is the last highest PRICE:145.861
+0	16:24:22.259	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: This is the last highest RSI:78.2968
+0	16:24:22.259	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: This is the last highest PRICE:146.34
+0	16:24:22.259	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: 76.3498- is not a new RSI high...
+0	16:24:22.259	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: This is the last highest PRICE:146.419
+0	16:24:22.259	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: 1
+0	16:24:22.259	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: uninit reason 0
+0	16:24:22.260	Script rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: removed
+0	16:26:53.837	Script cleaning-attempt\rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: loaded successfully
+0	16:26:53.850	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: initialized
+0	16:26:53.850	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: This is the last highest RSI:69.2794
+0	16:26:53.850	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: This is the last highest PRICE:144.753
+0	16:26:53.850	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: 58.3087- is not a new RSI high...
+0	16:26:53.850	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: 144.6- is not a new PRICE high
+0	16:26:53.850	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: 64.0374- is not a new RSI high...
+0	16:26:53.850	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: This is the last highest PRICE:144.79
+0	16:26:53.850	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: This is the last highest RSI:58.1711
+0	16:26:53.850	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: This is the last highest PRICE:144.943
+0	16:26:53.850	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: This is the last highest RSI:77.8224
+0	16:26:53.850	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: This is the last highest PRICE:145.528
+0	16:26:53.850	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: 69.1621- is not a new RSI high...
+0	16:26:53.850	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: 145.499- is not a new PRICE high
+0	16:26:53.851	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: 68.8162- is not a new RSI high...
+0	16:26:53.851	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: This is the last highest PRICE:145.542
+0	16:26:53.851	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: This is the last lowest RSI39.2718
+0	16:26:53.851	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: This is the last lowest PRICE:145.132
+0	16:26:53.851	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: This is the last highest RSI:55.0991
+0	16:26:53.851	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: This is the last highest PRICE:145.557
+0	16:26:53.851	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: This is the last highest RSI:57.851
+0	16:26:53.851	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: This is the last highest PRICE:145.659
+0	16:26:53.851	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: 54.2185- is not a new RSI high...
+0	16:26:53.851	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: 145.565- is not a new PRICE high
+0	16:26:53.851	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: 55.9413- is not a new RSI high...
+0	16:26:53.851	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: 145.616- is not a new PRICE high
+0	16:26:53.851	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: This is the last lowest RSI42.7646
+0	16:26:53.851	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: This is the last lowest PRICE:145.345
+0	16:26:53.851	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: This is the last highest RSI:66.5001
+0	16:26:53.851	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: This is the last highest PRICE:145.861
+0	16:26:53.851	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: This is the last highest RSI:78.2968
+0	16:26:53.851	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: This is the last highest PRICE:146.34
+0	16:26:53.851	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: 76.3498- is not a new RSI high...
+0	16:26:53.851	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: This is the last highest PRICE:146.419
+0	16:26:53.851	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: 1
+0	16:26:53.851	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: uninit reason 0
+0	16:26:53.852	Script rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: removed
+0	16:30:24.401	Script cleaning-attempt\rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: loaded successfully
+0	16:30:24.423	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: initialized
+0	16:30:24.423	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: This is the last highest RSI:69.2794
+0	16:30:24.423	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: This is the last highest PRICE:144.753
+0	16:30:24.423	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: 58.3087- is not a new RSI high...
+0	16:30:24.423	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: 144.6- is not a new PRICE high
+0	16:30:24.423	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: 64.0374- is not a new RSI high...
+0	16:30:24.423	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: This is the last highest PRICE:144.79
+0	16:30:24.423	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: This is the last highest RSI:58.1711
+0	16:30:24.423	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: This is the last highest PRICE:144.943
+0	16:30:24.423	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: This is the last highest RSI:77.8224
+0	16:30:24.423	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: This is the last highest PRICE:145.528
+0	16:30:24.423	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: 69.1621- is not a new RSI high...
+0	16:30:24.423	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: 145.499- is not a new PRICE high
+0	16:30:24.423	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: 68.8162- is not a new RSI high...
+0	16:30:24.423	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: This is the last highest PRICE:145.542
+0	16:30:24.423	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: This is the last lowest RSI39.2718
+0	16:30:24.423	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: This is the last lowest PRICE:145.132
+0	16:30:24.424	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: This is the last highest RSI:55.0991
+0	16:30:24.424	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: This is the last highest PRICE:145.557
+0	16:30:24.424	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: This is the last highest RSI:57.851
+0	16:30:24.424	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: This is the last highest PRICE:145.659
+0	16:30:24.424	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: 54.2185- is not a new RSI high...
+0	16:30:24.424	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: 145.565- is not a new PRICE high
+0	16:30:24.424	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: 55.9413- is not a new RSI high...
+0	16:30:24.424	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: 145.616- is not a new PRICE high
+0	16:30:24.424	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: This is the last lowest RSI42.7646
+0	16:30:24.424	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: This is the last lowest PRICE:145.345
+0	16:30:24.424	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: This is the last highest RSI:66.5001
+0	16:30:24.424	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: This is the last highest PRICE:145.861
+0	16:30:24.424	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: This is the last highest RSI:78.2968
+0	16:30:24.424	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: This is the last highest PRICE:146.34
+0	16:30:24.424	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: 76.3498- is not a new RSI high...
+0	16:30:24.424	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: This is the last highest PRICE:146.419
+0	16:30:24.424	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: 1
+0	16:30:24.424	rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: uninit reason 0
+0	16:30:24.425	Script rsi-divergence-rsi-cleaning-attempt USDJPY#,H1: removed
+0	16:32:19.005	Compiling 'cleaning-attempt\rsi-divergence-rsi-cleaning-attempt'
+0	16:32:35.952	Script rsi-divergence-rsi USDJPY#,H1: loaded successfully
+0	16:32:35.966	rsi-divergence-rsi USDJPY#,H1: initialized
+0	16:32:35.966	rsi-divergence-rsi USDJPY#,H1: This is the last highest RSI:69.2794
+0	16:32:35.966	rsi-divergence-rsi USDJPY#,H1: This is the last highest PRICE:144.753
+0	16:32:35.966	rsi-divergence-rsi USDJPY#,H1: 58.3087- is not a new RSI high...
+0	16:32:35.966	rsi-divergence-rsi USDJPY#,H1: 144.6- is not a new PRICE high
+0	16:32:35.966	rsi-divergence-rsi USDJPY#,H1: 64.0374- is not a new RSI high...
+0	16:32:35.966	rsi-divergence-rsi USDJPY#,H1: This is the last highest PRICE:144.79
+0	16:32:35.966	rsi-divergence-rsi USDJPY#,H1: This is the last highest RSI:58.1711
+0	16:32:35.966	rsi-divergence-rsi USDJPY#,H1: This is the last highest PRICE:144.943
+0	16:32:35.966	rsi-divergence-rsi USDJPY#,H1: This is the last highest RSI:77.8224
+0	16:32:35.966	rsi-divergence-rsi USDJPY#,H1: This is the last highest PRICE:145.528
+0	16:32:35.966	rsi-divergence-rsi USDJPY#,H1: 69.1621- is not a new RSI high...
+0	16:32:35.966	rsi-divergence-rsi USDJPY#,H1: 145.499- is not a new PRICE high
+0	16:32:35.966	rsi-divergence-rsi USDJPY#,H1: 68.8162- is not a new RSI high...
+0	16:32:35.966	rsi-divergence-rsi USDJPY#,H1: This is the last highest PRICE:145.542
+0	16:32:35.966	rsi-divergence-rsi USDJPY#,H1: This is the last lowest RSI39.2718
+0	16:32:35.966	rsi-divergence-rsi USDJPY#,H1: This is the last lowest PRICE:145.132
+0	16:32:35.966	rsi-divergence-rsi USDJPY#,H1: This is the last highest RSI:55.0991
+0	16:32:35.966	rsi-divergence-rsi USDJPY#,H1: This is the last highest PRICE:145.557
+0	16:32:35.966	rsi-divergence-rsi USDJPY#,H1: This is the last highest RSI:57.851
+0	16:32:35.966	rsi-divergence-rsi USDJPY#,H1: This is the last highest PRICE:145.659
+0	16:32:35.966	rsi-divergence-rsi USDJPY#,H1: 54.2185- is not a new RSI high...
+0	16:32:35.966	rsi-divergence-rsi USDJPY#,H1: 145.565- is not a new PRICE high
+0	16:32:35.966	rsi-divergence-rsi USDJPY#,H1: 55.9413- is not a new RSI high...
+0	16:32:35.966	rsi-divergence-rsi USDJPY#,H1: 145.616- is not a new PRICE high
+0	16:32:35.966	rsi-divergence-rsi USDJPY#,H1: This is the last lowest RSI42.7646
+0	16:32:35.966	rsi-divergence-rsi USDJPY#,H1: This is the last lowest PRICE:145.345
+0	16:32:35.967	rsi-divergence-rsi USDJPY#,H1: This is the last highest RSI:66.5001
+0	16:32:35.967	rsi-divergence-rsi USDJPY#,H1: This is the last highest PRICE:145.861
+0	16:32:35.967	rsi-divergence-rsi USDJPY#,H1: This is the last highest RSI:78.2968
+0	16:32:35.967	rsi-divergence-rsi USDJPY#,H1: This is the last highest PRICE:146.34
+0	16:32:35.967	rsi-divergence-rsi USDJPY#,H1: 76.3498- is not a new RSI high...
+0	16:32:35.967	rsi-divergence-rsi USDJPY#,H1: This is the last highest PRICE:146.419
+0	16:32:35.967	rsi-divergence-rsi USDJPY#,H1: 1
+0	16:32:35.967	rsi-divergence-rsi USDJPY#,H1: uninit reason 0
+0	16:32:35.968	Script rsi-divergence-rsi USDJPY#,H1: removed
+0	16:35:23.956	Script main-script USDJPY#,H1: loaded successfully
+0	16:35:23.968	main-script USDJPY#,H1: initialized
+0	16:35:23.968	main-script USDJPY#,H1: This is the last highest RSI:69.2794
+0	16:35:23.968	main-script USDJPY#,H1: This is the last highest PRICE:144.753
+0	16:35:23.968	main-script USDJPY#,H1: 58.3087- is not a new RSI high...
+0	16:35:23.968	main-script USDJPY#,H1: 144.6- is not a new PRICE high
+0	16:35:23.968	main-script USDJPY#,H1: 64.0374- is not a new RSI high...
+0	16:35:23.968	main-script USDJPY#,H1: This is the last highest PRICE:144.79
+0	16:35:23.968	main-script USDJPY#,H1: This is the last highest RSI:58.1711
+0	16:35:23.968	main-script USDJPY#,H1: This is the last highest PRICE:144.943
+0	16:35:23.968	main-script USDJPY#,H1: This is the last highest RSI:77.8224
+0	16:35:23.968	main-script USDJPY#,H1: This is the last highest PRICE:145.528
+0	16:35:23.968	main-script USDJPY#,H1: 69.1621- is not a new RSI high...
+0	16:35:23.968	main-script USDJPY#,H1: 145.499- is not a new PRICE high
+0	16:35:23.968	main-script USDJPY#,H1: 68.8162- is not a new RSI high...
+0	16:35:23.968	main-script USDJPY#,H1: This is the last highest PRICE:145.542
+0	16:35:23.968	main-script USDJPY#,H1: This is the last lowest RSI39.2718
+0	16:35:23.968	main-script USDJPY#,H1: This is the last lowest PRICE:145.132
+0	16:35:23.968	main-script USDJPY#,H1: This is the last highest RSI:55.0991
+0	16:35:23.968	main-script USDJPY#,H1: This is the last highest PRICE:145.557
+0	16:35:23.968	main-script USDJPY#,H1: This is the last highest RSI:57.851
+0	16:35:23.968	main-script USDJPY#,H1: This is the last highest PRICE:145.659
+0	16:35:23.968	main-script USDJPY#,H1: 54.2185- is not a new RSI high...
+0	16:35:23.968	main-script USDJPY#,H1: 145.565- is not a new PRICE high
+0	16:35:23.968	main-script USDJPY#,H1: 55.9413- is not a new RSI high...
+0	16:35:23.968	main-script USDJPY#,H1: 145.616- is not a new PRICE high
+0	16:35:23.968	main-script USDJPY#,H1: This is the last lowest RSI42.7646
+0	16:35:23.968	main-script USDJPY#,H1: This is the last lowest PRICE:145.345
+0	16:35:23.968	main-script USDJPY#,H1: This is the last highest RSI:66.5001
+0	16:35:23.968	main-script USDJPY#,H1: This is the last highest PRICE:145.861
+0	16:35:23.968	main-script USDJPY#,H1: This is the last highest RSI:78.2968
+0	16:35:23.968	main-script USDJPY#,H1: This is the last highest PRICE:146.34
+0	16:35:23.968	main-script USDJPY#,H1: 76.3498- is not a new RSI high...
+0	16:35:23.968	main-script USDJPY#,H1: This is the last highest PRICE:146.419
+0	16:35:23.968	main-script USDJPY#,H1: 1
+0	16:35:23.968	main-script USDJPY#,H1: uninit reason 0
+0	16:35:23.970	Script main-script USDJPY#,H1: removed
+0	16:37:21.964	Script main-script USDJPY#,H1: loaded successfully
+0	16:37:21.978	main-script USDJPY#,H1: initialized
+0	16:37:21.978	main-script USDJPY#,H1: This is the last highest RSI:69.2794
+0	16:37:21.978	main-script USDJPY#,H1: This is the last highest PRICE:144.753
+0	16:37:21.978	main-script USDJPY#,H1: 58.3087- is not a new RSI high...
+0	16:37:21.978	main-script USDJPY#,H1: 144.6- is not a new PRICE high
+0	16:37:21.978	main-script USDJPY#,H1: 64.0374- is not a new RSI high...
+0	16:37:21.978	main-script USDJPY#,H1: This is the last highest PRICE:144.79
+0	16:37:21.978	main-script USDJPY#,H1: This is the last highest RSI:58.1711
+0	16:37:21.978	main-script USDJPY#,H1: This is the last highest PRICE:144.943
+0	16:37:21.979	main-script USDJPY#,H1: This is the last highest RSI:77.8224
+0	16:37:21.979	main-script USDJPY#,H1: This is the last highest PRICE:145.528
+0	16:37:21.979	main-script USDJPY#,H1: 69.1621- is not a new RSI high...
+0	16:37:21.979	main-script USDJPY#,H1: 145.499- is not a new PRICE high
+0	16:37:21.979	main-script USDJPY#,H1: 68.8162- is not a new RSI high...
+0	16:37:21.979	main-script USDJPY#,H1: This is the last highest PRICE:145.542
+0	16:37:21.979	main-script USDJPY#,H1: This is the last lowest RSI39.2718
+0	16:37:21.979	main-script USDJPY#,H1: This is the last lowest PRICE:145.132
+0	16:37:21.979	main-script USDJPY#,H1: This is the last highest RSI:55.0991
+0	16:37:21.979	main-script USDJPY#,H1: This is the last highest PRICE:145.557
+0	16:37:21.979	main-script USDJPY#,H1: This is the last highest RSI:57.851
+0	16:37:21.979	main-script USDJPY#,H1: This is the last highest PRICE:145.659
+0	16:37:21.979	main-script USDJPY#,H1: 54.2185- is not a new RSI high...
+0	16:37:21.979	main-script USDJPY#,H1: 145.565- is not a new PRICE high
+0	16:37:21.979	main-script USDJPY#,H1: 55.9413- is not a new RSI high...
+0	16:37:21.979	main-script USDJPY#,H1: 145.616- is not a new PRICE high
+0	16:37:21.979	main-script USDJPY#,H1: This is the last lowest RSI42.7646
+0	16:37:21.979	main-script USDJPY#,H1: This is the last lowest PRICE:145.345
+0	16:37:21.979	main-script USDJPY#,H1: This is the last highest RSI:66.5001
+0	16:37:21.979	main-script USDJPY#,H1: This is the last highest PRICE:145.861
+0	16:37:21.979	main-script USDJPY#,H1: This is the last highest RSI:78.2968
+0	16:37:21.979	main-script USDJPY#,H1: This is the last highest PRICE:146.34
+0	16:37:21.979	main-script USDJPY#,H1: 76.3498- is not a new RSI high...
+0	16:37:21.979	main-script USDJPY#,H1: This is the last highest PRICE:146.419
+0	16:37:21.979	main-script USDJPY#,H1: 1
+0	16:37:21.979	main-script USDJPY#,H1: uninit reason 0
+0	16:37:21.980	Script main-script USDJPY#,H1: removed
+0	16:47:25.503	Script main-script USDJPY#,H1: loaded successfully
+0	16:47:25.529	main-script USDJPY#,H1: initialized
+0	16:47:25.529	main-script USDJPY#,H1: This is the last highest RSI:69.2794
+0	16:47:25.529	main-script USDJPY#,H1: This is the last highest PRICE:144.753
+0	16:47:25.529	main-script USDJPY#,H1: 58.3087- is not a new RSI high...
+0	16:47:25.529	main-script USDJPY#,H1: 144.6- is not a new PRICE high
+0	16:47:25.529	main-script USDJPY#,H1: 64.0374- is not a new RSI high...
+0	16:47:25.529	main-script USDJPY#,H1: This is the last highest PRICE:144.79
+0	16:47:25.529	main-script USDJPY#,H1: This is the last highest RSI:58.1711
+0	16:47:25.529	main-script USDJPY#,H1: This is the last highest PRICE:144.943
+0	16:47:25.529	main-script USDJPY#,H1: This is the last highest RSI:77.8224
+0	16:47:25.529	main-script USDJPY#,H1: This is the last highest PRICE:145.528
+0	16:47:25.529	main-script USDJPY#,H1: 69.1621- is not a new RSI high...
+0	16:47:25.529	main-script USDJPY#,H1: 145.499- is not a new PRICE high
+0	16:47:25.529	main-script USDJPY#,H1: 68.8162- is not a new RSI high...
+0	16:47:25.529	main-script USDJPY#,H1: This is the last highest PRICE:145.542
+0	16:47:25.529	main-script USDJPY#,H1: This is the last lowest RSI39.2718
+0	16:47:25.529	main-script USDJPY#,H1: This is the last lowest PRICE:145.132
+0	16:47:25.529	main-script USDJPY#,H1: This is the last highest RSI:55.0991
+0	16:47:25.529	main-script USDJPY#,H1: This is the last highest PRICE:145.557
+0	16:47:25.529	main-script USDJPY#,H1: This is the last highest RSI:57.851
+0	16:47:25.529	main-script USDJPY#,H1: This is the last highest PRICE:145.659
+0	16:47:25.529	main-script USDJPY#,H1: 54.2185- is not a new RSI high...
+0	16:47:25.529	main-script USDJPY#,H1: 145.565- is not a new PRICE high
+0	16:47:25.529	main-script USDJPY#,H1: 55.9413- is not a new RSI high...
+0	16:47:25.529	main-script USDJPY#,H1: 145.616- is not a new PRICE high
+0	16:47:25.529	main-script USDJPY#,H1: This is the last lowest RSI42.7646
+0	16:47:25.529	main-script USDJPY#,H1: This is the last lowest PRICE:145.345
+0	16:47:25.529	main-script USDJPY#,H1: This is the last highest RSI:66.5001
+0	16:47:25.529	main-script USDJPY#,H1: This is the last highest PRICE:145.861
+0	16:47:25.529	main-script USDJPY#,H1: This is the last highest RSI:78.2968
+0	16:47:25.529	main-script USDJPY#,H1: This is the last highest PRICE:146.34
+0	16:47:25.529	main-script USDJPY#,H1: 76.3498- is not a new RSI high...
+0	16:47:25.529	main-script USDJPY#,H1: This is the last highest PRICE:146.419
+0	16:47:25.529	main-script USDJPY#,H1: 146.356
+0	16:47:25.529	main-script USDJPY#,H1: 1
+0	16:47:25.529	main-script USDJPY#,H1: uninit reason 0
+0	16:47:25.531	Script main-script USDJPY#,H1: removed
+0	17:01:23.813	Script main-script USDJPY#,H1: loaded successfully
+0	17:01:23.831	main-script USDJPY#,H1: initialized
+0	17:01:23.831	main-script USDJPY#,H1: This is the last highest RSI:69.2794
+0	17:01:23.831	main-script USDJPY#,H1: This is the last highest PRICE:144.753
+0	17:01:23.831	main-script USDJPY#,H1: 58.3087- is not a new RSI high...
+0	17:01:23.831	main-script USDJPY#,H1: 144.6- is not a new PRICE high
+0	17:01:23.831	main-script USDJPY#,H1: 64.0374- is not a new RSI high...
+0	17:01:23.831	main-script USDJPY#,H1: This is the last highest PRICE:144.79
+0	17:01:23.831	main-script USDJPY#,H1: This is the last highest RSI:58.1711
+0	17:01:23.831	main-script USDJPY#,H1: This is the last highest PRICE:144.943
+0	17:01:23.831	main-script USDJPY#,H1: This is the last highest RSI:77.8224
+0	17:01:23.831	main-script USDJPY#,H1: This is the last highest PRICE:145.528
+0	17:01:23.831	main-script USDJPY#,H1: 69.1621- is not a new RSI high...
+0	17:01:23.831	main-script USDJPY#,H1: 145.499- is not a new PRICE high
+0	17:01:23.831	main-script USDJPY#,H1: 68.8162- is not a new RSI high...
+0	17:01:23.831	main-script USDJPY#,H1: This is the last highest PRICE:145.542
+0	17:01:23.831	main-script USDJPY#,H1: This is the last lowest RSI39.2718
+0	17:01:23.831	main-script USDJPY#,H1: This is the last lowest PRICE:145.132
+0	17:01:23.831	main-script USDJPY#,H1: This is the last highest RSI:55.0991
+0	17:01:23.831	main-script USDJPY#,H1: This is the last highest PRICE:145.557
+0	17:01:23.831	main-script USDJPY#,H1: This is the last highest RSI:57.851
+0	17:01:23.831	main-script USDJPY#,H1: This is the last highest PRICE:145.659
+0	17:01:23.831	main-script USDJPY#,H1: 54.2185- is not a new RSI high...
+0	17:01:23.831	main-script USDJPY#,H1: 145.565- is not a new PRICE high
+0	17:01:23.831	main-script USDJPY#,H1: 55.9413- is not a new RSI high...
+0	17:01:23.831	main-script USDJPY#,H1: 145.616- is not a new PRICE high
+0	17:01:23.831	main-script USDJPY#,H1: This is the last lowest RSI42.7646
+0	17:01:23.831	main-script USDJPY#,H1: This is the last lowest PRICE:145.345
+0	17:01:23.831	main-script USDJPY#,H1: This is the last highest RSI:66.5001
+0	17:01:23.831	main-script USDJPY#,H1: This is the last highest PRICE:145.861
+0	17:01:23.831	main-script USDJPY#,H1: This is the last highest RSI:78.2968
+0	17:01:23.831	main-script USDJPY#,H1: This is the last highest PRICE:146.34
+0	17:01:23.831	main-script USDJPY#,H1: 76.3498- is not a new RSI high...
+0	17:01:23.831	main-script USDJPY#,H1: This is the last highest PRICE:146.419
+0	17:01:23.834	main-script USDJPY#,H1: 12
+0	17:01:23.834	main-script USDJPY#,H1: 1
+0	17:01:23.834	main-script USDJPY#,H1: uninit reason 0
+0	17:01:23.836	Script main-script USDJPY#,H1: removed
+0	17:02:06.820	Script main-script USDJPY#,H1: loaded successfully
+0	17:02:06.834	main-script USDJPY#,H1: initialized
+0	17:02:06.834	main-script USDJPY#,H1: Alert: 12
+0	17:02:06.835	main-script USDJPY#,H1: This is the last highest RSI:69.2794
+0	17:02:06.835	main-script USDJPY#,H1: This is the last highest PRICE:144.753
+0	17:02:06.835	main-script USDJPY#,H1: 58.3087- is not a new RSI high...
+0	17:02:06.835	main-script USDJPY#,H1: 144.6- is not a new PRICE high
+0	17:02:06.835	main-script USDJPY#,H1: 64.0374- is not a new RSI high...
+0	17:02:06.835	main-script USDJPY#,H1: This is the last highest PRICE:144.79
+0	17:02:06.835	main-script USDJPY#,H1: This is the last highest RSI:58.1711
+0	17:02:06.843	main-script USDJPY#,H1: This is the last highest PRICE:144.943
+0	17:02:06.843	main-script USDJPY#,H1: This is the last highest RSI:77.8224
+0	17:02:06.843	main-script USDJPY#,H1: This is the last highest PRICE:145.528
+0	17:02:06.843	main-script USDJPY#,H1: 69.1621- is not a new RSI high...
+0	17:02:06.843	main-script USDJPY#,H1: 145.499- is not a new PRICE high
+0	17:02:06.843	main-script USDJPY#,H1: 68.8162- is not a new RSI high...
+0	17:02:06.843	main-script USDJPY#,H1: This is the last highest PRICE:145.542
+0	17:02:06.843	main-script USDJPY#,H1: This is the last lowest RSI39.2718
+0	17:02:06.843	main-script USDJPY#,H1: This is the last lowest PRICE:145.132
+0	17:02:06.843	main-script USDJPY#,H1: This is the last highest RSI:55.0991
+0	17:02:06.843	main-script USDJPY#,H1: This is the last highest PRICE:145.557
+0	17:02:06.843	main-script USDJPY#,H1: This is the last highest RSI:57.851
+0	17:02:06.843	main-script USDJPY#,H1: This is the last highest PRICE:145.659
+0	17:02:06.843	main-script USDJPY#,H1: 54.2185- is not a new RSI high...
+0	17:02:06.843	main-script USDJPY#,H1: 145.565- is not a new PRICE high
+0	17:02:06.843	main-script USDJPY#,H1: 55.9413- is not a new RSI high...
+0	17:02:06.843	main-script USDJPY#,H1: 145.616- is not a new PRICE high
+0	17:02:06.843	main-script USDJPY#,H1: This is the last lowest RSI42.7646
+0	17:02:06.843	main-script USDJPY#,H1: This is the last lowest PRICE:145.345
+0	17:02:06.843	main-script USDJPY#,H1: This is the last highest RSI:66.5001
+0	17:02:06.843	main-script USDJPY#,H1: This is the last highest PRICE:145.861
+0	17:02:06.843	main-script USDJPY#,H1: This is the last highest RSI:78.2968
+0	17:02:06.843	main-script USDJPY#,H1: This is the last highest PRICE:146.34
+0	17:02:06.843	main-script USDJPY#,H1: 76.3498- is not a new RSI high...
+0	17:02:06.843	main-script USDJPY#,H1: This is the last highest PRICE:146.419
+0	17:02:06.843	main-script USDJPY#,H1: 1
+0	17:02:06.843	main-script USDJPY#,H1: uninit reason 0
+0	17:02:06.846	Script main-script USDJPY#,H1: removed
+0	17:04:09.883	Script main-script USDJPY#,H1: loaded successfully
+0	17:04:09.899	main-script USDJPY#,H1: initialized
+0	17:04:09.900	main-script USDJPY#,H1: Alert: 12
+0	17:04:09.900	main-script USDJPY#,H1: Alert: 4
+0	17:04:09.900	main-script USDJPY#,H1: This is the last highest RSI:69.2794
+0	17:04:09.900	main-script USDJPY#,H1: This is the last highest PRICE:144.753
+0	17:04:09.900	main-script USDJPY#,H1: 58.3087- is not a new RSI high...
+0	17:04:09.900	main-script USDJPY#,H1: 144.6- is not a new PRICE high
+0	17:04:09.900	main-script USDJPY#,H1: 64.0374- is not a new RSI high...
+0	17:04:09.900	main-script USDJPY#,H1: This is the last highest PRICE:144.79
+0	17:04:09.900	main-script USDJPY#,H1: This is the last highest RSI:58.1711
+0	17:04:09.900	main-script USDJPY#,H1: This is the last highest PRICE:144.943
+0	17:04:09.900	main-script USDJPY#,H1: This is the last highest RSI:77.8224
+0	17:04:09.900	main-script USDJPY#,H1: This is the last highest PRICE:145.528
+0	17:04:09.900	main-script USDJPY#,H1: 69.1621- is not a new RSI high...
+0	17:04:09.900	main-script USDJPY#,H1: 145.499- is not a new PRICE high
+0	17:04:09.900	main-script USDJPY#,H1: 68.8162- is not a new RSI high...
+0	17:04:09.900	main-script USDJPY#,H1: This is the last highest PRICE:145.542
+0	17:04:09.900	main-script USDJPY#,H1: This is the last lowest RSI39.2718
+0	17:04:09.900	main-script USDJPY#,H1: This is the last lowest PRICE:145.132
+0	17:04:09.900	main-script USDJPY#,H1: This is the last highest RSI:55.0991
+0	17:04:09.900	main-script USDJPY#,H1: This is the last highest PRICE:145.557
+0	17:04:09.900	main-script USDJPY#,H1: This is the last highest RSI:57.851
+0	17:04:09.900	main-script USDJPY#,H1: This is the last highest PRICE:145.659
+0	17:04:09.900	main-script USDJPY#,H1: 54.2185- is not a new RSI high...
+0	17:04:09.900	main-script USDJPY#,H1: 145.565- is not a new PRICE high
+0	17:04:09.900	main-script USDJPY#,H1: 55.9413- is not a new RSI high...
+0	17:04:09.900	main-script USDJPY#,H1: 145.616- is not a new PRICE high
+0	17:04:09.901	main-script USDJPY#,H1: This is the last lowest RSI42.7646
+0	17:04:09.901	main-script USDJPY#,H1: This is the last lowest PRICE:145.345
+0	17:04:09.901	main-script USDJPY#,H1: This is the last highest RSI:66.5001
+0	17:04:09.901	main-script USDJPY#,H1: This is the last highest PRICE:145.861
+0	17:04:09.901	main-script USDJPY#,H1: This is the last highest RSI:78.2968
+0	17:04:09.901	main-script USDJPY#,H1: This is the last highest PRICE:146.34
+0	17:04:09.901	main-script USDJPY#,H1: 76.3498- is not a new RSI high...
+0	17:04:09.901	main-script USDJPY#,H1: This is the last highest PRICE:146.419
+0	17:04:09.901	main-script USDJPY#,H1: 1
+0	17:04:09.901	main-script USDJPY#,H1: uninit reason 0
+0	17:04:09.903	Script main-script USDJPY#,H1: removed
+0	17:04:56.764	Script main-script USDJPY#,H1: loaded successfully
+0	17:04:56.777	main-script USDJPY#,H1: initialized
+0	17:04:56.777	main-script USDJPY#,H1: Alert: 4
+0	17:04:56.777	main-script USDJPY#,H1: This is the last highest RSI:69.2794
+0	17:04:56.777	main-script USDJPY#,H1: This is the last highest PRICE:144.753
+0	17:04:56.777	main-script USDJPY#,H1: 58.3087- is not a new RSI high...
+0	17:04:56.777	main-script USDJPY#,H1: 144.6- is not a new PRICE high
+0	17:04:56.777	main-script USDJPY#,H1: 64.0374- is not a new RSI high...
+0	17:04:56.777	main-script USDJPY#,H1: This is the last highest PRICE:144.79
+0	17:04:56.777	main-script USDJPY#,H1: This is the last highest RSI:58.1711
+0	17:04:56.777	main-script USDJPY#,H1: This is the last highest PRICE:144.943
+0	17:04:56.777	main-script USDJPY#,H1: This is the last highest RSI:77.8224
+0	17:04:56.777	main-script USDJPY#,H1: This is the last highest PRICE:145.528
+0	17:04:56.777	main-script USDJPY#,H1: 69.1621- is not a new RSI high...
+0	17:04:56.777	main-script USDJPY#,H1: 145.499- is not a new PRICE high
+0	17:04:56.777	main-script USDJPY#,H1: 68.8162- is not a new RSI high...
+0	17:04:56.777	main-script USDJPY#,H1: This is the last highest PRICE:145.542
+0	17:04:56.777	main-script USDJPY#,H1: This is the last lowest RSI39.2718
+0	17:04:56.777	main-script USDJPY#,H1: This is the last lowest PRICE:145.132
+0	17:04:56.777	main-script USDJPY#,H1: This is the last highest RSI:55.0991
+0	17:04:56.777	main-script USDJPY#,H1: This is the last highest PRICE:145.557
+0	17:04:56.777	main-script USDJPY#,H1: This is the last highest RSI:57.851
+0	17:04:56.777	main-script USDJPY#,H1: This is the last highest PRICE:145.659
+0	17:04:56.777	main-script USDJPY#,H1: 54.2185- is not a new RSI high...
+0	17:04:56.777	main-script USDJPY#,H1: 145.565- is not a new PRICE high
+0	17:04:56.777	main-script USDJPY#,H1: 55.9413- is not a new RSI high...
+0	17:04:56.777	main-script USDJPY#,H1: 145.616- is not a new PRICE high
+0	17:04:56.777	main-script USDJPY#,H1: This is the last lowest RSI42.7646
+0	17:04:56.777	main-script USDJPY#,H1: This is the last lowest PRICE:145.345
+0	17:04:56.777	main-script USDJPY#,H1: This is the last highest RSI:66.5001
+0	17:04:56.777	main-script USDJPY#,H1: This is the last highest PRICE:145.861
+0	17:04:56.777	main-script USDJPY#,H1: This is the last highest RSI:78.2968
+0	17:04:56.777	main-script USDJPY#,H1: This is the last highest PRICE:146.34
+0	17:04:56.777	main-script USDJPY#,H1: 76.3498- is not a new RSI high...
+0	17:04:56.777	main-script USDJPY#,H1: This is the last highest PRICE:146.419
+0	17:04:56.777	main-script USDJPY#,H1: 1
+0	17:04:56.777	main-script USDJPY#,H1: uninit reason 0
+0	17:04:56.780	Script main-script USDJPY#,H1: removed
+0	17:05:34.853	Script main-script USDJPY#,H1: loaded successfully
+0	17:05:34.867	main-script USDJPY#,H1: initialized
+0	17:05:34.868	main-script USDJPY#,H1: Alert: 12
+0	17:05:34.868	main-script USDJPY#,H1: Alert: 5
+0	17:05:34.868	main-script USDJPY#,H1: This is the last highest RSI:69.2794
+0	17:05:34.868	main-script USDJPY#,H1: This is the last highest PRICE:144.753
+0	17:05:34.868	main-script USDJPY#,H1: 58.3087- is not a new RSI high...
+0	17:05:34.868	main-script USDJPY#,H1: 144.6- is not a new PRICE high
+0	17:05:34.868	main-script USDJPY#,H1: 64.0374- is not a new RSI high...
+0	17:05:34.868	main-script USDJPY#,H1: This is the last highest PRICE:144.79
+0	17:05:34.868	main-script USDJPY#,H1: This is the last highest RSI:58.1711
+0	17:05:34.868	main-script USDJPY#,H1: This is the last highest PRICE:144.943
+0	17:05:34.868	main-script USDJPY#,H1: This is the last highest RSI:77.8224
+0	17:05:34.868	main-script USDJPY#,H1: This is the last highest PRICE:145.528
+0	17:05:34.868	main-script USDJPY#,H1: 69.1621- is not a new RSI high...
+0	17:05:34.868	main-script USDJPY#,H1: 145.499- is not a new PRICE high
+0	17:05:34.868	main-script USDJPY#,H1: 68.8162- is not a new RSI high...
+0	17:05:34.868	main-script USDJPY#,H1: This is the last highest PRICE:145.542
+0	17:05:34.868	main-script USDJPY#,H1: This is the last lowest RSI39.2718
+0	17:05:34.868	main-script USDJPY#,H1: This is the last lowest PRICE:145.132
+0	17:05:34.868	main-script USDJPY#,H1: This is the last highest RSI:55.0991
+0	17:05:34.868	main-script USDJPY#,H1: This is the last highest PRICE:145.557
+0	17:05:34.868	main-script USDJPY#,H1: This is the last highest RSI:57.851
+0	17:05:34.868	main-script USDJPY#,H1: This is the last highest PRICE:145.659
+0	17:05:34.868	main-script USDJPY#,H1: 54.2185- is not a new RSI high...
+0	17:05:34.868	main-script USDJPY#,H1: 145.565- is not a new PRICE high
+0	17:05:34.868	main-script USDJPY#,H1: 55.9413- is not a new RSI high...
+0	17:05:34.868	main-script USDJPY#,H1: 145.616- is not a new PRICE high
+0	17:05:34.868	main-script USDJPY#,H1: This is the last lowest RSI42.7646
+0	17:05:34.868	main-script USDJPY#,H1: This is the last lowest PRICE:145.345
+0	17:05:34.868	main-script USDJPY#,H1: This is the last highest RSI:66.5001
+0	17:05:34.868	main-script USDJPY#,H1: This is the last highest PRICE:145.861
+0	17:05:34.868	main-script USDJPY#,H1: This is the last highest RSI:78.2968
+0	17:05:34.868	main-script USDJPY#,H1: This is the last highest PRICE:146.34
+0	17:05:34.868	main-script USDJPY#,H1: 76.3498- is not a new RSI high...
+0	17:05:34.868	main-script USDJPY#,H1: This is the last highest PRICE:146.419
+0	17:05:34.868	main-script USDJPY#,H1: 1
+0	17:05:34.868	main-script USDJPY#,H1: uninit reason 0
+0	17:05:34.869	Script main-script USDJPY#,H1: removed
+0	17:06:33.313	Script main-script US100Cash,H1: loaded successfully
+0	17:06:33.328	main-script US100Cash,H1: initialized
+0	17:06:33.329	main-script US100Cash,H1: Alert: 1692273993
+0	17:06:33.329	main-script US100Cash,H1: This is the last lowest RSI44.452
+0	17:06:33.329	main-script US100Cash,H1: This is the last lowest PRICE:15133.78
+0	17:06:33.329	main-script US100Cash,H1: This is the last lowest RSI39.3216
+0	17:06:33.329	main-script US100Cash,H1: This is the last lowest PRICE:15088.33
+0	17:06:33.329	main-script US100Cash,H1: This is the last lowest RSI31.2426
+0	17:06:33.329	main-script US100Cash,H1: This is the last lowest PRICE:14999.83
+0	17:06:33.329	main-script US100Cash,H1: 33.4397- is not a new RSI low
+0	17:06:33.329	main-script US100Cash,H1: This is the last lowest PRICE:14994.95
+0	17:06:33.329	main-script US100Cash,H1: This is the last highest RSI:60.1531
+0	17:06:33.329	main-script US100Cash,H1: This is the last highest PRICE:15135.58
+0	17:06:33.329	main-script US100Cash,H1: 53.5184- is not a new RSI high...
+0	17:06:33.329	main-script US100Cash,H1: 15089.83- is not a new PRICE high
+0	17:06:33.329	main-script US100Cash,H1: This is the last lowest RSI44.1489
+0	17:06:33.329	main-script US100Cash,H1: This is the last lowest PRICE:15018.45
+0	17:06:33.329	main-script US100Cash,H1: This is the last highest RSI:60.7004
+0	17:06:33.329	main-script US100Cash,H1: This is the last highest PRICE:15165.33
+0	17:06:33.329	main-script US100Cash,H1: 59.1293- is not a new RSI high...
+0	17:06:33.329	main-script US100Cash,H1: 15155.28- is not a new PRICE high
+0	17:06:33.329	main-script US100Cash,H1: This is the last highest RSI:67.23
+0	17:06:33.329	main-script US100Cash,H1: This is the last highest PRICE:15245.85
+0	17:06:33.329	main-script US100Cash,H1: 66.1743- is not a new RSI high...
+0	17:06:33.329	main-script US100Cash,H1: This is the last highest PRICE:15249.01
+0	17:06:33.329	main-script US100Cash,H1: This is the last lowest RSI45.7778
+0	17:06:33.329	main-script US100Cash,H1: This is the last lowest PRICE:15140.34
+0	17:06:33.329	main-script US100Cash,H1: This is the last lowest RSI41.1632
+0	17:06:33.329	main-script US100Cash,H1: This is the last lowest PRICE:15102.95
+0	17:06:33.329	main-script US100Cash,H1: This is the last lowest RSI37.5565
+0	17:06:33.329	main-script US100Cash,H1: This is the last lowest PRICE:15071.2
+0	17:06:33.329	main-script US100Cash,H1: 42.7033- is not a new RSI low
+0	17:06:33.329	main-script US100Cash,H1: 15091.29- is not a new PRICE Low
+0	17:06:33.329	main-script US100Cash,H1: This is the last lowest RSI37.1079
+0	17:06:33.329	main-script US100Cash,H1: This is the last lowest PRICE:15042.73
+0	17:06:33.329	main-script US100Cash,H1: 37.6088- is not a new RSI low
+0	17:06:33.329	main-script US100Cash,H1: This is the last lowest PRICE:15041.07
+0	17:06:33.329	main-script US100Cash,H1: 1
+0	17:06:33.329	main-script US100Cash,H1: uninit reason 0
+0	17:06:33.331	Script main-script US100Cash,H1: removed
+0	17:07:17.386	Script main-script US100Cash,H1: loaded successfully
+0	17:07:17.404	main-script US100Cash,H1: initialized
+0	17:07:17.404	main-script US100Cash,H1: Alert: 1692274037
+0	17:07:17.404	main-script US100Cash,H1: This is the last lowest RSI44.452
+0	17:07:17.404	main-script US100Cash,H1: This is the last lowest PRICE:15133.78
+0	17:07:17.404	main-script US100Cash,H1: This is the last lowest RSI39.3216
+0	17:07:17.404	main-script US100Cash,H1: This is the last lowest PRICE:15088.33
+0	17:07:17.404	main-script US100Cash,H1: This is the last lowest RSI31.2426
+0	17:07:17.404	main-script US100Cash,H1: This is the last lowest PRICE:14999.83
+0	17:07:17.404	main-script US100Cash,H1: 33.4397- is not a new RSI low
+0	17:07:17.404	main-script US100Cash,H1: This is the last lowest PRICE:14994.95
+0	17:07:17.404	main-script US100Cash,H1: This is the last highest RSI:60.1531
+0	17:07:17.404	main-script US100Cash,H1: This is the last highest PRICE:15135.58
+0	17:07:17.404	main-script US100Cash,H1: 53.5184- is not a new RSI high...
+0	17:07:17.404	main-script US100Cash,H1: 15089.83- is not a new PRICE high
+0	17:07:17.404	main-script US100Cash,H1: This is the last lowest RSI44.1489
+0	17:07:17.404	main-script US100Cash,H1: This is the last lowest PRICE:15018.45
+0	17:07:17.404	main-script US100Cash,H1: This is the last highest RSI:60.7004
+0	17:07:17.404	main-script US100Cash,H1: This is the last highest PRICE:15165.33
+0	17:07:17.404	main-script US100Cash,H1: 59.1293- is not a new RSI high...
+0	17:07:17.404	main-script US100Cash,H1: 15155.28- is not a new PRICE high
+0	17:07:17.404	main-script US100Cash,H1: This is the last highest RSI:67.23
+0	17:07:17.404	main-script US100Cash,H1: This is the last highest PRICE:15245.85
+0	17:07:17.404	main-script US100Cash,H1: 66.1743- is not a new RSI high...
+0	17:07:17.404	main-script US100Cash,H1: This is the last highest PRICE:15249.01
+0	17:07:17.404	main-script US100Cash,H1: This is the last lowest RSI45.7778
+0	17:07:17.404	main-script US100Cash,H1: This is the last lowest PRICE:15140.34
+0	17:07:17.404	main-script US100Cash,H1: This is the last lowest RSI41.1632
+0	17:07:17.404	main-script US100Cash,H1: This is the last lowest PRICE:15102.95
+0	17:07:17.404	main-script US100Cash,H1: This is the last lowest RSI37.5565
+0	17:07:17.404	main-script US100Cash,H1: This is the last lowest PRICE:15071.2
+0	17:07:17.404	main-script US100Cash,H1: 42.7033- is not a new RSI low
+0	17:07:17.404	main-script US100Cash,H1: 15091.29- is not a new PRICE Low
+0	17:07:17.404	main-script US100Cash,H1: This is the last lowest RSI37.1079
+0	17:07:17.404	main-script US100Cash,H1: This is the last lowest PRICE:15042.73
+0	17:07:17.404	main-script US100Cash,H1: 37.6088- is not a new RSI low
+0	17:07:17.404	main-script US100Cash,H1: This is the last lowest PRICE:15041.07
+0	17:07:17.404	main-script US100Cash,H1: 1
+0	17:07:17.412	main-script US100Cash,H1: uninit reason 0
+0	17:07:17.416	Script main-script US100Cash,H1: removed
+0	17:09:24.017	Compiling 'main-script'
+0	17:09:33.745	Script timeTest US100Cash,H1: loaded successfully
+0	17:09:33.755	timeTest US100Cash,H1: initialized
+0	17:09:33.755	timeTest US100Cash,H1: Year: 2023
+0	17:09:33.755	timeTest US100Cash,H1: Month: 8
+0	17:09:33.755	timeTest US100Cash,H1: Day: 17
+0	17:09:33.755	timeTest US100Cash,H1: Hour: 12
+0	17:09:33.755	timeTest US100Cash,H1: Minute: 9
+0	17:09:33.755	timeTest US100Cash,H1: Second: 32
+0	17:09:33.755	timeTest US100Cash,H1: uninit reason 0
+0	17:09:33.757	Script timeTest US100Cash,H1: removed
+0	17:12:22.642	Compiling 'main-script'
+0	17:12:30.515	Script timeTest US100Cash,H1: loaded successfully
+0	17:12:30.526	timeTest US100Cash,H1: initialized
+0	17:12:30.526	timeTest US100Cash,H1: Year: 2023
+0	17:12:30.526	timeTest US100Cash,H1: Month: 8
+0	17:12:30.526	timeTest US100Cash,H1: Day: 17
+0	17:12:30.526	timeTest US100Cash,H1: Hour: 12
+0	17:12:30.526	timeTest US100Cash,H1: Minute: 12
+0	17:12:30.526	timeTest US100Cash,H1: Second: 30
+0	17:12:30.526	timeTest US100Cash,H1: uninit reason 0
+0	17:12:30.528	Script timeTest US100Cash,H1: removed
+0	17:12:54.434	Script main-script US100Cash,H1: loaded successfully
+0	17:12:54.449	main-script US100Cash,H1: initialized
+0	17:12:54.449	main-script US100Cash,H1: Alert: 1212
+0	17:12:54.449	main-script US100Cash,H1: This is the last lowest RSI44.452
+0	17:12:54.449	main-script US100Cash,H1: This is the last lowest PRICE:15133.78
+0	17:12:54.449	main-script US100Cash,H1: This is the last lowest RSI39.3216
+0	17:12:54.449	main-script US100Cash,H1: This is the last lowest PRICE:15088.33
+0	17:12:54.449	main-script US100Cash,H1: This is the last lowest RSI31.2426
+0	17:12:54.449	main-script US100Cash,H1: This is the last lowest PRICE:14999.83
+0	17:12:54.449	main-script US100Cash,H1: 33.4397- is not a new RSI low
+0	17:12:54.449	main-script US100Cash,H1: This is the last lowest PRICE:14994.95
+0	17:12:54.449	main-script US100Cash,H1: This is the last highest RSI:60.1531
+0	17:12:54.449	main-script US100Cash,H1: This is the last highest PRICE:15135.58
+0	17:12:54.449	main-script US100Cash,H1: 53.5184- is not a new RSI high...
+0	17:12:54.449	main-script US100Cash,H1: 15089.83- is not a new PRICE high
+0	17:12:54.449	main-script US100Cash,H1: This is the last lowest RSI44.1489
+0	17:12:54.449	main-script US100Cash,H1: This is the last lowest PRICE:15018.45
+0	17:12:54.449	main-script US100Cash,H1: This is the last highest RSI:60.7004
+0	17:12:54.449	main-script US100Cash,H1: This is the last highest PRICE:15165.33
+0	17:12:54.449	main-script US100Cash,H1: 59.1293- is not a new RSI high...
+0	17:12:54.449	main-script US100Cash,H1: 15155.28- is not a new PRICE high
+0	17:12:54.449	main-script US100Cash,H1: This is the last highest RSI:67.23
+0	17:12:54.449	main-script US100Cash,H1: This is the last highest PRICE:15245.85
+0	17:12:54.449	main-script US100Cash,H1: 66.1743- is not a new RSI high...
+0	17:12:54.449	main-script US100Cash,H1: This is the last highest PRICE:15249.01
+0	17:12:54.449	main-script US100Cash,H1: This is the last lowest RSI45.7778
+0	17:12:54.449	main-script US100Cash,H1: This is the last lowest PRICE:15140.34
+0	17:12:54.449	main-script US100Cash,H1: This is the last lowest RSI41.1632
+0	17:12:54.449	main-script US100Cash,H1: This is the last lowest PRICE:15102.95
+0	17:12:54.449	main-script US100Cash,H1: This is the last lowest RSI37.5565
+0	17:12:54.449	main-script US100Cash,H1: This is the last lowest PRICE:15071.2
+0	17:12:54.449	main-script US100Cash,H1: 42.7033- is not a new RSI low
+0	17:12:54.449	main-script US100Cash,H1: 15091.29- is not a new PRICE Low
+0	17:12:54.449	main-script US100Cash,H1: This is the last lowest RSI37.1079
+0	17:12:54.449	main-script US100Cash,H1: This is the last lowest PRICE:15042.73
+0	17:12:54.449	main-script US100Cash,H1: 37.6088- is not a new RSI low
+0	17:12:54.450	main-script US100Cash,H1: This is the last lowest PRICE:15041.07
+0	17:12:54.450	main-script US100Cash,H1: 1
+0	17:12:54.450	main-script US100Cash,H1: uninit reason 0
+0	17:12:54.452	Script main-script US100Cash,H1: removed
+0	17:13:00.672	Script main-script US100Cash,H1: loaded successfully
+0	17:13:00.687	main-script US100Cash,H1: initialized
+0	17:13:00.687	main-script US100Cash,H1: Alert: 1213
+0	17:13:00.687	main-script US100Cash,H1: This is the last lowest RSI44.452
+0	17:13:00.687	main-script US100Cash,H1: This is the last lowest PRICE:15133.78
+0	17:13:00.687	main-script US100Cash,H1: This is the last lowest RSI39.3216
+0	17:13:00.687	main-script US100Cash,H1: This is the last lowest PRICE:15088.33
+0	17:13:00.687	main-script US100Cash,H1: This is the last lowest RSI31.2426
+0	17:13:00.687	main-script US100Cash,H1: This is the last lowest PRICE:14999.83
+0	17:13:00.687	main-script US100Cash,H1: 33.4397- is not a new RSI low
+0	17:13:00.687	main-script US100Cash,H1: This is the last lowest PRICE:14994.95
+0	17:13:00.687	main-script US100Cash,H1: This is the last highest RSI:60.1531
+0	17:13:00.687	main-script US100Cash,H1: This is the last highest PRICE:15135.58
+0	17:13:00.687	main-script US100Cash,H1: 53.5184- is not a new RSI high...
+0	17:13:00.687	main-script US100Cash,H1: 15089.83- is not a new PRICE high
+0	17:13:00.687	main-script US100Cash,H1: This is the last lowest RSI44.1489
+0	17:13:00.687	main-script US100Cash,H1: This is the last lowest PRICE:15018.45
+0	17:13:00.687	main-script US100Cash,H1: This is the last highest RSI:60.7004
+0	17:13:00.687	main-script US100Cash,H1: This is the last highest PRICE:15165.33
+0	17:13:00.687	main-script US100Cash,H1: 59.1293- is not a new RSI high...
+0	17:13:00.687	main-script US100Cash,H1: 15155.28- is not a new PRICE high
+0	17:13:00.687	main-script US100Cash,H1: This is the last highest RSI:67.23
+0	17:13:00.687	main-script US100Cash,H1: This is the last highest PRICE:15245.85
+0	17:13:00.687	main-script US100Cash,H1: 66.1743- is not a new RSI high...
+0	17:13:00.687	main-script US100Cash,H1: This is the last highest PRICE:15249.01
+0	17:13:00.687	main-script US100Cash,H1: This is the last lowest RSI45.7778
+0	17:13:00.687	main-script US100Cash,H1: This is the last lowest PRICE:15140.34
+0	17:13:00.687	main-script US100Cash,H1: This is the last lowest RSI41.1632
+0	17:13:00.687	main-script US100Cash,H1: This is the last lowest PRICE:15102.95
+0	17:13:00.687	main-script US100Cash,H1: This is the last lowest RSI37.5565
+0	17:13:00.687	main-script US100Cash,H1: This is the last lowest PRICE:15071.2
+0	17:13:00.687	main-script US100Cash,H1: 42.7033- is not a new RSI low
+0	17:13:00.687	main-script US100Cash,H1: 15091.29- is not a new PRICE Low
+0	17:13:00.687	main-script US100Cash,H1: This is the last lowest RSI37.1079
+0	17:13:00.687	main-script US100Cash,H1: This is the last lowest PRICE:15042.73
+0	17:13:00.687	main-script US100Cash,H1: 37.6088- is not a new RSI low
+0	17:13:00.687	main-script US100Cash,H1: This is the last lowest PRICE:15041.07
+0	17:13:00.687	main-script US100Cash,H1: 1
+0	17:13:00.687	main-script US100Cash,H1: uninit reason 0
+0	17:13:00.692	Script main-script US100Cash,H1: removed
