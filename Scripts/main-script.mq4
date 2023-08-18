@@ -3,18 +3,24 @@
 double newPriceOpening = iOpen(Symbol(), timeFrame, 1);
 int currentHour = TimeHour(TimeCurrent());
 int currentMinute = TimeMinute(TimeCurrent());
+int currentDay = TimeDay(TimeCurrent());
 
 bool isTradingTime = false;
 
 void OnStart() {
-   //check if there is an unsettled divergence in the past...
+   
+   //run this to see if there is uncleared rsiDivergence....
+   runDivergenceMonitor(); 
 
-   //runDivergenceMonitor(); //run this to see if there is uncleared rsiDivergence....
-   checkTradingTime(); //run this to see if it is tradingtime....
+   //run this to see if it is tradingtime....
+   checkTradingTime();
+   
    //run the sessionLevelsFinder
-
    findSessionResistance();
    findSessionSupport();
+   
+   Print("Resistance is:",sessionResistanceArray[0],"Created on:",resistanceLevelCreationTime);
+   Print("Support is:",sessionSupportArray[0], "Created on:",supportLevelCreationTime);
 
    // Print(isDivergence);
    // Print(isTradingTime);
@@ -35,37 +41,53 @@ void OnStart() {
       */
    }     
 }
-
+// custom functions variables
+   double sessionResistanceArray [];
+   double sessionSupportArray [];
+   double sessionResistance = 0;
+   double sessionSupport = 999999;
+   int resistanceLevelCreationTime;
+   int supportLevelCreationTime;
 // Custom functions
 
 double findSessionResistance(){
    double indexValue;
-   double sessionResistance = 0;
-   if (currentHour == 9){
-      for (int i = 1 ; i <= 7; i++){
+   //This is the level reset condition
+   if (resistanceLevelCreationTime != currentDay){
+      ArrayFree(sessionResistanceArray);
+   }
+
+   if (currentHour == 10){
+      for (int i = 1 ; i <= 5; i++){
          indexValue = iHigh(Symbol(),timeFrame,i);
-         Print("index value",i,"is:",indexValue);
          if(indexValue > sessionResistance){
             sessionResistance = indexValue;
          }
-      } 
+         ArrayResize(sessionResistanceArray,1);
+         ArrayFill(sessionResistanceArray,0,1,sessionResistance);  
+         resistanceLevelCreationTime = currentDay;
+      }  
    }
-   Print("session Resistance is:",sessionResistance);
 } 
 
 double findSessionSupport(){
    double indexValue;
-   double sessionSupport = 999999;
-   if (currentHour == 9){
-      for (int i = 1 ; i <= 7; i++){
+   //This is the level reset condition
+   if (supportLevelCreationTime != currentDay){
+      ArrayFree(sessionSupportArray);
+   }
+
+   if (currentHour == 10){
+      for (int i = 1 ; i <= 5; i++){
          indexValue = iLow(Symbol(),timeFrame,i);
-         Print("index value",i,"is:",indexValue);
          if(indexValue < sessionSupport){
             sessionSupport = indexValue;
          }
+         ArrayResize(sessionSupportArray,1);
+         ArrayFill(sessionSupportArray,0,1,sessionSupport);  
+         supportLevelCreationTime = currentDay;
       } 
    }
-   Print("session Support is:",sessionSupport);
 } 
 
 
