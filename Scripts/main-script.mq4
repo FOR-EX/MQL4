@@ -29,12 +29,12 @@ void OnStart() {
    if(!isDivergence && isTradingTime){
 
       //this is the condition for placing order during bullish conditions
-      /*if(newPriceOpening > sessionResistance && bullishEngulfing && bullishEngulfingBase > highestHighonBullBreak){
+      /*if(newPriceOpening > sessionResistance && isbullishEngulfing && bullishEngulfingBase > highestHighonBullBreak){
          placeBullishOrder();
          }      
       */
       //this is the condition for placing order during bullish conditions
-      /*if(newPriceOpening < sessionSupport && bearishEngulfing && bearishEngulfingHead < lowestLowonBearBreak){
+      /*if(newPriceOpening < sessionSupport && isbearishEngulfing && bearishEngulfingHead < lowestLowonBearBreak){
          placeBearishOrder();
          }
       
@@ -97,6 +97,17 @@ bool checkTradingTime(){
       return isTradingTime = false;
    }
 }
+
+// bool isBullishEngulfing(){
+//    bool lastCandleIsBear;
+//    bool newCandleisBull;
+//    bool newCloseisEngulfer;
+//    if(lastCandleIsBear && newCandleisBull && newCloseisEngulfer){
+//       return true;
+//    } else {
+//       return false;
+//    }
+// }
 
 
 //This is a lotsize calculator

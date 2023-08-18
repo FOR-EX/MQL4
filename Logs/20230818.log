@@ -1,1 +1,606 @@
 0	12:23:49.577	Compiling 'main-script'
+0	12:46:36.686	Script main-script US100Cash,M15: loaded successfully
+0	12:46:36.725	main-script US100Cash,M15: initialized
+0	12:46:36.726	main-script US100Cash,M15: This is the last lowest RSI36.1894
+0	12:46:36.726	main-script US100Cash,M15: This is the last lowest PRICE:14981.2
+0	12:46:36.726	main-script US100Cash,M15: 36.5527- is not a new RSI low
+0	12:46:36.726	main-script US100Cash,M15: 14982.83- is not a new PRICE Low
+0	12:46:36.726	main-script US100Cash,M15: This is the last highest RSI:60.1531
+0	12:46:36.726	main-script US100Cash,M15: This is the last highest PRICE:15135.58
+0	12:46:36.726	main-script US100Cash,M15: 53.5184- is not a new RSI high...
+0	12:46:36.726	main-script US100Cash,M15: 15089.83- is not a new PRICE high
+0	12:46:36.726	main-script US100Cash,M15: This is the last lowest RSI44.1489
+0	12:46:36.726	main-script US100Cash,M15: This is the last lowest PRICE:15018.45
+0	12:46:36.726	main-script US100Cash,M15: This is the last highest RSI:60.7004
+0	12:46:36.726	main-script US100Cash,M15: This is the last highest PRICE:15165.33
+0	12:46:36.726	main-script US100Cash,M15: 59.1293- is not a new RSI high...
+0	12:46:36.726	main-script US100Cash,M15: 15155.28- is not a new PRICE high
+0	12:46:36.726	main-script US100Cash,M15: This is the last highest RSI:67.23
+0	12:46:36.726	main-script US100Cash,M15: This is the last highest PRICE:15245.85
+0	12:46:36.726	main-script US100Cash,M15: 66.1743- is not a new RSI high...
+0	12:46:36.726	main-script US100Cash,M15: This is the last highest PRICE:15249.01
+0	12:46:36.726	main-script US100Cash,M15: This is the last lowest RSI45.7778
+0	12:46:36.726	main-script US100Cash,M15: This is the last lowest PRICE:15140.34
+0	12:46:36.726	main-script US100Cash,M15: This is the last lowest RSI41.1632
+0	12:46:36.726	main-script US100Cash,M15: This is the last lowest PRICE:15102.95
+0	12:46:36.726	main-script US100Cash,M15: This is the last lowest RSI37.5565
+0	12:46:36.726	main-script US100Cash,M15: This is the last lowest PRICE:15071.2
+0	12:46:36.726	main-script US100Cash,M15: 42.7033- is not a new RSI low
+0	12:46:36.726	main-script US100Cash,M15: 15091.29- is not a new PRICE Low
+0	12:46:36.726	main-script US100Cash,M15: This is the last lowest RSI37.1079
+0	12:46:36.726	main-script US100Cash,M15: This is the last lowest PRICE:15042.73
+0	12:46:36.726	main-script US100Cash,M15: 37.6088- is not a new RSI low
+0	12:46:36.726	main-script US100Cash,M15: This is the last lowest PRICE:15041.07
+0	12:46:36.726	main-script US100Cash,M15: This is the last lowest RSI35.1696
+0	12:46:36.726	main-script US100Cash,M15: This is the last lowest PRICE:14830.14
+0	12:46:36.726	main-script US100Cash,M15: This is the last lowest RSI27.2411
+0	12:46:36.726	main-script US100Cash,M15: This is the last lowest PRICE:14681.88
+0	12:46:36.726	main-script US100Cash,M15: 0
+0	12:46:36.726	main-script US100Cash,M15: uninit reason 0
+0	12:46:36.730	Script main-script US100Cash,M15: removed
+0	12:47:50.765	Script main-script US100Cash,M15: loaded successfully
+0	12:47:50.782	main-script US100Cash,M15: initialized
+0	12:47:50.782	main-script US100Cash,M15: This is the last lowest RSI36.1894
+0	12:47:50.782	main-script US100Cash,M15: This is the last lowest PRICE:14981.2
+0	12:47:50.782	main-script US100Cash,M15: 36.5527- is not a new RSI low
+0	12:47:50.782	main-script US100Cash,M15: 14982.83- is not a new PRICE Low
+0	12:47:50.782	main-script US100Cash,M15: This is the last highest RSI:60.1531
+0	12:47:50.782	main-script US100Cash,M15: This is the last highest PRICE:15135.58
+0	12:47:50.782	main-script US100Cash,M15: 53.5184- is not a new RSI high...
+0	12:47:50.782	main-script US100Cash,M15: 15089.83- is not a new PRICE high
+0	12:47:50.782	main-script US100Cash,M15: This is the last lowest RSI44.1489
+0	12:47:50.782	main-script US100Cash,M15: This is the last lowest PRICE:15018.45
+0	12:47:50.782	main-script US100Cash,M15: This is the last highest RSI:60.7004
+0	12:47:50.782	main-script US100Cash,M15: This is the last highest PRICE:15165.33
+0	12:47:50.782	main-script US100Cash,M15: 59.1293- is not a new RSI high...
+0	12:47:50.782	main-script US100Cash,M15: 15155.28- is not a new PRICE high
+0	12:47:50.782	main-script US100Cash,M15: This is the last highest RSI:67.23
+0	12:47:50.782	main-script US100Cash,M15: This is the last highest PRICE:15245.85
+0	12:47:50.782	main-script US100Cash,M15: 66.1743- is not a new RSI high...
+0	12:47:50.782	main-script US100Cash,M15: This is the last highest PRICE:15249.01
+0	12:47:50.782	main-script US100Cash,M15: This is the last lowest RSI45.7778
+0	12:47:50.782	main-script US100Cash,M15: This is the last lowest PRICE:15140.34
+0	12:47:50.782	main-script US100Cash,M15: This is the last lowest RSI41.1632
+0	12:47:50.782	main-script US100Cash,M15: This is the last lowest PRICE:15102.95
+0	12:47:50.782	main-script US100Cash,M15: This is the last lowest RSI37.5565
+0	12:47:50.782	main-script US100Cash,M15: This is the last lowest PRICE:15071.2
+0	12:47:50.782	main-script US100Cash,M15: 42.7033- is not a new RSI low
+0	12:47:50.782	main-script US100Cash,M15: 15091.29- is not a new PRICE Low
+0	12:47:50.782	main-script US100Cash,M15: This is the last lowest RSI37.1079
+0	12:47:50.782	main-script US100Cash,M15: This is the last lowest PRICE:15042.73
+0	12:47:50.782	main-script US100Cash,M15: 37.6088- is not a new RSI low
+0	12:47:50.782	main-script US100Cash,M15: This is the last lowest PRICE:15041.07
+0	12:47:50.782	main-script US100Cash,M15: This is the last lowest RSI35.1696
+0	12:47:50.782	main-script US100Cash,M15: This is the last lowest PRICE:14830.14
+0	12:47:50.782	main-script US100Cash,M15: This is the last lowest RSI27.2411
+0	12:47:50.782	main-script US100Cash,M15: This is the last lowest PRICE:14681.88
+0	12:47:50.782	main-script US100Cash,M15: 0
+0	12:47:50.782	main-script US100Cash,M15: trading time?:0
+0	12:47:50.782	main-script US100Cash,M15: uninit reason 0
+0	12:47:50.784	Script main-script US100Cash,M15: removed
+0	12:55:47.724	Script main-script US100Cash,M15: loaded successfully
+0	12:55:47.742	main-script US100Cash,M15: initialized
+0	12:55:47.742	main-script US100Cash,M15: This is the last lowest RSI36.1894
+0	12:55:47.742	main-script US100Cash,M15: This is the last lowest PRICE:14981.2
+0	12:55:47.742	main-script US100Cash,M15: 36.5527- is not a new RSI low
+0	12:55:47.742	main-script US100Cash,M15: 14982.83- is not a new PRICE Low
+0	12:55:47.742	main-script US100Cash,M15: This is the last highest RSI:60.1531
+0	12:55:47.742	main-script US100Cash,M15: This is the last highest PRICE:15135.58
+0	12:55:47.742	main-script US100Cash,M15: 53.5184- is not a new RSI high...
+0	12:55:47.742	main-script US100Cash,M15: 15089.83- is not a new PRICE high
+0	12:55:47.743	main-script US100Cash,M15: This is the last lowest RSI44.1489
+0	12:55:47.743	main-script US100Cash,M15: This is the last lowest PRICE:15018.45
+0	12:55:47.743	main-script US100Cash,M15: This is the last highest RSI:60.7004
+0	12:55:47.743	main-script US100Cash,M15: This is the last highest PRICE:15165.33
+0	12:55:47.743	main-script US100Cash,M15: 59.1293- is not a new RSI high...
+0	12:55:47.743	main-script US100Cash,M15: 15155.28- is not a new PRICE high
+0	12:55:47.743	main-script US100Cash,M15: This is the last highest RSI:67.23
+0	12:55:47.743	main-script US100Cash,M15: This is the last highest PRICE:15245.85
+0	12:55:47.743	main-script US100Cash,M15: 66.1743- is not a new RSI high...
+0	12:55:47.743	main-script US100Cash,M15: This is the last highest PRICE:15249.01
+0	12:55:47.743	main-script US100Cash,M15: This is the last lowest RSI45.7778
+0	12:55:47.743	main-script US100Cash,M15: This is the last lowest PRICE:15140.34
+0	12:55:47.743	main-script US100Cash,M15: This is the last lowest RSI41.1632
+0	12:55:47.743	main-script US100Cash,M15: This is the last lowest PRICE:15102.95
+0	12:55:47.743	main-script US100Cash,M15: This is the last lowest RSI37.5565
+0	12:55:47.743	main-script US100Cash,M15: This is the last lowest PRICE:15071.2
+0	12:55:47.743	main-script US100Cash,M15: 42.7033- is not a new RSI low
+0	12:55:47.743	main-script US100Cash,M15: 15091.29- is not a new PRICE Low
+0	12:55:47.743	main-script US100Cash,M15: This is the last lowest RSI37.1079
+0	12:55:47.743	main-script US100Cash,M15: This is the last lowest PRICE:15042.73
+0	12:55:47.743	main-script US100Cash,M15: 37.6088- is not a new RSI low
+0	12:55:47.743	main-script US100Cash,M15: This is the last lowest PRICE:15041.07
+0	12:55:47.743	main-script US100Cash,M15: This is the last lowest RSI35.1696
+0	12:55:47.743	main-script US100Cash,M15: This is the last lowest PRICE:14830.14
+0	12:55:47.743	main-script US100Cash,M15: This is the last lowest RSI27.2411
+0	12:55:47.743	main-script US100Cash,M15: This is the last lowest PRICE:14681.88
+0	12:55:47.743	main-script US100Cash,M15: 0
+0	12:55:47.743	main-script US100Cash,M15: 0
+0	12:55:47.743	main-script US100Cash,M15: uninit reason 0
+0	12:55:47.744	Script main-script US100Cash,M15: removed
+0	12:56:16.320	Script main-script US100Cash,M15: loaded successfully
+0	12:56:16.335	main-script US100Cash,M15: initialized
+0	12:56:16.335	main-script US100Cash,M15: This is the last lowest RSI36.1894
+0	12:56:16.335	main-script US100Cash,M15: This is the last lowest PRICE:14981.2
+0	12:56:16.335	main-script US100Cash,M15: 36.5527- is not a new RSI low
+0	12:56:16.335	main-script US100Cash,M15: 14982.83- is not a new PRICE Low
+0	12:56:16.335	main-script US100Cash,M15: This is the last highest RSI:60.1531
+0	12:56:16.335	main-script US100Cash,M15: This is the last highest PRICE:15135.58
+0	12:56:16.335	main-script US100Cash,M15: 53.5184- is not a new RSI high...
+0	12:56:16.335	main-script US100Cash,M15: 15089.83- is not a new PRICE high
+0	12:56:16.335	main-script US100Cash,M15: This is the last lowest RSI44.1489
+0	12:56:16.335	main-script US100Cash,M15: This is the last lowest PRICE:15018.45
+0	12:56:16.335	main-script US100Cash,M15: This is the last highest RSI:60.7004
+0	12:56:16.335	main-script US100Cash,M15: This is the last highest PRICE:15165.33
+0	12:56:16.335	main-script US100Cash,M15: 59.1293- is not a new RSI high...
+0	12:56:16.335	main-script US100Cash,M15: 15155.28- is not a new PRICE high
+0	12:56:16.335	main-script US100Cash,M15: This is the last highest RSI:67.23
+0	12:56:16.335	main-script US100Cash,M15: This is the last highest PRICE:15245.85
+0	12:56:16.335	main-script US100Cash,M15: 66.1743- is not a new RSI high...
+0	12:56:16.335	main-script US100Cash,M15: This is the last highest PRICE:15249.01
+0	12:56:16.335	main-script US100Cash,M15: This is the last lowest RSI45.7778
+0	12:56:16.335	main-script US100Cash,M15: This is the last lowest PRICE:15140.34
+0	12:56:16.335	main-script US100Cash,M15: This is the last lowest RSI41.1632
+0	12:56:16.335	main-script US100Cash,M15: This is the last lowest PRICE:15102.95
+0	12:56:16.335	main-script US100Cash,M15: This is the last lowest RSI37.5565
+0	12:56:16.335	main-script US100Cash,M15: This is the last lowest PRICE:15071.2
+0	12:56:16.335	main-script US100Cash,M15: 42.7033- is not a new RSI low
+0	12:56:16.335	main-script US100Cash,M15: 15091.29- is not a new PRICE Low
+0	12:56:16.335	main-script US100Cash,M15: This is the last lowest RSI37.1079
+0	12:56:16.335	main-script US100Cash,M15: This is the last lowest PRICE:15042.73
+0	12:56:16.335	main-script US100Cash,M15: 37.6088- is not a new RSI low
+0	12:56:16.335	main-script US100Cash,M15: This is the last lowest PRICE:15041.07
+0	12:56:16.335	main-script US100Cash,M15: This is the last lowest RSI35.1696
+0	12:56:16.335	main-script US100Cash,M15: This is the last lowest PRICE:14830.14
+0	12:56:16.335	main-script US100Cash,M15: This is the last lowest RSI27.2411
+0	12:56:16.335	main-script US100Cash,M15: This is the last lowest PRICE:14681.88
+0	12:56:16.335	main-script US100Cash,M15: 0
+0	12:56:16.335	main-script US100Cash,M15: 0
+0	12:56:16.335	main-script US100Cash,M15: uninit reason 0
+0	12:56:16.337	Script main-script US100Cash,M15: removed
+3	12:56:35.767	cannot open file 'C:\Users\ACER\AppData\Roaming\MetaQuotes\Terminal\98A82F92176B73A2100FCD1F8ABD7255\MQL4\Scripts\main-script.ex4' [2]
+3	12:56:46.915	cannot open file 'C:\Users\ACER\AppData\Roaming\MetaQuotes\Terminal\98A82F92176B73A2100FCD1F8ABD7255\MQL4\Scripts\main-script.ex4' [2]
+0	12:56:52.160	Script main-script US100Cash,M15: loaded successfully
+0	12:56:52.176	main-script US100Cash,M15: initialized
+0	12:56:52.176	main-script US100Cash,M15: This is the last lowest RSI36.1894
+0	12:56:52.176	main-script US100Cash,M15: This is the last lowest PRICE:14981.2
+0	12:56:52.176	main-script US100Cash,M15: 36.5527- is not a new RSI low
+0	12:56:52.176	main-script US100Cash,M15: 14982.83- is not a new PRICE Low
+0	12:56:52.176	main-script US100Cash,M15: This is the last highest RSI:60.1531
+0	12:56:52.176	main-script US100Cash,M15: This is the last highest PRICE:15135.58
+0	12:56:52.176	main-script US100Cash,M15: 53.5184- is not a new RSI high...
+0	12:56:52.176	main-script US100Cash,M15: 15089.83- is not a new PRICE high
+0	12:56:52.176	main-script US100Cash,M15: This is the last lowest RSI44.1489
+0	12:56:52.176	main-script US100Cash,M15: This is the last lowest PRICE:15018.45
+0	12:56:52.176	main-script US100Cash,M15: This is the last highest RSI:60.7004
+0	12:56:52.176	main-script US100Cash,M15: This is the last highest PRICE:15165.33
+0	12:56:52.176	main-script US100Cash,M15: 59.1293- is not a new RSI high...
+0	12:56:52.176	main-script US100Cash,M15: 15155.28- is not a new PRICE high
+0	12:56:52.176	main-script US100Cash,M15: This is the last highest RSI:67.23
+0	12:56:52.176	main-script US100Cash,M15: This is the last highest PRICE:15245.85
+0	12:56:52.176	main-script US100Cash,M15: 66.1743- is not a new RSI high...
+0	12:56:52.176	main-script US100Cash,M15: This is the last highest PRICE:15249.01
+0	12:56:52.176	main-script US100Cash,M15: This is the last lowest RSI45.7778
+0	12:56:52.176	main-script US100Cash,M15: This is the last lowest PRICE:15140.34
+0	12:56:52.176	main-script US100Cash,M15: This is the last lowest RSI41.1632
+0	12:56:52.176	main-script US100Cash,M15: This is the last lowest PRICE:15102.95
+0	12:56:52.176	main-script US100Cash,M15: This is the last lowest RSI37.5565
+0	12:56:52.176	main-script US100Cash,M15: This is the last lowest PRICE:15071.2
+0	12:56:52.176	main-script US100Cash,M15: 42.7033- is not a new RSI low
+0	12:56:52.176	main-script US100Cash,M15: 15091.29- is not a new PRICE Low
+0	12:56:52.176	main-script US100Cash,M15: This is the last lowest RSI37.1079
+0	12:56:52.176	main-script US100Cash,M15: This is the last lowest PRICE:15042.73
+0	12:56:52.176	main-script US100Cash,M15: 37.6088- is not a new RSI low
+0	12:56:52.176	main-script US100Cash,M15: This is the last lowest PRICE:15041.07
+0	12:56:52.176	main-script US100Cash,M15: This is the last lowest RSI35.1696
+0	12:56:52.176	main-script US100Cash,M15: This is the last lowest PRICE:14830.14
+0	12:56:52.176	main-script US100Cash,M15: This is the last lowest RSI27.2411
+0	12:56:52.176	main-script US100Cash,M15: This is the last lowest PRICE:14681.88
+0	12:56:52.176	main-script US100Cash,M15: 0
+0	12:56:52.176	main-script US100Cash,M15: isTradingTime:0
+0	12:56:52.176	main-script US100Cash,M15: uninit reason 0
+0	12:56:52.177	Script main-script US100Cash,M15: removed
+0	13:52:37.223	Script main-script US100Cash,H1: loaded successfully
+0	13:52:37.252	main-script US100Cash,H1: initialized
+0	13:52:37.254	main-script US100Cash,H1: This is the last lowest RSI36.1894
+0	13:52:37.254	main-script US100Cash,H1: This is the last lowest PRICE:14981.2
+0	13:52:37.254	main-script US100Cash,H1: 36.5527- is not a new RSI low
+0	13:52:37.254	main-script US100Cash,H1: 14982.83- is not a new PRICE Low
+0	13:52:37.254	main-script US100Cash,H1: This is the last highest RSI:60.1531
+0	13:52:37.254	main-script US100Cash,H1: This is the last highest PRICE:15135.58
+0	13:52:37.254	main-script US100Cash,H1: 53.5184- is not a new RSI high...
+0	13:52:37.254	main-script US100Cash,H1: 15089.83- is not a new PRICE high
+0	13:52:37.254	main-script US100Cash,H1: This is the last lowest RSI44.1489
+0	13:52:37.254	main-script US100Cash,H1: This is the last lowest PRICE:15018.45
+0	13:52:37.254	main-script US100Cash,H1: This is the last highest RSI:60.7004
+0	13:52:37.254	main-script US100Cash,H1: This is the last highest PRICE:15165.33
+0	13:52:37.254	main-script US100Cash,H1: 59.1293- is not a new RSI high...
+0	13:52:37.254	main-script US100Cash,H1: 15155.28- is not a new PRICE high
+0	13:52:37.254	main-script US100Cash,H1: This is the last highest RSI:67.23
+0	13:52:37.254	main-script US100Cash,H1: This is the last highest PRICE:15245.85
+0	13:52:37.254	main-script US100Cash,H1: 66.1743- is not a new RSI high...
+0	13:52:37.254	main-script US100Cash,H1: This is the last highest PRICE:15249.01
+0	13:52:37.254	main-script US100Cash,H1: This is the last lowest RSI45.7778
+0	13:52:37.254	main-script US100Cash,H1: This is the last lowest PRICE:15140.34
+0	13:52:37.254	main-script US100Cash,H1: This is the last lowest RSI41.1632
+0	13:52:37.254	main-script US100Cash,H1: This is the last lowest PRICE:15102.95
+0	13:52:37.254	main-script US100Cash,H1: This is the last lowest RSI37.5565
+0	13:52:37.254	main-script US100Cash,H1: This is the last lowest PRICE:15071.2
+0	13:52:37.254	main-script US100Cash,H1: 42.7033- is not a new RSI low
+0	13:52:37.254	main-script US100Cash,H1: 15091.29- is not a new PRICE Low
+0	13:52:37.254	main-script US100Cash,H1: This is the last lowest RSI37.1079
+0	13:52:37.254	main-script US100Cash,H1: This is the last lowest PRICE:15042.73
+0	13:52:37.254	main-script US100Cash,H1: 37.6088- is not a new RSI low
+0	13:52:37.254	main-script US100Cash,H1: This is the last lowest PRICE:15041.07
+0	13:52:37.254	main-script US100Cash,H1: This is the last lowest RSI35.1696
+0	13:52:37.254	main-script US100Cash,H1: This is the last lowest PRICE:14830.14
+0	13:52:37.254	main-script US100Cash,H1: This is the last lowest RSI27.2411
+0	13:52:37.254	main-script US100Cash,H1: This is the last lowest PRICE:14681.88
+0	13:52:37.254	main-script US100Cash,H1: 32.9297- is not a new RSI low
+0	13:52:37.254	main-script US100Cash,H1: 14703.37- is not a new PRICE Low
+0	13:53:37.982	Script main-script USDJPY#,H1: loaded successfully
+0	13:53:37.998	main-script USDJPY#,H1: initialized
+0	13:53:37.999	main-script USDJPY#,H1: This is the last highest RSI:62.5229
+0	13:53:37.999	main-script USDJPY#,H1: This is the last highest PRICE:144.967
+0	13:53:37.999	main-script USDJPY#,H1: This is the last highest RSI:58.1711
+0	13:53:37.999	main-script USDJPY#,H1: This is the last highest PRICE:144.943
+0	13:53:37.999	main-script USDJPY#,H1: This is the last highest RSI:77.8224
+0	13:53:37.999	main-script USDJPY#,H1: This is the last highest PRICE:145.528
+0	13:53:37.999	main-script USDJPY#,H1: 69.1621- is not a new RSI high...
+0	13:53:37.999	main-script USDJPY#,H1: 145.499- is not a new PRICE high
+0	13:53:37.999	main-script USDJPY#,H1: 68.8162- is not a new RSI high...
+0	13:53:37.999	main-script USDJPY#,H1: This is the last highest PRICE:145.542
+0	13:53:37.999	main-script USDJPY#,H1: This is the last lowest RSI39.2718
+0	13:53:37.999	main-script USDJPY#,H1: This is the last lowest PRICE:145.132
+0	13:53:37.999	main-script USDJPY#,H1: This is the last highest RSI:55.0991
+0	13:53:37.999	main-script USDJPY#,H1: This is the last highest PRICE:145.557
+0	13:53:37.999	main-script USDJPY#,H1: This is the last highest RSI:57.851
+0	13:53:38.000	main-script USDJPY#,H1: This is the last highest PRICE:145.659
+0	13:53:38.000	main-script USDJPY#,H1: 54.2185- is not a new RSI high...
+0	13:53:38.000	main-script USDJPY#,H1: 145.565- is not a new PRICE high
+0	13:53:38.000	main-script USDJPY#,H1: 55.9413- is not a new RSI high...
+0	13:53:38.000	main-script USDJPY#,H1: 145.616- is not a new PRICE high
+0	13:53:38.000	main-script USDJPY#,H1: This is the last lowest RSI42.7646
+0	13:53:38.000	main-script USDJPY#,H1: This is the last lowest PRICE:145.345
+0	13:53:38.000	main-script USDJPY#,H1: This is the last highest RSI:66.5001
+0	13:53:38.000	main-script USDJPY#,H1: This is the last highest PRICE:145.861
+0	13:53:38.000	main-script USDJPY#,H1: This is the last highest RSI:78.2968
+0	13:53:38.000	main-script USDJPY#,H1: This is the last highest PRICE:146.34
+0	13:53:38.000	main-script USDJPY#,H1: 76.3498- is not a new RSI high...
+0	13:53:38.000	main-script USDJPY#,H1: This is the last highest PRICE:146.419
+0	13:53:38.000	main-script USDJPY#,H1: This is the last lowest RSI35.8418
+0	13:53:38.000	main-script USDJPY#,H1: This is the last lowest PRICE:145.785
+0	13:53:38.000	main-script USDJPY#,H1: This is the last highest RSI:55.261
+0	13:53:38.000	main-script USDJPY#,H1: This is the last highest PRICE:146.165
+0	13:53:38.000	main-script USDJPY#,H1: This is the last highest RSI:59.0235
+0	13:53:38.000	main-script USDJPY#,H1: This is the last highest PRICE:146.271
+0	13:53:38.000	main-script USDJPY#,H1: This is the last lowest RSI38.6112
+0	13:53:38.000	main-script USDJPY#,H1: This is the last lowest PRICE:145.717
+0	13:53:38.000	main-script USDJPY#,H1: This is the last lowest RSI32.7963
+0	13:53:38.000	main-script USDJPY#,H1: This is the last lowest PRICE:145.461
+0	13:53:38.000	main-script USDJPY#,H1: This is the last lowest RSI31.5378
+0	13:53:38.000	main-script USDJPY#,H1: This is the last lowest PRICE:145.364
+3	13:55:09.703	main-script USDJPY#,H1: shutdown by timeout
+1	13:55:17.220	main-script USDJPY#,H1: Abnormal termination
+0	13:55:17.220	main-script USDJPY#,H1: uninit reason 1
+0	13:55:17.224	Script main-script USDJPY#,H1: removed
+0	13:55:17.237	Script main-script USDJPY#,H1: loaded successfully
+0	13:55:17.272	main-script USDJPY#,H1: initialized
+3	13:57:36.926	main-script USDJPY#,H1: shutdown by timeout
+1	13:57:44.479	main-script USDJPY#,H1: Abnormal termination
+0	13:57:44.479	main-script USDJPY#,H1: uninit reason 1
+0	13:57:44.490	Script main-script USDJPY#,H1: removed
+0	13:57:44.512	Script main-script USDJPY#,H1: loaded successfully
+0	13:57:44.539	main-script USDJPY#,H1: initialized
+0	13:57:44.539	main-script USDJPY#,H1: session Resistance is:0
+0	13:57:44.539	main-script USDJPY#,H1: 0
+0	13:57:44.539	main-script USDJPY#,H1: 0
+0	13:57:44.539	main-script USDJPY#,H1: uninit reason 0
+0	13:57:44.541	Script main-script USDJPY#,H1: removed
+0	13:58:02.285	Script main-script USDJPY#,H1: loaded successfully
+0	13:58:02.302	main-script USDJPY#,H1: initialized
+1	13:58:02.302	main-script USDJPY#,H1: array out of range in 'main-script.mq4' (54,20)
+0	13:58:02.303	main-script USDJPY#,H1: uninit reason 0
+0	13:58:02.306	Script main-script USDJPY#,H1: removed
+0	13:58:46.436	Script main-script USDJPY#,H1: loaded successfully
+0	13:58:46.455	main-script USDJPY#,H1: initialized
+1	13:58:46.455	main-script USDJPY#,H1: array out of range in 'main-script.mq4' (54,20)
+0	13:58:46.457	main-script USDJPY#,H1: uninit reason 0
+0	13:58:46.461	Script main-script USDJPY#,H1: removed
+0	13:59:10.867	Script main-script USDJPY#,H1: loaded successfully
+0	13:59:10.887	main-script USDJPY#,H1: initialized
+0	13:59:10.887	main-script USDJPY#,H1: session Resistance is:145.791
+0	13:59:10.887	main-script USDJPY#,H1: 0
+0	13:59:10.887	main-script USDJPY#,H1: 0
+0	13:59:10.887	main-script USDJPY#,H1: uninit reason 0
+0	13:59:10.889	Script main-script USDJPY#,H1: removed
+0	14:00:51.970	Script main-script USDJPY#,H1: loaded successfully
+0	14:00:51.986	main-script USDJPY#,H1: initialized
+0	14:00:51.986	main-script USDJPY#,H1: This is the last highest RSI:62.5229
+0	14:00:51.986	main-script USDJPY#,H1: This is the last highest PRICE:144.967
+0	14:00:51.986	main-script USDJPY#,H1: This is the last highest RSI:58.1711
+0	14:00:51.986	main-script USDJPY#,H1: This is the last highest PRICE:144.943
+0	14:00:51.986	main-script USDJPY#,H1: This is the last highest RSI:77.8224
+0	14:00:51.986	main-script USDJPY#,H1: This is the last highest PRICE:145.528
+0	14:00:51.986	main-script USDJPY#,H1: 69.1621- is not a new RSI high...
+0	14:00:51.986	main-script USDJPY#,H1: 145.499- is not a new PRICE high
+0	14:00:51.986	main-script USDJPY#,H1: 68.8162- is not a new RSI high...
+0	14:00:51.986	main-script USDJPY#,H1: This is the last highest PRICE:145.542
+0	14:00:51.986	main-script USDJPY#,H1: This is the last lowest RSI39.2718
+0	14:00:51.986	main-script USDJPY#,H1: This is the last lowest PRICE:145.132
+0	14:00:51.986	main-script USDJPY#,H1: This is the last highest RSI:55.0991
+0	14:00:51.986	main-script USDJPY#,H1: This is the last highest PRICE:145.557
+0	14:00:51.986	main-script USDJPY#,H1: This is the last highest RSI:57.851
+0	14:00:51.986	main-script USDJPY#,H1: This is the last highest PRICE:145.659
+0	14:00:51.986	main-script USDJPY#,H1: 54.2185- is not a new RSI high...
+0	14:00:51.986	main-script USDJPY#,H1: 145.565- is not a new PRICE high
+0	14:00:51.986	main-script USDJPY#,H1: 55.9413- is not a new RSI high...
+0	14:00:51.986	main-script USDJPY#,H1: 145.616- is not a new PRICE high
+0	14:00:51.986	main-script USDJPY#,H1: This is the last lowest RSI42.7646
+0	14:00:51.986	main-script USDJPY#,H1: This is the last lowest PRICE:145.345
+0	14:00:51.986	main-script USDJPY#,H1: This is the last highest RSI:66.5001
+0	14:00:51.986	main-script USDJPY#,H1: This is the last highest PRICE:145.861
+0	14:00:51.986	main-script USDJPY#,H1: This is the last highest RSI:78.2968
+0	14:00:51.986	main-script USDJPY#,H1: This is the last highest PRICE:146.34
+0	14:00:51.986	main-script USDJPY#,H1: 76.3498- is not a new RSI high...
+0	14:00:51.986	main-script USDJPY#,H1: This is the last highest PRICE:146.419
+0	14:00:51.986	main-script USDJPY#,H1: This is the last lowest RSI35.8418
+0	14:00:51.986	main-script USDJPY#,H1: This is the last lowest PRICE:145.785
+0	14:00:51.986	main-script USDJPY#,H1: This is the last highest RSI:55.261
+0	14:00:51.986	main-script USDJPY#,H1: This is the last highest PRICE:146.165
+0	14:00:51.986	main-script USDJPY#,H1: This is the last highest RSI:59.0235
+0	14:00:51.986	main-script USDJPY#,H1: This is the last highest PRICE:146.271
+0	14:00:51.986	main-script USDJPY#,H1: This is the last lowest RSI38.6112
+0	14:00:51.986	main-script USDJPY#,H1: This is the last lowest PRICE:145.717
+0	14:00:51.986	main-script USDJPY#,H1: This is the last lowest RSI32.7963
+0	14:00:51.986	main-script USDJPY#,H1: This is the last lowest PRICE:145.461
+0	14:00:51.986	main-script USDJPY#,H1: This is the last lowest RSI31.5378
+0	14:00:51.986	main-script USDJPY#,H1: This is the last lowest PRICE:145.364
+0	14:00:51.986	main-script USDJPY#,H1: session Resistance is:145.791
+0	14:00:51.986	main-script USDJPY#,H1: uninit reason 0
+0	14:00:51.989	Script main-script USDJPY#,H1: removed
+0	14:01:06.381	Script main-script USDJPY#,H1: loaded successfully
+0	14:01:06.400	main-script USDJPY#,H1: initialized
+0	14:01:06.400	main-script USDJPY#,H1: session Resistance is:145.791
+0	14:01:06.400	main-script USDJPY#,H1: uninit reason 0
+0	14:01:06.403	Script main-script USDJPY#,H1: removed
+0	14:03:26.802	Script main-script USDJPY#,H1: loaded successfully
+0	14:03:26.818	main-script USDJPY#,H1: initialized
+0	14:03:26.818	main-script USDJPY#,H1: index value1is:145.468
+0	14:03:26.818	main-script USDJPY#,H1: index value2is:145.504
+0	14:03:26.818	main-script USDJPY#,H1: index value3is:145.53
+0	14:03:26.818	main-script USDJPY#,H1: index value4is:145.554
+0	14:03:26.818	main-script USDJPY#,H1: index value5is:145.569
+0	14:03:26.818	main-script USDJPY#,H1: index value6is:145.791
+0	14:03:26.818	main-script USDJPY#,H1: index value7is:145.732
+0	14:03:26.818	main-script USDJPY#,H1: session Resistance is:145.791
+0	14:03:26.818	main-script USDJPY#,H1: uninit reason 0
+0	14:03:26.820	Script main-script USDJPY#,H1: removed
+0	14:08:50.802	Script main-script USDJPY#,H1: loaded successfully
+0	14:08:50.817	main-script USDJPY#,H1: initialized
+0	14:08:50.817	main-script USDJPY#,H1: index value1is:145.468
+0	14:08:50.817	main-script USDJPY#,H1: index value2is:145.504
+0	14:08:50.817	main-script USDJPY#,H1: index value3is:145.53
+0	14:08:50.817	main-script USDJPY#,H1: index value4is:145.554
+0	14:08:50.817	main-script USDJPY#,H1: index value5is:145.569
+0	14:08:50.817	main-script USDJPY#,H1: index value6is:145.791
+0	14:08:50.817	main-script USDJPY#,H1: index value7is:145.732
+0	14:08:50.817	main-script USDJPY#,H1: session Resistance is:145.791
+0	14:08:50.817	main-script USDJPY#,H1: index value1is:145.319
+0	14:08:50.817	main-script USDJPY#,H1: index value2is:145.328
+0	14:08:50.817	main-script USDJPY#,H1: index value3is:145.318
+0	14:08:50.817	main-script USDJPY#,H1: index value4is:145.439
+0	14:08:50.817	main-script USDJPY#,H1: index value5is:145.322
+0	14:08:50.817	main-script USDJPY#,H1: index value6is:145.525
+0	14:08:50.817	main-script USDJPY#,H1: index value7is:145.569
+0	14:08:50.817	main-script USDJPY#,H1: session Resistance is:145.318
+0	14:08:50.817	main-script USDJPY#,H1: uninit reason 0
+0	14:08:50.819	Script main-script USDJPY#,H1: removed
+0	14:09:21.468	Script main-script USDJPY#,H1: loaded successfully
+0	14:09:21.480	main-script USDJPY#,H1: initialized
+0	14:09:21.480	main-script USDJPY#,H1: index value1is:145.468
+0	14:09:21.480	main-script USDJPY#,H1: index value2is:145.504
+0	14:09:21.480	main-script USDJPY#,H1: index value3is:145.53
+0	14:09:21.480	main-script USDJPY#,H1: index value4is:145.554
+0	14:09:21.480	main-script USDJPY#,H1: index value5is:145.569
+0	14:09:21.480	main-script USDJPY#,H1: index value6is:145.791
+0	14:09:21.480	main-script USDJPY#,H1: index value7is:145.732
+0	14:09:21.480	main-script USDJPY#,H1: session Resistance is:145.791
+0	14:09:21.480	main-script USDJPY#,H1: index value1is:145.319
+0	14:09:21.480	main-script USDJPY#,H1: index value2is:145.328
+0	14:09:21.480	main-script USDJPY#,H1: index value3is:145.318
+0	14:09:21.480	main-script USDJPY#,H1: index value4is:145.439
+0	14:09:21.480	main-script USDJPY#,H1: index value5is:145.322
+0	14:09:21.480	main-script USDJPY#,H1: index value6is:145.525
+0	14:09:21.480	main-script USDJPY#,H1: index value7is:145.569
+0	14:09:21.480	main-script USDJPY#,H1: session Support is:145.318
+0	14:09:21.480	main-script USDJPY#,H1: uninit reason 0
+0	14:09:21.482	Script main-script USDJPY#,H1: removed
+0	14:51:37.602	Script main-script USDJPY#,H1: loaded successfully
+0	14:51:37.624	main-script USDJPY#,H1: initialized
+0	14:51:37.625	main-script USDJPY#,H1: index value1is:145.468
+0	14:51:37.625	main-script USDJPY#,H1: index value2is:145.504
+0	14:51:37.625	main-script USDJPY#,H1: index value3is:145.53
+0	14:51:37.625	main-script USDJPY#,H1: index value4is:145.554
+0	14:51:37.625	main-script USDJPY#,H1: index value5is:145.569
+0	14:51:37.625	main-script USDJPY#,H1: index value6is:145.791
+0	14:51:37.625	main-script USDJPY#,H1: index value7is:145.732
+0	14:51:37.625	main-script USDJPY#,H1: session Resistance is:145.791
+0	14:51:37.625	main-script USDJPY#,H1: index value1is:145.319
+0	14:51:37.625	main-script USDJPY#,H1: index value2is:145.328
+0	14:51:37.625	main-script USDJPY#,H1: index value3is:145.318
+0	14:51:37.625	main-script USDJPY#,H1: index value4is:145.439
+0	14:51:37.625	main-script USDJPY#,H1: index value5is:145.322
+0	14:51:37.625	main-script USDJPY#,H1: index value6is:145.525
+0	14:51:37.625	main-script USDJPY#,H1: index value7is:145.569
+0	14:51:37.625	main-script USDJPY#,H1: session Support is:145.318
+0	14:51:37.625	main-script USDJPY#,H1: uninit reason 0
+0	14:51:37.627	Script main-script USDJPY#,H1: removed
+0	14:55:15.820	Script main-script USDJPY#,H1: loaded successfully
+0	14:55:15.832	main-script USDJPY#,H1: initialized
+0	14:55:15.834	main-script USDJPY#,H1: This is the last highest RSI:62.5229
+0	14:55:15.834	main-script USDJPY#,H1: This is the last highest PRICE:144.967
+0	14:55:15.834	main-script USDJPY#,H1: This is the last highest RSI:58.1711
+0	14:55:15.834	main-script USDJPY#,H1: This is the last highest PRICE:144.943
+0	14:55:15.834	main-script USDJPY#,H1: This is the last highest RSI:77.8224
+0	14:55:15.834	main-script USDJPY#,H1: This is the last highest PRICE:145.528
+0	14:55:15.834	main-script USDJPY#,H1: 69.1621- is not a new RSI high...
+0	14:55:15.834	main-script USDJPY#,H1: 145.499- is not a new PRICE high
+0	14:55:15.834	main-script USDJPY#,H1: 68.8162- is not a new RSI high...
+0	14:55:15.834	main-script USDJPY#,H1: This is the last highest PRICE:145.542
+0	14:55:15.834	main-script USDJPY#,H1: This is the last lowest RSI39.2718
+0	14:55:15.834	main-script USDJPY#,H1: This is the last lowest PRICE:145.132
+0	14:55:15.834	main-script USDJPY#,H1: This is the last highest RSI:55.0991
+0	14:55:15.834	main-script USDJPY#,H1: This is the last highest PRICE:145.557
+0	14:55:15.834	main-script USDJPY#,H1: This is the last highest RSI:57.851
+0	14:55:15.834	main-script USDJPY#,H1: This is the last highest PRICE:145.659
+0	14:55:15.834	main-script USDJPY#,H1: 54.2185- is not a new RSI high...
+0	14:55:15.834	main-script USDJPY#,H1: 145.565- is not a new PRICE high
+0	14:55:15.834	main-script USDJPY#,H1: 55.9413- is not a new RSI high...
+0	14:55:15.834	main-script USDJPY#,H1: 145.616- is not a new PRICE high
+0	14:55:15.834	main-script USDJPY#,H1: This is the last lowest RSI42.7646
+0	14:55:15.834	main-script USDJPY#,H1: This is the last lowest PRICE:145.345
+0	14:55:15.834	main-script USDJPY#,H1: This is the last highest RSI:66.5001
+0	14:55:15.834	main-script USDJPY#,H1: This is the last highest PRICE:145.861
+0	14:55:15.834	main-script USDJPY#,H1: This is the last highest RSI:78.2968
+0	14:55:15.834	main-script USDJPY#,H1: This is the last highest PRICE:146.34
+0	14:55:15.834	main-script USDJPY#,H1: 76.3498- is not a new RSI high...
+0	14:55:15.834	main-script USDJPY#,H1: This is the last highest PRICE:146.419
+0	14:55:15.834	main-script USDJPY#,H1: This is the last lowest RSI35.8418
+0	14:55:15.834	main-script USDJPY#,H1: This is the last lowest PRICE:145.785
+0	14:55:15.834	main-script USDJPY#,H1: This is the last highest RSI:55.261
+0	14:55:15.834	main-script USDJPY#,H1: This is the last highest PRICE:146.165
+0	14:55:15.834	main-script USDJPY#,H1: This is the last highest RSI:59.0235
+0	14:55:15.834	main-script USDJPY#,H1: This is the last highest PRICE:146.271
+0	14:55:15.834	main-script USDJPY#,H1: This is the last lowest RSI38.6112
+0	14:55:15.834	main-script USDJPY#,H1: This is the last lowest PRICE:145.717
+0	14:55:15.834	main-script USDJPY#,H1: This is the last lowest RSI32.7963
+0	14:55:15.834	main-script USDJPY#,H1: This is the last lowest PRICE:145.461
+0	14:55:15.834	main-script USDJPY#,H1: This is the last lowest RSI31.5378
+0	14:55:15.834	main-script USDJPY#,H1: This is the last lowest PRICE:145.364
+0	14:55:15.834	main-script USDJPY#,H1: index value1is:145.468
+0	14:55:15.835	main-script USDJPY#,H1: index value2is:145.504
+0	14:55:15.835	main-script USDJPY#,H1: index value3is:145.53
+0	14:55:15.835	main-script USDJPY#,H1: index value4is:145.554
+0	14:55:15.835	main-script USDJPY#,H1: index value5is:145.569
+0	14:55:15.835	main-script USDJPY#,H1: session Resistance is:145.569
+0	14:55:15.835	main-script USDJPY#,H1: index value1is:145.319
+0	14:55:15.835	main-script USDJPY#,H1: index value2is:145.328
+0	14:55:15.835	main-script USDJPY#,H1: index value3is:145.318
+0	14:55:15.835	main-script USDJPY#,H1: index value4is:145.439
+0	14:55:15.835	main-script USDJPY#,H1: index value5is:145.322
+0	14:55:15.835	main-script USDJPY#,H1: session Support is:145.318
+0	14:55:15.835	main-script USDJPY#,H1: uninit reason 0
+0	14:55:15.837	Script main-script USDJPY#,H1: removed
+0	14:56:17.109	Script main-script USDJPY#,H1: loaded successfully
+0	14:56:17.124	main-script USDJPY#,H1: initialized
+0	14:56:17.124	main-script USDJPY#,H1: index value1is:145.468
+0	14:56:17.124	main-script USDJPY#,H1: index value2is:145.504
+0	14:56:17.124	main-script USDJPY#,H1: index value3is:145.53
+0	14:56:17.124	main-script USDJPY#,H1: index value4is:145.554
+0	14:56:17.124	main-script USDJPY#,H1: index value5is:145.569
+0	14:56:17.124	main-script USDJPY#,H1: session Resistance is:145.569
+0	14:56:17.124	main-script USDJPY#,H1: index value1is:145.319
+0	14:56:17.124	main-script USDJPY#,H1: index value2is:145.328
+0	14:56:17.124	main-script USDJPY#,H1: index value3is:145.318
+0	14:56:17.124	main-script USDJPY#,H1: index value4is:145.439
+0	14:56:17.124	main-script USDJPY#,H1: index value5is:145.322
+0	14:56:17.124	main-script USDJPY#,H1: session Support is:145.318
+0	14:56:17.124	main-script USDJPY#,H1: uninit reason 0
+0	14:56:17.125	Script main-script USDJPY#,H1: removed
+0	14:59:54.632	Script main-script USDJPY#,H1: loaded successfully
+0	14:59:54.650	main-script USDJPY#,H1: initialized
+0	14:59:54.650	main-script USDJPY#,H1: index value1is:145.468
+0	14:59:54.650	main-script USDJPY#,H1: index value2is:145.504
+0	14:59:54.650	main-script USDJPY#,H1: index value3is:145.53
+0	14:59:54.650	main-script USDJPY#,H1: index value4is:145.554
+0	14:59:54.650	main-script USDJPY#,H1: index value5is:145.569
+0	14:59:54.650	main-script USDJPY#,H1: session Resistance is:145.569
+0	14:59:54.650	main-script USDJPY#,H1: index value1is:145.319
+0	14:59:54.650	main-script USDJPY#,H1: index value2is:145.328
+0	14:59:54.650	main-script USDJPY#,H1: index value3is:145.318
+0	14:59:54.650	main-script USDJPY#,H1: index value4is:145.439
+0	14:59:54.650	main-script USDJPY#,H1: index value5is:145.322
+0	14:59:54.650	main-script USDJPY#,H1: session Support is:145.318
+0	14:59:54.650	main-script USDJPY#,H1: Alert: 145.569
+0	14:59:54.650	main-script USDJPY#,H1: uninit reason 0
+0	14:59:54.651	Script main-script USDJPY#,H1: removed
+0	15:00:58.821	Script main-script USDJPY#,H1: loaded successfully
+0	15:00:58.840	main-script USDJPY#,H1: initialized
+0	15:00:58.840	main-script USDJPY#,H1: Alert: 0999999
+0	15:00:58.840	main-script USDJPY#,H1: uninit reason 0
+0	15:00:58.845	Script main-script USDJPY#,H1: removed
+0	15:02:06.796	Script main-script USDJPY#,H1: loaded successfully
+0	15:02:06.814	main-script USDJPY#,H1: initialized
+0	15:02:06.814	main-script USDJPY#,H1: 0999999
+0	15:02:06.814	main-script USDJPY#,H1: uninit reason 0
+0	15:02:06.816	Script main-script USDJPY#,H1: removed
+0	15:03:18.595	Script main-script USDJPY#,H1: loaded successfully
+0	15:03:18.609	main-script USDJPY#,H1: initialized
+0	15:03:18.609	main-script USDJPY#,H1: Resistance is:0
+0	15:03:18.609	main-script USDJPY#,H1: Support is:999999
+0	15:03:18.609	main-script USDJPY#,H1: uninit reason 0
+0	15:03:18.611	Script main-script USDJPY#,H1: removed
+0	15:03:49.664	Script main-script USDJPY#,H1: loaded successfully
+0	15:03:49.681	main-script USDJPY#,H1: initialized
+0	15:03:49.681	main-script USDJPY#,H1: Resistance is:145.554
+0	15:03:49.681	main-script USDJPY#,H1: Support is:145.18
+0	15:03:49.681	main-script USDJPY#,H1: uninit reason 0
+0	15:03:49.682	Script main-script USDJPY#,H1: removed
+0	15:04:44.192	Script main-script USDJPY#,H1: loaded successfully
+0	15:04:44.207	main-script USDJPY#,H1: initialized
+0	15:04:44.207	main-script USDJPY#,H1: Resistance is:145.554
+0	15:04:44.207	main-script USDJPY#,H1: Support is:145.18
+0	15:04:44.207	main-script USDJPY#,H1: uninit reason 0
+0	15:04:44.209	Script main-script USDJPY#,H1: removed
+0	15:05:12.347	Script main-script USDJPY#,H1: loaded successfully
+0	15:05:12.364	main-script USDJPY#,H1: initialized
+0	15:05:12.364	main-script USDJPY#,H1: Resistance is:145.554
+0	15:05:12.365	main-script USDJPY#,H1: Support is:145.18
+0	15:05:12.365	main-script USDJPY#,H1: uninit reason 0
+0	15:05:12.366	Script main-script USDJPY#,H1: removed
+0	15:16:26.913	Script main-script USDJPY#,H1: loaded successfully
+0	15:16:26.930	main-script USDJPY#,H1: initialized
+0	15:16:26.930	main-script USDJPY#,H1: Resistance is:145.554
+0	15:16:26.930	main-script USDJPY#,H1: uninit reason 0
+0	15:16:26.931	Script main-script USDJPY#,H1: removed
+0	15:27:43.749	Script main-script USDJPY#,H1: loaded successfully
+0	15:27:43.766	main-script USDJPY#,H1: initialized
+0	15:27:43.766	main-script USDJPY#,H1: Resistance is:145.554
+0	15:27:43.766	main-script USDJPY#,H1: uninit reason 0
+0	15:27:43.767	Script main-script USDJPY#,H1: removed
+0	15:33:33.980	Script main-script USDJPY#,H1: loaded successfully
+0	15:33:33.999	main-script USDJPY#,H1: initialized
+0	15:33:34.007	main-script USDJPY#,H1: Day now is:18
+0	15:33:34.007	main-script USDJPY#,H1: Minute now is33
+0	15:33:34.007	main-script USDJPY#,H1: Resistance is:145.554
+0	15:33:34.007	main-script USDJPY#,H1: uninit reason 0
+0	15:33:34.009	Script main-script USDJPY#,H1: removed
+0	15:34:01.973	Script main-script USDJPY#,H1: loaded successfully
+0	15:34:01.988	main-script USDJPY#,H1: initialized
+0	15:34:01.988	main-script USDJPY#,H1: Day now is:18
+0	15:34:01.988	main-script USDJPY#,H1: Minute now is34
+0	15:34:01.988	main-script USDJPY#,H1: Resistance is:145.554
+0	15:34:01.988	main-script USDJPY#,H1: uninit reason 0
+0	15:34:01.989	Script main-script USDJPY#,H1: removed
+0	15:35:00.686	Script main-script USDJPY#,H1: loaded successfully
+0	15:35:00.699	main-script USDJPY#,H1: initialized
+0	15:35:00.700	main-script USDJPY#,H1: Resistance is:145.554
+0	15:35:00.700	main-script USDJPY#,H1: uninit reason 0
+0	15:35:00.701	Script main-script USDJPY#,H1: removed
+0	15:46:28.179	Script main-script USDJPY#,H1: loaded successfully
+0	15:46:28.199	main-script USDJPY#,H1: initialized
+0	15:46:28.199	main-script USDJPY#,H1: Resistance is:145.554
+0	15:46:28.199	main-script USDJPY#,H1: Support is:145.18
+0	15:46:28.199	main-script USDJPY#,H1: uninit reason 0
+0	15:46:28.201	Script main-script USDJPY#,H1: removed
+0	15:47:56.162	Script main-script USDJPY#,H1: loaded successfully
+0	15:47:56.177	main-script USDJPY#,H1: initialized
+0	15:47:56.178	main-script USDJPY#,H1: Resistance is:145.554Created on:18
+0	15:47:56.178	main-script USDJPY#,H1: Support is:145.18Created on:18
+0	15:47:56.178	main-script USDJPY#,H1: uninit reason 0
+0	15:47:56.179	Script main-script USDJPY#,H1: removed
+3	17:06:56.270	main-script US100Cash,H1: shutdown by timeout
+1	17:07:03.893	main-script US100Cash,H1: Abnormal termination
+0	17:07:03.897	main-script US100Cash,H1: uninit reason 9
+0	17:07:03.953	Script main-script US100Cash,H1: removed
