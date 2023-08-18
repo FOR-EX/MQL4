@@ -18,7 +18,7 @@ void OnStart() {
    //run the sessionLevelsFinder
    findSessionResistance();
    findSessionSupport();
-   
+
    Print("Resistance is:",sessionResistanceArray[0],"Created on:",resistanceLevelCreationTime);
    Print("Support is:",sessionSupportArray[0], "Created on:",supportLevelCreationTime);
 
@@ -57,7 +57,7 @@ double findSessionResistance(){
       ArrayFree(sessionResistanceArray);
    }
 
-   if (currentHour == 10){
+   if (currentHour == 14){
       for (int i = 1 ; i <= 5; i++){
          indexValue = iHigh(Symbol(),timeFrame,i);
          if(indexValue > sessionResistance){
@@ -77,7 +77,7 @@ double findSessionSupport(){
       ArrayFree(sessionSupportArray);
    }
 
-   if (currentHour == 10){
+   if (currentHour == 14){
       for (int i = 1 ; i <= 5; i++){
          indexValue = iLow(Symbol(),timeFrame,i);
          if(indexValue < sessionSupport){
@@ -90,8 +90,6 @@ double findSessionSupport(){
    }
 } 
 
-
-
 bool checkTradingTime(){
    if (currentHour > 15 && currentHour < 23){
       return isTradingTime = true;
@@ -99,3 +97,9 @@ bool checkTradingTime(){
       return isTradingTime = false;
    }
 }
+
+
+//This is a lotsize calculator
+   // double stOpinPips = span*100;
+   // double riskPerpips = (riskInUsd/stOpinPips);
+   // double lOtz = riskInUsd/stOpinPips*Ask/normalLot;
