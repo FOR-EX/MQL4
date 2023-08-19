@@ -1,19 +1,12 @@
 #include <divergence-monitor.mqh>
+#include <session-levels-marker.mqh>
 
 double newPriceOpening = iOpen(Symbol(), timeFrame, 1);
-int currentHour = TimeHour(TimeCurrent());
-int currentMinute = TimeMinute(TimeCurrent());
-int currentDay = TimeDay(TimeCurrent());
-int resistanceLevelCreationTime = currentDay;
-int supportLevelCreationTime = currentDay;
-
-bool isTradingTime = false;
 
 void OnTick() {
+   // update the date&time vars on each tick...
+   runningTime();
 
-   currentHour = TimeHour(TimeCurrent());
-   currentMinute = TimeMinute(TimeCurrent());
-   currentDay = TimeDay(TimeCurrent());
    //run this to see if there is uncleared rsiDivergence....
    runDivergenceMonitor(); 
 
@@ -24,8 +17,8 @@ void OnTick() {
    findSessionResistance();
    findSessionSupport();
 
-   //Print("Resistance is:",sessionResistanceArray[0],"Created on:",resistanceLevelCreationTime);
-   ///Print("Support is:",sessionSupportArray[0], "Created on:",supportLevelCreationTime);
+   Print("Resistance is:",sessionResistanceArray[0],"Created on:",resistanceLevelCreationTime);
+   Print("Support is:",sessionSupportArray[0], "Created on:",supportLevelCreationTime);
 
    //Print("0 means no divergence:" , isDivergence);
    Print("0 means not time to trade", isTradingTime);
@@ -45,68 +38,6 @@ void OnTick() {
       
       */
    }     
-}
-// custom functions variables
-   double sessionResistanceArray [];
-   double sessionSupportArray [];
-   double sessionResistance = 0;
-   double sessionSupport = 999999;
-   
-// Custom functions
-
-double findSessionResistance(){
-
-   //This is the level reset condition
-   if (resistanceLevelCreationTime != currentDay){
-      ArrayFree(sessionResistanceArray);
-      resistanceLevelCreationTime = currentDay;
-      sessionResistance = 0;
-   }
-
-   if (currentHour == 14){
-      for (int i = 1 ; i <= 5; i++){
-         double indexValue = iHigh(Symbol(),timeFrame,i);
-         if(indexValue > sessionResistance){
-            sessionResistance = indexValue;
-         }
-         ArrayResize(sessionResistanceArray,1);
-         ArrayFill(sessionResistanceArray,0,1,sessionResistance);  
-         resistanceLevelCreationTime = currentDay;
-      }  
-   }
-} 
-
-double findSessionSupport(){
-
-   //This is the level reset condition
-   if (supportLevelCreationTime != currentDay){
-      ArrayFree(sessionSupportArray);
-      supportLevelCreationTime = currentDay;
-      sessionSupport = 999999;
-   }
-
-   if (currentHour == 14){
-      for (int i = 1 ; i <= 5; i++){
-         double indexValue = iLow(Symbol(),timeFrame,i);
-         if(indexValue < sessionSupport){
-            sessionSupport = indexValue;
-         }
-         ArrayResize(sessionSupportArray,1);
-         ArrayFill(sessionSupportArray,0,1,sessionSupport);  
-         supportLevelCreationTime = currentDay;
-      } 
-   }
-} 
-
-bool checkTradingTime(){
-   if (currentHour >=14 && currentHour <= 23){
-      if (currentHour == 14 && currentMinute <= 30){
-         return isTradingTime = false;
-      }
-      return isTradingTime = true;
-   } else {
-      return isTradingTime = false;
-   }
 }
 
 // bool isBullishEngulfing(){
