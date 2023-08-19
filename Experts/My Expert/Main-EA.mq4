@@ -4,11 +4,16 @@ double newPriceOpening = iOpen(Symbol(), timeFrame, 1);
 int currentHour = TimeHour(TimeCurrent());
 int currentMinute = TimeMinute(TimeCurrent());
 int currentDay = TimeDay(TimeCurrent());
+int resistanceLevelCreationTime = currentDay;
+int supportLevelCreationTime = currentDay;
 
 bool isTradingTime = false;
 
 void OnTick() {
-   
+
+   currentHour = TimeHour(TimeCurrent());
+   currentMinute = TimeMinute(TimeCurrent());
+   currentDay = TimeDay(TimeCurrent());
    //run this to see if there is uncleared rsiDivergence....
    runDivergenceMonitor(); 
 
@@ -18,6 +23,7 @@ void OnTick() {
    //run the sessionLevelsFinder
    findSessionResistance();
    findSessionSupport();
+   Print("This is the current hour:", TimeHour(TimeCurrent()));
 
    Print("Resistance is:",sessionResistanceArray[0],"Created on:",resistanceLevelCreationTime);
    Print("Support is:",sessionSupportArray[0], "Created on:",supportLevelCreationTime);
@@ -46,20 +52,21 @@ void OnTick() {
    double sessionSupportArray [];
    double sessionResistance = 0;
    double sessionSupport = 999999;
-   int resistanceLevelCreationTime;
-   int supportLevelCreationTime;
+   
 // Custom functions
 
 double findSessionResistance(){
-   double indexValue;
+
    //This is the level reset condition
    if (resistanceLevelCreationTime != currentDay){
       ArrayFree(sessionResistanceArray);
+      resistanceLevelCreationTime = currentDay;
+      sessionResistance = 0;
    }
 
    if (currentHour == 14){
       for (int i = 1 ; i <= 5; i++){
-         indexValue = iHigh(Symbol(),timeFrame,i);
+         double indexValue = iHigh(Symbol(),timeFrame,i);
          if(indexValue > sessionResistance){
             sessionResistance = indexValue;
          }
@@ -71,15 +78,17 @@ double findSessionResistance(){
 } 
 
 double findSessionSupport(){
-   double indexValue;
+
    //This is the level reset condition
    if (supportLevelCreationTime != currentDay){
       ArrayFree(sessionSupportArray);
+      supportLevelCreationTime = currentDay;
+      sessionSupport = 999999;
    }
 
    if (currentHour == 14){
       for (int i = 1 ; i <= 5; i++){
-         indexValue = iLow(Symbol(),timeFrame,i);
+         double indexValue = iLow(Symbol(),timeFrame,i);
          if(indexValue < sessionSupport){
             sessionSupport = indexValue;
          }
