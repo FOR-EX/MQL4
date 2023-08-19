@@ -1,6 +1,7 @@
 #include <divergence-monitor.mqh>
 #include <session-levels-marker.mqh>
 #include <engulfing-detector.mqh>
+#include <after-break-levels.mqh>
 
 void OnTick() {
    engulferTimeFrame = 60; //Update the timeframe from engulferTimeFrame
@@ -15,6 +16,9 @@ void OnTick() {
 
    //run this to see if it is tradingtime....
    checkTradingTime();
+
+   //resets the After Break Levels if !tradingTime
+   resetTheAfterBreakLevels();
    
    //run the sessionLevelsFinder
    findSessionResistance();
@@ -34,9 +38,9 @@ void OnTick() {
    
    //Condition to place an order
    if(!isDivergence && isTradingTime){
-      double newPriceOpening = iOpen(Symbol(), engulferTimeFrame, 1);
+      
       //this is the condition for placing order during bullish conditions
-      /*if(newPriceOpening > sessionResistance && isBullishEngulfing() && bullishEngulfingBase > highestHighonBullBreak){
+      /*if( isBullishEngulfing() && bullishEngulfingBase > sessionResistance && bullishEngulfingBase > highestHighonBullBreak){
          placeBullishOrder();
          }      
       */
@@ -48,6 +52,8 @@ void OnTick() {
       */
    }     
 }
+//Custom Function
+
 
 //This is a lotsize calculator
    // double stOpinPips = span*100;
