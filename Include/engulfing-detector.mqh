@@ -1,9 +1,12 @@
 int engulferTimeFrame;
+double bullishEngulfingBase;
+double bearishEngulfingHead;
+
 
 //bearish-engulfing-detector
 bool isBearishEngulfing (){
-   
    if (isLastCandleBull() && isNewCandleBear() && isNewCandleBearishEngulfer()){
+      bearishEngulfingHead = iClose(Symbol(),engulferTimeFrame,2);
       return true;
    } else {
       return false;
@@ -44,8 +47,8 @@ bool isNewCandleBear(){
 
 //bullish-engulfing-detector
 bool isBullishEngulfing (){
-   
    if (isLastCandleBear() && isNewCandleBull() && isNewCandleBullishEngulfer()){
+      bullishEngulfingBase = iClose(Symbol(),engulferTimeFrame,2);
       return true;
    } else {
       return false;

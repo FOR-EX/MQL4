@@ -25,19 +25,23 @@ void OnTick() {
 
    //Print("0 means no divergence:" , isDivergence);
    //Print("0 means not time to trade", isTradingTime);
-
-   Print ("there is a bullish enguulfing going on:", isBullishEngulfing());
-
+   if (isBullishEngulfing()){
+      Print ("there is a bullish engulfing going on and the base is:", bullishEngulfingBase);
+   }
+   if (isBearishEngulfing()){
+      Print ("there is a bearish engulfing going on and the head is:", bearishEngulfingHead);
+   }
+   
    //Condition to place an order
    if(!isDivergence && isTradingTime){
       double newPriceOpening = iOpen(Symbol(), engulferTimeFrame, 1);
       //this is the condition for placing order during bullish conditions
-      /*if(newPriceOpening > sessionResistance && isbBullishEngulfing() && bullishEngulfingBase > highestHighonBullBreak){
+      /*if(newPriceOpening > sessionResistance && isBullishEngulfing() && bullishEngulfingBase > highestHighonBullBreak){
          placeBullishOrder();
          }      
       */
       //this is the condition for placing order during bullish conditions
-      /*if(newPriceOpening < sessionSupport && isbearishEngulfing && bearishEngulfingHead < lowestLowonBearBreak){
+      /*if(newPriceOpening < sessionSupport && isBearishEngulfing && bearishEngulfingHead < lowestLowonBearBreak){
          placeBearishOrder();
          }
       
