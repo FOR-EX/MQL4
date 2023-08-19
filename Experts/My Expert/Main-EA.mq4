@@ -23,13 +23,12 @@ void OnTick() {
    //run the sessionLevelsFinder
    findSessionResistance();
    findSessionSupport();
-   Print("This is the current hour:", TimeHour(TimeCurrent()));
 
-   Print("Resistance is:",sessionResistanceArray[0],"Created on:",resistanceLevelCreationTime);
-   Print("Support is:",sessionSupportArray[0], "Created on:",supportLevelCreationTime);
+   //Print("Resistance is:",sessionResistanceArray[0],"Created on:",resistanceLevelCreationTime);
+   ///Print("Support is:",sessionSupportArray[0], "Created on:",supportLevelCreationTime);
 
-   // Print(isDivergence);
-   // Print(isTradingTime);
+   //Print("0 means no divergence:" , isDivergence);
+   Print("0 means not time to trade", isTradingTime);
    
    //Condition to place an order
    if(!isDivergence && isTradingTime){
@@ -100,7 +99,10 @@ double findSessionSupport(){
 } 
 
 bool checkTradingTime(){
-   if (currentHour > 15 && currentHour < 23){
+   if (currentHour > 13 && currentHour < 23){
+      if (currentHour == 14 && currentMinute <= 30){
+         return isTradingTime = false;
+      }
       return isTradingTime = true;
    } else {
       return isTradingTime = false;
