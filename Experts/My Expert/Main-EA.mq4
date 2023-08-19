@@ -1,6 +1,6 @@
 #include <divergence-monitor.mqh>
 #include <session-levels-marker.mqh>
-#include <bullish-engulfing-detector.mqh>
+#include <engulfing-detector.mqh>
 
 void OnTick() {
    engulferTimeFrame = 60; //Update the timeframe from engulferTimeFrame
