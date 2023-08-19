@@ -5,6 +5,7 @@
 
 void OnTick() {
    engulferTimeFrame = 60; //Update the timeframe from engulferTimeFrame
+   afterBreakLevelsTimeframe = engulferTimeFrame;
    divergenceMonitorTimeFrame =60; //Update the timeframe from divergenceMonitor
    sessionLevelTimeFrame = 60; //Update the timeframe from sessionLevelMarker
 
