@@ -1,5 +1,5 @@
 //Declare the Variables
-
+int divergenceMonitorTimeFrame; //60 minutes
 int initialArray = 100;
 int initialRsiPeaksArray = 1;
 int startingRsiIndex = 0;

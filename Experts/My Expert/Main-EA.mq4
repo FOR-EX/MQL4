@@ -2,11 +2,11 @@
 #include <session-levels-marker.mqh>
 #include <bullish-engulfing-detector.mqh>
 
-int divergenceMonitorTimeFrame = 60; //60 minutes
-int sessionLevelTimeFrame = 60;
-int engulferTimeFrame = 2; //What engulferTimeFrame - 2minutes
-
 void OnTick() {
+   engulferTimeFrame = 60; //Update the timeframe from engulferTimeFrame
+   divergenceMonitorTimeFrame =60; //Update the timeframe from divergenceMonitor
+   sessionLevelTimeFrame = 60; //Update the timeframe from sessionLevelMarker
+
    // update the date&time vars on each tick...
    runningTime();
 

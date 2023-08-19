@@ -1,4 +1,4 @@
-    
+    int sessionLevelTimeFrame;
 //  On Start
     int currentHour = TimeHour(TimeCurrent());
     int currentMinute = TimeMinute(TimeCurrent());
