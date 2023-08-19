@@ -109,7 +109,6 @@ bool checkTradingTime(){
 //    }
 // }
 
-
 //This is a lotsize calculator
    // double stOpinPips = span*100;
    // double riskPerpips = (riskInUsd/stOpinPips);
