@@ -99,7 +99,7 @@ double findSessionSupport(){
 } 
 
 bool checkTradingTime(){
-   if (currentHour > 13 && currentHour < 23){
+   if (currentHour >=14 && currentHour <= 23){
       if (currentHour == 14 && currentMinute <= 30){
          return isTradingTime = false;
       }
