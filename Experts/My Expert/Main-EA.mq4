@@ -1,7 +1,10 @@
 #include <divergence-monitor.mqh>
 #include <session-levels-marker.mqh>
+#include <bullish-engulfing-detector.mqh>
 
-double newPriceOpening = iOpen(Symbol(), timeFrame, 1);
+int divergenceMonitorTimeFrame = 60; //60 minutes
+int sessionLevelTimeFrame = 60;
+int engulferTimeFrame = 2; //What engulferTimeFrame - 2minutes
 
 void OnTick() {
    // update the date&time vars on each tick...
@@ -17,17 +20,19 @@ void OnTick() {
    findSessionResistance();
    findSessionSupport();
 
-   Print("Resistance is:",sessionResistanceArray[0],"Created on:",resistanceLevelCreationTime);
-   Print("Support is:",sessionSupportArray[0], "Created on:",supportLevelCreationTime);
+   // Print("Resistance is:",sessionResistanceArray[0],"Created on:",resistanceLevelCreationTime);
+   // Print("Support is:",sessionSupportArray[0], "Created on:",supportLevelCreationTime);
 
    //Print("0 means no divergence:" , isDivergence);
-   Print("0 means not time to trade", isTradingTime);
-   
+   //Print("0 means not time to trade", isTradingTime);
+
+   Print ("there is a bullish enguulfing going on:", isBullishEngulfing());
+
    //Condition to place an order
    if(!isDivergence && isTradingTime){
-
+      double newPriceOpening = iOpen(Symbol(), engulferTimeFrame, 1);
       //this is the condition for placing order during bullish conditions
-      /*if(newPriceOpening > sessionResistance && isbullishEngulfing && bullishEngulfingBase > highestHighonBullBreak){
+      /*if(newPriceOpening > sessionResistance && isbBullishEngulfing() && bullishEngulfingBase > highestHighonBullBreak){
          placeBullishOrder();
          }      
       */
@@ -39,17 +44,6 @@ void OnTick() {
       */
    }     
 }
-
-// bool isBullishEngulfing(){
-//    bool lastCandleIsBear;
-//    bool newCandleisBull;
-//    bool newCloseisEngulfer;
-//    if(lastCandleIsBear && newCandleisBull && newCloseisEngulfer){
-//       return true;
-//    } else {
-//       return false;
-//    }
-// }
 
 //This is a lotsize calculator
    // double stOpinPips = span*100;

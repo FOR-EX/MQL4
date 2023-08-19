@@ -1,4 +1,4 @@
-    #include <divergence-monitor.mqh>
+    
 //  On Start
     int currentHour = TimeHour(TimeCurrent());
     int currentMinute = TimeMinute(TimeCurrent());
@@ -32,7 +32,7 @@ double findSessionResistance(){
 
    if (currentHour == 14){
       for (int i = 1 ; i <= 5; i++){
-         double indexValue = iHigh(Symbol(),timeFrame,i);
+         double indexValue = iHigh(Symbol(),sessionLevelTimeFrame,i);
          if(indexValue > sessionResistance){
             sessionResistance = indexValue;
          }
@@ -54,7 +54,7 @@ double findSessionSupport(){
 
    if (currentHour == 14){
       for (int i = 1 ; i <= 5; i++){
-         double indexValue = iLow(Symbol(),timeFrame,i);
+         double indexValue = iLow(Symbol(),sessionLevelTimeFrame,i);
          if(indexValue < sessionSupport){
             sessionSupport = indexValue;
          }

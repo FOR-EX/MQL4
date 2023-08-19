@@ -1,5 +1,5 @@
 //Declare the Variables
-int timeFrame = 60; //60 minutes
+
 int initialArray = 100;
 int initialRsiPeaksArray = 1;
 int startingRsiIndex = 0;
@@ -38,11 +38,11 @@ bool isDivergence = false;
 double runDivergenceMonitor(){
     for (int i=0; i<100;i++){
       //This is to push rsiArray
-      indexValueRsi = iRSI(Symbol(),timeFrame,14,PRICE_CLOSE,(i+1));
+      indexValueRsi = iRSI(Symbol(),divergenceMonitorTimeFrame,14,PRICE_CLOSE,(i+1));
          ArrayResize(rsiArray,initialArray);
          ArrayFill(rsiArray,i,1,indexValueRsi);
       //This is to push priceArray
-      indexValuePrice = iClose(Symbol(), timeFrame, (i+1));
+      indexValuePrice = iClose(Symbol(), divergenceMonitorTimeFrame, (i+1));
          ArrayResize(priceArray,initialArray);
          ArrayFill(priceArray,i,1,indexValuePrice);
                
