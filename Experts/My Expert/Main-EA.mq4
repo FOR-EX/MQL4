@@ -25,7 +25,7 @@ void OnTick() {
    findSessionResistance();
    findSessionSupport();
    
-
+   
    Comment("Resistance is:",sessionResistanceArray[0],"Created on:",resistanceLevelCreationTime, "\n",
             "Support is:",sessionSupportArray[0], "Created on:",supportLevelCreationTime, "\n",
             "0 means no divergence:" , isDivergence, "\n",
@@ -38,26 +38,32 @@ void OnTick() {
    // if (isBearishEngulfing()){
    //    Print ("there is a bearish engulfing going on and the head is:", bearishEngulfingHead);
    // }
-   
-   //Condition to place an order
-   if(!isDivergence && isTradingTime){
-      runAfterBreakLevels();
-         //this is the condition for placing order during bullish conditions
-         /* if (isBullishEngulfing() && bullishEngulfingBase > sessionResistance && bullishEngulfingBase > lastHighestHighonBreak){
-            //placeBullishOrder();
-            Print("Bullish Order Placed");
-            }  */    
-         
-         //this is the condition for placing order during bullish conditions
-         /*if(newPriceOpening < sessionSupport && isBearishEngulfing && bearishEngulfingHead < lowestLowonBearBreak){
-            placeBearishOrder();
-            }
-         
-         */
-   }     
-}
-//Custom Function
+   checkForBreaks ();
 
+   pushBullishBreakPriceArrays();
+
+   //establish the last highes peak...
+   establishLastHighestPeak();
+   
+   
+   Print("LastbullishBreakPriceArrays is:",bullishBreakPriceArrays[initialAfterBreakLevelsArray-1]);
+   Print("Last highest peak is:", lastHighestPeak[lastHighestPeakIndex]);
+   //Condition to place a bullish order
+   if(!isDivergence && isTradingTime){
+      //this is the condition for placing order during bullish conditions
+      if (isBullishEngulfing() && bullishEngulfingBase > lastHighestPeak[lastHighestPeakIndex]){
+         //placeBullishOrder();
+         Print("Bullish Order Placed");
+         updateNewHighestPeak ();
+         } 
+         
+         
+      if (bullishEngulfingBase < lastHighestPeak[lastHighestPeakIndex]) {
+         // updateLastHigh();
+      }
+      }     
+   }
+//Custom Function
 
 
 //This is a lotsize calculator
