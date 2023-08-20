@@ -4,7 +4,7 @@
 #include <after-break-levels.mqh>
 
 void OnTick() {
-   engulferTimeFrame = 60; //Update the timeframe from engulferTimeFrame
+   engulferTimeFrame = 1; //Update the timeframe from engulferTimeFrame
    afterBreakLevelsTimeframe = engulferTimeFrame;
    divergenceMonitorTimeFrame =60; //Update the timeframe from divergenceMonitor
    sessionLevelTimeFrame = 60; //Update the timeframe from sessionLevelMarker
@@ -24,36 +24,40 @@ void OnTick() {
    //run the sessionLevelsFinder
    findSessionResistance();
    findSessionSupport();
+   
 
-   // Print("Resistance is:",sessionResistanceArray[0],"Created on:",resistanceLevelCreationTime);
-   // Print("Support is:",sessionSupportArray[0], "Created on:",supportLevelCreationTime);
+   Comment("Resistance is:",sessionResistanceArray[0],"Created on:",resistanceLevelCreationTime, "\n",
+            "Support is:",sessionSupportArray[0], "Created on:",supportLevelCreationTime, "\n",
+            "0 means no divergence:" , isDivergence, "\n",
+            "0 means not time to trade:", isTradingTime);
 
-   //Print("0 means no divergence:" , isDivergence);
-   //Print("0 means not time to trade", isTradingTime);
-   if (isBullishEngulfing()){
-      Print ("there is a bullish engulfing going on and the base is:", bullishEngulfingBase);
-   }
-   if (isBearishEngulfing()){
-      Print ("there is a bearish engulfing going on and the head is:", bearishEngulfingHead);
-   }
+
+   // if (isBullishEngulfing()){
+   //    Print ("there is a bullish engulfing going on and the base is:", bullishEngulfingBase);
+   // }
+   // if (isBearishEngulfing()){
+   //    Print ("there is a bearish engulfing going on and the head is:", bearishEngulfingHead);
+   // }
    
    //Condition to place an order
    if(!isDivergence && isTradingTime){
-      
-      //this is the condition for placing order during bullish conditions
-      /*if( isBullishEngulfing() && bullishEngulfingBase > sessionResistance && bullishEngulfingBase > highestHighonBullBreak){
-         placeBullishOrder();
-         }      
-      */
-      //this is the condition for placing order during bullish conditions
-      /*if(newPriceOpening < sessionSupport && isBearishEngulfing && bearishEngulfingHead < lowestLowonBearBreak){
-         placeBearishOrder();
-         }
-      
-      */
+      runAfterBreakLevels();
+         //this is the condition for placing order during bullish conditions
+         /* if (isBullishEngulfing() && bullishEngulfingBase > sessionResistance && bullishEngulfingBase > lastHighestHighonBreak){
+            //placeBullishOrder();
+            Print("Bullish Order Placed");
+            }  */    
+         
+         //this is the condition for placing order during bullish conditions
+         /*if(newPriceOpening < sessionSupport && isBearishEngulfing && bearishEngulfingHead < lowestLowonBearBreak){
+            placeBearishOrder();
+            }
+         
+         */
    }     
 }
 //Custom Function
+
 
 
 //This is a lotsize calculator
