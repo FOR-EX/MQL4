@@ -72,7 +72,7 @@ void pushBearishBreakPriceArrays (){
 
 //Establish the last lowest low
 void establishLastLastLowestLow(){
-   if(isBearBreak){    
+   if(currentHour == 14 && currentMinute <= 31 && isBearBreak){    
          lastLowestLowIndex = ArrayMinimum(bearishBreakPriceArrays, WHOLE_ARRAY, 0);
          lastLowestLowValue = bearishBreakPriceArrays[lastLowestLowIndex];
    } 
