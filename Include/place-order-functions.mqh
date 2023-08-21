@@ -9,6 +9,11 @@ double bullStopLoss;
 double bullTakeProfit;
 double bullLotSize;
 
+//bearOrderVariables
+double bearStopLoss;
+double bearTakeProfit;
+double bearLotSize;
+
 //vars for fibo...
 double Level100;
 double Level0;
@@ -76,6 +81,35 @@ void createBullishFibo(){
         "Level 161.8:", Level161_8 + "\n",
         "NegativeLevel2:", NegativeLevel2 + "\n",
         "NegativeLevel1_39:",NegativeLevel1_39);
+}
+
+void placeBearishOrder(){
+    double currentNumberofOrder = OrdersTotal();
+    double currentSpreadValue =  Ask-Bid;
+    double stopLossinPips;
+    double riskPerPips;
+    double contractSize = SymbolInfoDouble(Symbol(), SYMBOL_TRADE_CONTRACT_SIZE);
+
+    if(contractSize == 100000){
+        contractSize = 1000;
+    }
+
+    if (!currentNumberofOrder){
+        createBearishFibo();
+        
+        bearStopLoss = Level161_8 + currentSpreadValue;
+        stopLossinPips = (bearStopLoss - Bid)*100;
+        bearTakeProfit = stopLossinPips/100 * 1.39 - Bid;
+        riskPerPips = riskedAmount/stopLossinPips;
+        bearLotSize = riskPerPips*Bid/contractSize;
+        Print("riskPerPips:", riskPerPips);
+        Print ("bearLotSize is:", bearLotSize);
+        Print("bearTakeProfit:", bearTakeProfit);
+        Print("bearStopLoss:",bearStopLoss);
+        Print("stopLossinPips:",stopLossinPips);
+        OrderSend(Symbol(),OP_BUY,bearLotSize,Bid,1,bearStopLoss,bearTakeProfit,NULL,0,0,clrAquamarine);
+    }
+    
 }
 
 void createBearishFibo(){
