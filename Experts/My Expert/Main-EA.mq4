@@ -86,7 +86,26 @@ void OnTick() {
          if(isBearishEngulfing() && bearishEngulfingHead > lastLowestLowValue){
             updateLastLow();
          }
-      }     
+      }
+      //Things to do if divergent and isTradingTime
+      if(isDivergence && isTradingTime) {
+         if (isBullishEngulfing() && bullishEngulfingBase > lastHighestPeakValue && isBullBreak){
+            updateLastHigh();
+            } 
+            //condition to update last high if no orderplaced
+         if (isBullishEngulfing() && bullishEngulfingBase < lastHighestPeakValue) {
+            updateLastHigh();
+         }
+         
+         // -------------------------------------------------------------------//
+         //this is the condition for placing order during bearish conditions
+         if(isBearishEngulfing() && bearishEngulfingHead < lastLowestLowValue && isBearBreak){
+            updateLastLow();
+         }
+         if(isBearishEngulfing() && bearishEngulfingHead > lastLowestLowValue){
+            updateLastLow();
+         }
+      }
       
       lastMinute = currentMinute;
    }
