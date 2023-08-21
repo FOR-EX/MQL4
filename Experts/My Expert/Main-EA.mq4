@@ -2,10 +2,12 @@
 #include <session-levels-marker.mqh>
 #include <engulfing-detector.mqh>
 #include <after-break-levels.mqh>
+#include <place-order-functions.mqh>
 
 void OnTick() {
    engulferTimeFrame = 1; //Update the timeframe from engulferTimeFrame
    afterBreakLevelsTimeframe = engulferTimeFrame;
+   placeOrderTimeframe = engulferTimeFrame;
    divergenceMonitorTimeFrame =60; //Update the timeframe from divergenceMonitor
    sessionLevelTimeFrame = 60; //Update the timeframe from sessionLevelMarker
    double lastMinute = currentMinute;
@@ -61,6 +63,7 @@ void OnTick() {
       if(!isDivergence && isTradingTime){
          //this is the condition for placing order during bullish conditions
          if (isBullishEngulfing() && bullishEngulfingBase > lastHighestPeakValue && isBullBreak){
+            //drawBullishFiboObject
             //placeBullishOrder();
             Print("Bullish Order Placed");
             updateLastHigh();
@@ -75,6 +78,7 @@ void OnTick() {
 
          //this is the condition for placing order during bearish conditions
          if(isBearishEngulfing() && bearishEngulfingHead < lastLowestLowValue && isBearBreak){
+            //drawBearishFiboObject
             //placeBearishOrder();
             Print("Bearish Order Placed");
             updateLastLow();
@@ -89,9 +93,3 @@ void OnTick() {
 
 }
 //Custom Function
-
-
-//This is a lotsize calculator
-   // double stOpinPips = span*100;
-   // double riskPerpips = (riskInUsd/stOpinPips);
-   // double lOtz = riskInUsd/stOpinPips*Ask/normalLot;
