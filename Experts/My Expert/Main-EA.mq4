@@ -8,64 +8,70 @@ void OnTick() {
    afterBreakLevelsTimeframe = engulferTimeFrame;
    divergenceMonitorTimeFrame =60; //Update the timeframe from divergenceMonitor
    sessionLevelTimeFrame = 60; //Update the timeframe from sessionLevelMarker
+   double lastMinute = currentMinute;
 
    // update the date&time vars on each tick...
    runningTime();
 
-   //run this to see if there is uncleared rsiDivergence....
-   runDivergenceMonitor(); 
+   //This is to make codes reiterate only once per minute - making the code efficient.
+   if (currentMinute != lastMinute){
+      //run this to see if there is uncleared rsiDivergence....
+      runDivergenceMonitor(); 
 
-   //run this to see if it is tradingtime....
-   checkTradingTime();
-   
-   //run the sessionLevelsFinder
-   findSessionResistance();
-   findSessionSupport();
-   
-   
-   Comment("Resistance is:",sessionResistanceArray[0],"Created on:",resistanceLevelCreationTime, "\n",
-            "Support is:",sessionSupportArray[0], "Created on:",supportLevelCreationTime, "\n",
-            "0 means no divergence:" , isDivergence, "\n",
-            "0 means not time to trade:", isTradingTime);
+      //run this to see if it is tradingtime....
+      checkTradingTime();
+      
+      //run the sessionLevelsFinder
+      findSessionResistance();
+      findSessionSupport();
+      
+      
+      Comment("Resistance is:",sessionResistanceArray[0],"Created on:",resistanceLevelCreationTime, "\n",
+               "Support is:",sessionSupportArray[0], "Created on:",supportLevelCreationTime, "\n",
+               "0 means no divergence:" , isDivergence, "\n",
+               "0 means not time to trade:", isTradingTime);
 
 
-   if (isBullishEngulfing()){
-      Print ("there is a bullish engulfing going on and the base is:", bullishEngulfingBase);
-   }
-   if (isBearishEngulfing()){
-      Print ("there is a bearish engulfing going on and the head is:", bearishEngulfingHead);
-   }
-
-   checkForBreaks ();
-
-   pushBullishBreakPriceArrays();
-
-   //establish the last highes peak...
-   establishLastHighestPeak();
-
-   //resets the After Break Levels if !tradingTime
-   if (currentHour > 22){
-      resetTheAfterBreakLevels();
-   }
-  
-   
-   Print("LastbullishBreakPriceArrays is:",bullishBreakPriceArrays[initialAfterBreakLevelsArray-1]);
-   Print("Last highest peak is:", lastHighestPeakValue);
-
-   //Condition to place a bullish order
-   if(!isDivergence && isTradingTime){
-      //this is the condition for placing order during bullish conditions
-      if (isBullishEngulfing() && bullishEngulfingBase > lastHighestPeakValue){
-         //placeBullishOrder();
-         Print("Bullish Order Placed");
-         updateLastHigh();
-         } 
-         
-         
-      if (isBullishEngulfing() && bullishEngulfingBase < lastHighestPeakValue) {
-         updateLastHigh();
+      if (isBullishEngulfing()){
+         Print ("there is a bullish engulfing going on and the base is:", bullishEngulfingBase);
       }
-   }     
+      if (isBearishEngulfing()){
+         Print ("there is a bearish engulfing going on and the head is:", bearishEngulfingHead);
+      }
+
+      checkForBreaks ();
+
+      pushBullishBreakPriceArrays();
+
+      //establish the last highes peak...
+      establishLastHighestPeak();
+
+      //resets the After Break Levels if !tradingTime
+      if (currentHour > 22){
+         resetTheAfterBreakLevels();
+      }
+   
+      
+      Print("LastbullishBreakPriceArrays is:",bullishBreakPriceArrays[initialAfterBreakLevelsArray-1]);
+      Print("Last highest peak is:", lastHighestPeakValue);
+
+      //Condition to place a bullish order
+      if(!isDivergence && isTradingTime){
+         //this is the condition for placing order during bullish conditions
+         if (isBullishEngulfing() && bullishEngulfingBase > lastHighestPeakValue){
+            //placeBullishOrder();
+            Print("Bullish Order Placed");
+            updateLastHigh();
+            } 
+            
+            
+         if (isBullishEngulfing() && bullishEngulfingBase < lastHighestPeakValue) {
+            updateLastHigh();
+         }
+      }     
+      
+      lastMinute = currentMinute;
+   }   
 }
 //Custom Function
 
