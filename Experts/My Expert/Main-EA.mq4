@@ -108,6 +108,7 @@ void OnTick() {
       }
       
       lastMinute = currentMinute;
+      deleteFibo();
    }
 
 }

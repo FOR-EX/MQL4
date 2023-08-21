@@ -79,8 +79,10 @@ void createBullishFibo(){
 }
 
 void deleteFibo(){
-    ObjectDelete(0,"FibonacciRetracement");
-
+    double currentNumberofOrder = OrdersTotal();
+    if(!currentNumberofOrder){
+        ObjectDelete(0,"FibonacciRetracement");
+    }
 }
 
 //This is a lotsize calculator
