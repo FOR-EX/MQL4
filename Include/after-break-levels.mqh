@@ -1,7 +1,7 @@
 #include <session-levels-marker.mqh>
 #include <engulfing-detector.mqh>
 
-double lastHighestPeak [];
+//double lastHighestPeak [];
 double newHighestPeak [];
 double lastLowestLow = 999999;
 int afterBreakLevelsTimeframe;
@@ -17,16 +17,17 @@ int newHighestPeakIndex;
 
 //push bullishBreakPriceArrays Function
 double pushBullishBreakPriceArrays (){
-   if(isBullBreak) {
-      double newPriceAfterBreak = iClose(Symbol(),afterBreakLevelsTimeframe,1);
+   if(isBullBreak && isTradingTime) {
+      double newPriceAfterBreak = iOpen(Symbol(),afterBreakLevelsTimeframe,1);
       ArrayResize(bullishBreakPriceArrays, initialAfterBreakLevelsArray);
       ArrayFill(bullishBreakPriceArrays,initialAfterBreakLevelsArray-1,1,newPriceAfterBreak);
    }
 }
 
+
 double establishLastHighestPeak(){
    //Establish the last highest peak
-   if(currentHour == 14 && currentMinute <= 30 && isBullBreak){    
+   if(currentHour == 14 && currentMinute <= 31){    
          lastHighestPeakIndex = ArrayMaximum(bullishBreakPriceArrays, WHOLE_ARRAY, 0);
          lastHighestPeakValue = bullishBreakPriceArrays[lastHighestPeakIndex];
    } 
@@ -43,14 +44,13 @@ double updateNewHighestPeak () {
       }
 
    }
-   
 }
 
-// double updateLastHigh(){
-//    if(newHighestPeak > lastHighestPeak) {
-//       lastHighestPeak = newHighestPeak;
-//    }
-// }
+double updateLastHigh(){
+   lastHighestPeakIndex = ArrayMaximum(bullishBreakPriceArrays, WHOLE_ARRAY, 0);
+   lastHighestPeakValue = bullishBreakPriceArrays [lastHighestPeakIndex];
+   
+}
 
 
 bool checkForBreaks (){
@@ -74,9 +74,7 @@ bool checkForBreaks (){
 
 
 double resetTheAfterBreakLevels(){
-   if (currentHour < 14 && currentHour > 23){
-      initialAfterBreakLevelsArray = 0;
-      //lastHighestPeak = 0;
-      ArrayFree(bullishBreakPriceArrays);
-   }
+   initialAfterBreakLevelsArray = 0;
+   ArrayFree(bullishBreakPriceArrays);
+   updateLastHigh();
 }

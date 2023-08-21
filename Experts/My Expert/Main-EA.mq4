@@ -19,7 +19,9 @@ void OnTick() {
    checkTradingTime();
 
    //resets the After Break Levels if !tradingTime
-   resetTheAfterBreakLevels();
+   // if (!isTradingTime){
+   //    resetTheAfterBreakLevels();
+   // }
    
    //run the sessionLevelsFinder
    findSessionResistance();
@@ -32,12 +34,12 @@ void OnTick() {
             "0 means not time to trade:", isTradingTime);
 
 
-   // if (isBullishEngulfing()){
-   //    Print ("there is a bullish engulfing going on and the base is:", bullishEngulfingBase);
-   // }
-   // if (isBearishEngulfing()){
-   //    Print ("there is a bearish engulfing going on and the head is:", bearishEngulfingHead);
-   // }
+   if (isBullishEngulfing()){
+      Print ("there is a bullish engulfing going on and the base is:", bullishEngulfingBase);
+   }
+   if (isBearishEngulfing()){
+      Print ("there is a bearish engulfing going on and the head is:", bearishEngulfingHead);
+   }
    checkForBreaks ();
 
    pushBullishBreakPriceArrays();
@@ -46,23 +48,24 @@ void OnTick() {
    establishLastHighestPeak();
    
    
-   Print("LastbullishBreakPriceArrays is:",bullishBreakPriceArrays[initialAfterBreakLevelsArray-1]);
-   Print("Last highest peak is:", lastHighestPeak[lastHighestPeakIndex]);
+   // Print("LastbullishBreakPriceArrays is:",bullishBreakPriceArrays[initialAfterBreakLevelsArray-1]);
+   // Print("Last highest peak is:", lastHighestPeakValue);
+
    //Condition to place a bullish order
    if(!isDivergence && isTradingTime){
       //this is the condition for placing order during bullish conditions
-      if (isBullishEngulfing() && bullishEngulfingBase > lastHighestPeak[lastHighestPeakIndex]){
+      if (isBullishEngulfing() && bullishEngulfingBase > lastHighestPeakValue){
          //placeBullishOrder();
          Print("Bullish Order Placed");
-         updateNewHighestPeak ();
+         updateLastHigh();
          } 
          
          
-      if (bullishEngulfingBase < lastHighestPeak[lastHighestPeakIndex]) {
-         // updateLastHigh();
+      if (isBullishEngulfing() && bullishEngulfingBase < lastHighestPeakValue) {
+         updateLastHigh();
       }
-      }     
-   }
+   }     
+}
 //Custom Function
 
 
