@@ -20,3 +20,13 @@ void calculateBullLotSize(){
 void placeBullishOrder(){
     //OrderSend(Symbol(),OP_BUY,bullLotSize,Ask,1,bullStopLoss,bullTakeProfit,NULL,0,0,clrAquamarine);
 }
+
+void createBullishFibo(){
+    double startPoint = iClose(Symbol(), placeOrderTimeframe, 2); // You can modify this based on your preference
+    double endPoint = iClose(Symbol(), placeOrderTimeframe, 1); // You can modify this based on your preference
+    ObjectCreate(0, "FibonacciRetracement", OBJ_FIBO, 0, Time[2], startPoint, Time[1], endPoint);
+}
+
+// void deleteBullishFibo(){
+
+// }
