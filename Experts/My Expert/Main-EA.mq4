@@ -70,7 +70,7 @@ void OnTick() {
             } 
             
             //condition to update last high if no orderplaced
-         if (isBullishEngulfing() && bullishEngulfingBase < lastHighestPeakValue || isBearishEngulfing()) {
+         if (isBullishEngulfing() && bullishEngulfingBase < lastHighestPeakValue || isBearishEngulfing() || isLastandNewBear()){
             updateLastHigh();
          }
          
@@ -83,7 +83,7 @@ void OnTick() {
             Print("Bearish Order Placed");
             updateLastLow();
          }
-         if(isBearishEngulfing() && bearishEngulfingHead > lastLowestLowValue || isBullishEngulfing()){
+         if(isBearishEngulfing() && bearishEngulfingHead > lastLowestLowValue || isBullishEngulfing() ||isLastandNewBull()){
             updateLastLow();
          }
       }
