@@ -2,7 +2,21 @@ int engulferTimeFrame;
 double bullishEngulfingBase;
 double bearishEngulfingHead;
 
+bool isLastandNewBull(){
+   if(isLastCandleBull() && isNewCandleBull()){
+      return true;
+   } else {
+      return false;
+   }
+}
 
+bool isLastandNewBear(){
+   if(isLastCandleBear() && isNewCandleBear()){
+      return true;
+   } else {
+      return false;
+   }
+}
 //bearish-engulfing-detector
 bool isBearishEngulfing (){
    if (isLastCandleBull() && isNewCandleBear() && isNewCandleBearishEngulfer()){
@@ -23,6 +37,8 @@ bool isNewCandleBearishEngulfer(){
       return false;
    }
 }
+
+
 
 bool isLastCandleBull(){
    double lastOpeningCandle = iOpen(Symbol(), engulferTimeFrame,2);
