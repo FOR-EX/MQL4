@@ -71,7 +71,8 @@ void OnTick() {
       }     
       
       lastMinute = currentMinute;
-   }   
+   }
+
 }
 //Custom Function
 

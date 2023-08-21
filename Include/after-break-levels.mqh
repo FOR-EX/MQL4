@@ -16,7 +16,7 @@ double lastHighestPeakValue;
 
 //push bullishBreakPriceArrays Function
 double pushBullishBreakPriceArrays (){
-   if(isBullBreak && isTradingTime) {
+   if(isBullBreak) {
       double newPriceAfterBreak = iOpen(Symbol(),afterBreakLevelsTimeframe,1);
       ArrayResize(bullishBreakPriceArrays, initialAfterBreakLevelsArray);
       ArrayFill(bullishBreakPriceArrays,initialAfterBreakLevelsArray-1,1,newPriceAfterBreak);
@@ -41,7 +41,7 @@ double updateLastHigh(){
 
 bool checkForBreaks (){
 
-   if (iOpen(Symbol(),afterBreakLevelsTimeframe,1) > sessionResistance && currentHour >=14 && currentHour <= 23){
+   if (iOpen(Symbol(),afterBreakLevelsTimeframe,1) > sessionResistance && currentHour >=14 && currentHour <= 22){
       Print("isBullishBreak");
       initialAfterBreakLevelsArray++;
       return isBullBreak = true;
@@ -49,7 +49,7 @@ bool checkForBreaks (){
       return isBullBreak =false;
    }
 
-   if (iOpen(Symbol(),afterBreakLevelsTimeframe,1) < sessionSupport && currentHour >=14 && currentHour <= 23){
+   if (iOpen(Symbol(),afterBreakLevelsTimeframe,1) < sessionSupport && currentHour >=14 && currentHour <= 22){
       Print("isBearishBreak");
       return isBearBreak = true;
       initialAfterBreakLevelsArray++;
