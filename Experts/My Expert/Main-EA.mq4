@@ -5,7 +5,8 @@
 #include <place-order-functions.mqh>
 
 void OnTick() {
-   engulferTimeFrame = 1; //Update the timeframe from engulferTimeFrame
+   riskedAmount = 60; //risked money in USD
+   engulferTimeFrame = 5; //Update the timeframe from engulferTimeFrame
    afterBreakLevelsTimeframe = engulferTimeFrame;
    placeOrderTimeframe = engulferTimeFrame;
    divergenceMonitorTimeFrame =60; //Update the timeframe from divergenceMonitor
@@ -63,8 +64,7 @@ void OnTick() {
       if(!isDivergence && isTradingTime){
          //this is the condition for placing order during bullish conditions
          if (isBullishEngulfing() && bullishEngulfingBase > lastHighestPeakValue && isBullBreak){
-            //drawBullishFiboObject
-            //placeBullishOrder();
+            placeBullishOrder();
             Print("Bullish Order Placed");
             updateLastHigh();
             } 
