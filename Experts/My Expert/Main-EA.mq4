@@ -17,11 +17,6 @@ void OnTick() {
 
    //run this to see if it is tradingtime....
    checkTradingTime();
-
-   //resets the After Break Levels if !tradingTime
-   // if (!isTradingTime){
-   //    resetTheAfterBreakLevels();
-   // }
    
    //run the sessionLevelsFinder
    findSessionResistance();
@@ -40,16 +35,22 @@ void OnTick() {
    if (isBearishEngulfing()){
       Print ("there is a bearish engulfing going on and the head is:", bearishEngulfingHead);
    }
+
    checkForBreaks ();
 
    pushBullishBreakPriceArrays();
 
    //establish the last highes peak...
    establishLastHighestPeak();
+
+   //resets the After Break Levels if !tradingTime
+   if (currentHour > 22){
+      resetTheAfterBreakLevels();
+   }
+  
    
-   
-   // Print("LastbullishBreakPriceArrays is:",bullishBreakPriceArrays[initialAfterBreakLevelsArray-1]);
-   // Print("Last highest peak is:", lastHighestPeakValue);
+   Print("LastbullishBreakPriceArrays is:",bullishBreakPriceArrays[initialAfterBreakLevelsArray-1]);
+   Print("Last highest peak is:", lastHighestPeakValue);
 
    //Condition to place a bullish order
    if(!isDivergence && isTradingTime){
