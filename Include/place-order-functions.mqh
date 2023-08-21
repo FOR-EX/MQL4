@@ -13,10 +13,10 @@ double bullTakeProfit;
 double bullLotSize;
 
 
-double calculateBullLotSize(){
+void calculateBullLotSize(){
     bullLotSize = 0;
 }
 
-double placeBullishOrder(){
-    OrderSend(Symbol(),OP_BUY,bullLotSize,Ask,1,bullStopLoss,bullTakeProfit,NULL,0,0,clrAquamarine);
+void placeBullishOrder(){
+    //OrderSend(Symbol(),OP_BUY,bullLotSize,Ask,1,bullStopLoss,bullTakeProfit,NULL,0,0,clrAquamarine);
 }

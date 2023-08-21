@@ -35,7 +35,7 @@ double newPrice;
 
 bool isDivergence = false;
 //This is the price and rsi scanner wrapped in a function
-double runDivergenceMonitor(){
+void runDivergenceMonitor(){
     for (int i=0; i<100;i++){
       //This is to push rsiArray
       indexValueRsi = iRSI(Symbol(),divergenceMonitorTimeFrame,14,PRICE_CLOSE,(i+1));
@@ -180,14 +180,14 @@ bool isNewRsiLow(){
    }
 }
 
-double addBullPricePeaks(){
+void addBullPricePeaks(){
    ArrayResize(bullPricePeaks, initialPricePeaksArray);
    ArrayFill(bullPricePeaks, startingPriceIndex, 1, newPricePeak);
    initialPricePeaksArray = initialPricePeaksArray++;
    startingPriceIndex = startingPriceIndex++;
 }
 
-double addBullRsiPeaks(){
+void addBullRsiPeaks(){
 
    ArrayResize(bullRsiPeaks,initialRsiPeaksArray);
    ArrayFill(bullRsiPeaks,startingRsiIndex,1,newRsiPeak);
@@ -196,14 +196,14 @@ double addBullRsiPeaks(){
    startingRsiIndex = startingRsiIndex++;
 }
 
-double addBearPricePeaks(){
+void addBearPricePeaks(){
    ArrayResize(bearPricePeaks, initialPricePeaksArray);
    ArrayFill(bearPricePeaks, startingPriceIndex, 1, newPriceLow);
    initialPricePeaksArray = initialPricePeaksArray++;
    startingPriceIndex = startingPriceIndex++;
 }
 
-double addBearRsiPeaks(){
+void addBearRsiPeaks(){
    ArrayResize(bearRsiPeaks, initialArray);
    ArrayFill(bearRsiPeaks, startingRsiIndex, 1, newRsiLow);
    //Print("bearRsiPeaks are" , bearRsiPeaks[startingRsiIndex]);
@@ -211,7 +211,7 @@ double addBearRsiPeaks(){
    startingRsiIndex = startingRsiIndex++;
 }
 
-double addBullishPriceArray(){
+void addBullishPriceArray(){
    for (int i=0; i<100 ; i++){
       indexValuePrice = newPrice;
       ArrayResize(bullishPriceArray, initialArray);
@@ -219,7 +219,7 @@ double addBullishPriceArray(){
    }
 }
 
-double addBullishRsiArray(){
+void addBullishRsiArray(){
    for (int i=0; i<100 ;i++){
       indexValueRsi = newRsi;
       ArrayResize(bullishRsiArray,initialArray);
@@ -227,7 +227,7 @@ double addBullishRsiArray(){
    }
 }
 
-double addBearishPriceArray(){
+void addBearishPriceArray(){
    for (int i=0; i<100 ; i++){
       indexValuePrice = newPrice;
       ArrayResize(bearishPriceArray, initialArray);
@@ -235,7 +235,7 @@ double addBearishPriceArray(){
    }
 }
 
-double addBearishRsiArray(){
+void addBearishRsiArray(){
    for (int i=0; i<100 ;i++){
       indexValueRsi = newRsi;
       ArrayResize(bearishRsiArray, initialArray);
@@ -243,28 +243,28 @@ double addBearishRsiArray(){
    }
 }
 
-double resetBullishPriceArray(){
+void resetBullishPriceArray(){
    ArrayFree(bullishPriceArray);
    lastHighestPrice = 0;
    startingPriceIndex = 0;
    initialPricePeaksArray = 1;
 }
 
-double resetBullishRsiArray (){
+void resetBullishRsiArray (){
    ArrayFree(bullishRsiArray);
    lastHighestRsi = 50;
    startingRsiIndex = 0;
    initialRsiPeaksArray = 1;
 }
   
-double resetBearishPriceArray(){
+void resetBearishPriceArray(){
    ArrayFree(bearishPriceArray);
    lastLowestPrice = 9999999;
    startingPriceIndex = 0;
    initialPricePeaksArray = 1;
 }
 
-double resetBearishRsiArray () {
+void resetBearishRsiArray () {
       ArrayFree(bearishRsiArray);
       lastLowestRsi = 50;
       startingRsiIndex = 0;

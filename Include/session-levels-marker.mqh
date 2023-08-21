@@ -15,13 +15,13 @@
    
 // Custom functions
 
-int runningTime(){
+void runningTime(){
     currentHour = TimeHour(TimeCurrent());
     currentMinute = TimeMinute(TimeCurrent());
     currentDay = TimeDay(TimeCurrent());
 }
 
-double findSessionResistance(){
+void findSessionResistance(){
 
    //This is the level reset condition
    if (resistanceLevelCreationTime != currentDay){
@@ -43,7 +43,7 @@ double findSessionResistance(){
    }
 } 
 
-double findSessionSupport(){
+void findSessionSupport(){
 
    //This is the level reset condition
    if (supportLevelCreationTime != currentDay){

@@ -18,7 +18,7 @@ int lastLowestLowIndex = 0;
 double lastLowestLowValue = 999999;
 
 //push bullishBreakPriceArrays Function
-double pushBullishBreakPriceArrays (){
+void pushBullishBreakPriceArrays (){
    if(isBullBreak) {
       double newPriceAfterBreak = iOpen(Symbol(),afterBreakLevelsTimeframe,1);
       ArrayResize(bullishBreakPriceArrays, initialAfterBullBreakLevelsArray);
@@ -27,7 +27,7 @@ double pushBullishBreakPriceArrays (){
 }
 
    //Establish the last highest peak
-double establishLastHighestPeak(){
+void establishLastHighestPeak(){
    if(currentHour == 14 && currentMinute <= 31 && isBullBreak){    
          lastHighestPeakIndex = ArrayMaximum(bullishBreakPriceArrays, WHOLE_ARRAY, 0);
          lastHighestPeakValue = bullishBreakPriceArrays[lastHighestPeakIndex];
@@ -35,7 +35,7 @@ double establishLastHighestPeak(){
 }
 
    //Update the last high
-double updateLastHigh(){
+void updateLastHigh(){
    lastHighestPeakIndex = ArrayMaximum(bullishBreakPriceArrays, WHOLE_ARRAY, 0);
    lastHighestPeakValue = bullishBreakPriceArrays [lastHighestPeakIndex];
    
@@ -62,7 +62,7 @@ bool checkForBearBreaks(){
 }
 
 //push bearishBreakPriceArrays Function
-double pushBearishBreakPriceArrays (){
+void pushBearishBreakPriceArrays (){
    if(isBearBreak) {
       double newPriceAfterBreak = iOpen(Symbol(),afterBreakLevelsTimeframe,1);
       ArrayResize(bearishBreakPriceArrays, initialAfterBearBreakLevelsArray);
@@ -71,7 +71,7 @@ double pushBearishBreakPriceArrays (){
 }
 
 //Establish the last lowest low
-double establishLastLastLowestLow(){
+void establishLastLastLowestLow(){
    if(isBearBreak){    
          lastLowestLowIndex = ArrayMinimum(bearishBreakPriceArrays, WHOLE_ARRAY, 0);
          lastLowestLowValue = bearishBreakPriceArrays[lastLowestLowIndex];
@@ -79,14 +79,14 @@ double establishLastLastLowestLow(){
 }
 
 //Update the last low
-double updateLastLow(){
+void updateLastLow(){
    lastLowestLowIndex = ArrayMinimum(bearishBreakPriceArrays, WHOLE_ARRAY, 0);
    lastLowestLowValue = bearishBreakPriceArrays[lastLowestLowIndex];
    
 }
 
 
-double resetTheAfterBreakLevels(){
+void resetTheAfterBreakLevels(){
    initialAfterBullBreakLevelsArray = 0;
    ArrayFree(bullishBreakPriceArrays);
    lastHighestPeakValue = 0;
