@@ -26,12 +26,6 @@ void OnTick() {
       findSessionSupport();
       
       
-      Comment("Resistance is:",sessionResistanceArray[0],"Created on:",resistanceLevelCreationTime, "\n",
-               "Support is:",sessionSupportArray[0], "Created on:",supportLevelCreationTime, "\n",
-               "0 means no divergence:" , isDivergence, "\n",
-               "0 means not time to trade:", isTradingTime);
-
-
       if (isBullishEngulfing()){
          Print ("there is a bullish engulfing going on and the base is:", bullishEngulfingBase);
       }
@@ -39,34 +33,54 @@ void OnTick() {
          Print ("there is a bearish engulfing going on and the head is:", bearishEngulfingHead);
       }
 
-      checkForBreaks ();
+      checkForBullBreaks ();
+      checkForBearBreaks();
 
       pushBullishBreakPriceArrays();
+      pushBearishBreakPriceArrays ();
 
-      //establish the last highes peak...
+      //establish the last highes peak and last lowest low...
       establishLastHighestPeak();
+      establishLastLastLowestLow();
 
       //resets the After Break Levels if !tradingTime
       if (currentHour > 22){
          resetTheAfterBreakLevels();
       }
    
+      Comment("Resistance is:",sessionResistanceArray[0],"Created on:",resistanceLevelCreationTime, "\n",
+            "Support is:",sessionSupportArray[0], "Created on:",supportLevelCreationTime, "\n",
+         "0 means no divergence:" , isDivergence, "\n",
+         "0 means not time to trade:", isTradingTime, "\n",
+         "LastbullishBreakPriceArrays is:",bullishBreakPriceArrays[initialAfterBullBreakLevelsArray-1], "\n",
+         "Last highest peak is:", lastHighestPeakValue, "\n",
+         "LastbearishBreakPriceArrays is:",bearishBreakPriceArrays[initialAfterBearBreakLevelsArray-1], "\n",
+         "Last lowest low is:", lastLowestLowValue);
       
-      Print("LastbullishBreakPriceArrays is:",bullishBreakPriceArrays[initialAfterBreakLevelsArray-1]);
-      Print("Last highest peak is:", lastHighestPeakValue);
-
       //Condition to place a bullish order
       if(!isDivergence && isTradingTime){
          //this is the condition for placing order during bullish conditions
-         if (isBullishEngulfing() && bullishEngulfingBase > lastHighestPeakValue){
+         if (isBullishEngulfing() && bullishEngulfingBase > lastHighestPeakValue && isBullBreak){
             //placeBullishOrder();
             Print("Bullish Order Placed");
             updateLastHigh();
             } 
             
-            
+            //condition to update last high if no orderplaced
          if (isBullishEngulfing() && bullishEngulfingBase < lastHighestPeakValue) {
             updateLastHigh();
+         }
+         
+         // -------------------------------------------------------------------//
+
+         //this is the condition for placing order during bearish conditions
+         if(isBearishEngulfing() && bearishEngulfingHead < lastLowestLowValue && isBearBreak){
+            //placeBearishOrder();
+            Print("Bearish Order Placed");
+            updateLastLow();
+         }
+         if(isBearishEngulfing() && bearishEngulfingHead > lastLowestLowValue){
+            updateLastLow();
          }
       }     
       
