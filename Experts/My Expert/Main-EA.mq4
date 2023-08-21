@@ -6,7 +6,7 @@
 
 void OnTick() {
    riskedAmount = 60; //risked money in USD
-   engulferTimeFrame = 5; //Update the timeframe from engulferTimeFrame
+   engulferTimeFrame = 1; //Update the timeframe from engulferTimeFrame
    afterBreakLevelsTimeframe = engulferTimeFrame;
    placeOrderTimeframe = engulferTimeFrame;
    divergenceMonitorTimeFrame =60; //Update the timeframe from divergenceMonitor
@@ -64,13 +64,13 @@ void OnTick() {
       if(!isDivergence && isTradingTime){
          //this is the condition for placing order during bullish conditions
          if (isBullishEngulfing() && bullishEngulfingBase > lastHighestPeakValue && isBullBreak){
-            placeBullishOrder();
+            //placeBullishOrder();
             Print("Bullish Order Placed");
             updateLastHigh();
             } 
             
             //condition to update last high if no orderplaced
-         if (isBullishEngulfing() && bullishEngulfingBase < lastHighestPeakValue) {
+         if (isBullishEngulfing() && bullishEngulfingBase < lastHighestPeakValue || isBearishEngulfing()) {
             updateLastHigh();
          }
          
@@ -78,12 +78,12 @@ void OnTick() {
 
          //this is the condition for placing order during bearish conditions
          if(isBearishEngulfing() && bearishEngulfingHead < lastLowestLowValue && isBearBreak){
-            //drawBearishFiboObject
+            createBearishFibo();
             //placeBearishOrder();
             Print("Bearish Order Placed");
             updateLastLow();
          }
-         if(isBearishEngulfing() && bearishEngulfingHead > lastLowestLowValue){
+         if(isBearishEngulfing() && bearishEngulfingHead > lastLowestLowValue || isBullishEngulfing()){
             updateLastLow();
          }
       }
@@ -108,7 +108,7 @@ void OnTick() {
       }
       
       lastMinute = currentMinute;
-      deleteFibo();
+      //deleteFibo();
    }
 
 }
