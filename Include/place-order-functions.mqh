@@ -4,6 +4,7 @@
 
 double riskedAmount;
 int placeOrderTimeframe;
+double takeProfitMultiplier;
 //bullOrderVariables
 double bullStopLoss;
 double bullTakeProfit;
@@ -24,13 +25,6 @@ double NegativeLevel2; //x2 if the  sl is 161.8 from fibo
 double NegativeLevel1_39; //x1.39 if the  sl is 161.8 from fibo
 
 
-
-
-void calculateBullLotSize(){
-    
-    bullLotSize = 0;
-}
-
 void placeBullishOrder(){
     double currentNumberofOrder = OrdersTotal();
     double currentSpreadValue =  Ask-Bid;
@@ -38,7 +32,7 @@ void placeBullishOrder(){
     double riskPerPips;
     double contractSize = SymbolInfoDouble(Symbol(), SYMBOL_TRADE_CONTRACT_SIZE);
 
-    if(contractSize == 100000){
+    if((contractSize == 100000) || (contractSize==1)){
         contractSize = 1000;
     }
 
@@ -47,15 +41,15 @@ void placeBullishOrder(){
         
         bullStopLoss = Level161_8 - currentSpreadValue;
         stopLossinPips = (Ask - bullStopLoss)*100;
-        bullTakeProfit = stopLossinPips/100 * 1.39 + Ask;
+        bullTakeProfit = stopLossinPips/100 * takeProfitMultiplier + Ask;
         riskPerPips = riskedAmount/stopLossinPips;
-        bullLotSize = riskPerPips*Ask/contractSize;
+        bullLotSize = NormalizeDouble(((riskPerPips*Ask)/contractSize),2);
         Print("riskPerPips:", riskPerPips);
         Print ("bullLotSize is:", bullLotSize);
         Print("bullTakeProfit:", bullTakeProfit);
         Print("bullStopLoss:",bullStopLoss);
         Print("stopLossinPips:",stopLossinPips);
-        OrderSend(Symbol(),OP_BUY,bullLotSize,Ask,1,bullStopLoss,bullTakeProfit,NULL,0,0,clrAquamarine);
+        OrderSend(Symbol(),OP_BUY,bullLotSize,Ask,3,bullStopLoss,bullTakeProfit,NULL,0,0,clrAquamarine);
     }
     
 }
@@ -84,13 +78,13 @@ void createBullishFibo(){
 }
 
 void placeBearishOrder(){
-    double currentNumberofOrder = OrdersTotal();
+    int currentNumberofOrder = OrdersTotal();
     double currentSpreadValue =  Ask-Bid;
     double stopLossinPips;
     double riskPerPips;
     double contractSize = SymbolInfoDouble(Symbol(), SYMBOL_TRADE_CONTRACT_SIZE);
 
-    if(contractSize == 100000){
+    if((contractSize == 100000) || (contractSize==1)){
         contractSize = 1000;
     }
 
@@ -98,16 +92,21 @@ void placeBearishOrder(){
         createBearishFibo();
         
         bearStopLoss = Level161_8 + currentSpreadValue;
-        stopLossinPips = (bearStopLoss - Bid)*100;
-        bearTakeProfit = stopLossinPips/100 * 1.39 - Bid;
+        stopLossinPips = NormalizeDouble(((bearStopLoss - Bid)*100),1);
+        bearTakeProfit = (Bid - ((stopLossinPips/100) * takeProfitMultiplier));
         riskPerPips = riskedAmount/stopLossinPips;
-        bearLotSize = riskPerPips*Bid/contractSize;
+        bearLotSize =  NormalizeDouble(((riskPerPips*Bid)/contractSize),2);
         Print("riskPerPips:", riskPerPips);
         Print ("bearLotSize is:", bearLotSize);
         Print("bearTakeProfit:", bearTakeProfit);
         Print("bearStopLoss:",bearStopLoss);
         Print("stopLossinPips:",stopLossinPips);
-        OrderSend(Symbol(),OP_BUY,bearLotSize,Bid,1,bearStopLoss,bearTakeProfit,NULL,0,0,clrAquamarine);
+        Print("EntryPrice:", Bid);
+        Print("currentSpreadValue:",currentSpreadValue);
+        Print("Allowed stop level is:", MarketInfo(Symbol(),MODE_STOPLEVEL));
+        Print("Minimum Lot Allowed:", MarketInfo(Symbol(),MODE_MINLOT));
+        Print("About lot size:", MarketInfo(Symbol(),MODE_LOTSIZE));
+        OrderSend(Symbol(),OP_SELL,bearLotSize,Bid,3,bearStopLoss,bearTakeProfit,NULL,0,0,clrAquamarine);
     }
     
 }
@@ -130,6 +129,7 @@ void createBearishFibo(){
     Print("Level 0:", Level0 + "\n",
         "Level 50:", Level50 + "\n",
         "Level 100:", Level100 + "\n",
+        "Level61_8", Level61_8 + "\n",
         "Level 161.8:", Level161_8 + "\n",
         "NegativeLevel2:", NegativeLevel2 + "\n",
         "NegativeLevel1_39:",NegativeLevel1_39);
