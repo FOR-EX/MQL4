@@ -12,6 +12,11 @@
     double sessionSupportArray [];
     double sessionResistance = 0;
     double sessionSupport = 999999;
+
+    int namE;
+    int intSessionSupportlabelCreated = 0;
+    int intSessionRessistancelabelCreated = 0;
+    
    
 // Custom functions
 
@@ -35,11 +40,16 @@ void findSessionResistance(){
          double indexValue = iHigh(Symbol(),sessionLevelTimeFrame,i);
          if(indexValue > sessionResistance){
             sessionResistance = indexValue;
+            int index = i;
          }
          ArrayResize(sessionResistanceArray,1);
-         ArrayFill(sessionResistanceArray,0,1,sessionResistance);  
+         ArrayFill(sessionResistanceArray,0,1,sessionResistance);
          resistanceLevelCreationTime = currentDay;
-      }  
+         namE = NormalizeDouble((sessionResistance*Bid),1);
+         Print(namE);
+         string SessionRessistancelabelCreated = IntegerToString(namE,0);
+      }
+      ObjectCreate(0,SessionRessistancelabelCreated, OBJ_ARROW_RIGHT_PRICE, 0, Time[index], sessionResistance); 
    }
 } 
 
@@ -50,6 +60,7 @@ void findSessionSupport(){
       ArrayFree(sessionSupportArray);
       supportLevelCreationTime = currentDay;
       sessionSupport = 999999;
+      
    }
 
    if (currentHour == 14){
@@ -57,11 +68,17 @@ void findSessionSupport(){
          double indexValue = iLow(Symbol(),sessionLevelTimeFrame,i);
          if(indexValue < sessionSupport){
             sessionSupport = indexValue;
+            int index = i;
          }
          ArrayResize(sessionSupportArray,1);
-         ArrayFill(sessionSupportArray,0,1,sessionSupport);  
+         ArrayFill(sessionSupportArray,0,1,sessionSupport);
          supportLevelCreationTime = currentDay;
-      } 
+         namE = NormalizeDouble((sessionSupport*Bid),1);
+         Print(namE);
+         string SessionSupportlabelCreated = IntegerToString(namE,0);
+       
+      }
+      ObjectCreate(0,SessionSupportlabelCreated, OBJ_ARROW_RIGHT_PRICE, 0, Time[index], sessionSupport);    
    }
 } 
 
