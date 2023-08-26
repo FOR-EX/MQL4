@@ -35,15 +35,18 @@ void findSessionResistance(){
       sessionResistance = 0;
    }
 
-   if (currentHour == 14){
-      for (int i = 1 ; i <= 5; i++){
+   if (currentHour == 14 && currentMinute == 0){
+      for (int i = 1 ; i <= 300; i++){
          double indexValue = iHigh(Symbol(),sessionLevelTimeFrame,i);
+         Print("indexValue is", indexValue);
          if(indexValue > sessionResistance){
             sessionResistance = indexValue;
+            Print("sessionResistance is", sessionResistance);
             int index = i;
          }
          ArrayResize(sessionResistanceArray,1);
          ArrayFill(sessionResistanceArray,0,1,sessionResistance);
+         //Print("sessionResistanceArray is:",sessionResistanceArray[0]);
          resistanceLevelCreationTime = currentDay;
          namE = NormalizeDouble((sessionResistance*Bid),1);
          Print(namE);
@@ -63,15 +66,18 @@ void findSessionSupport(){
       
    }
 
-   if (currentHour == 14){
-      for (int i = 1 ; i <= 5; i++){
+   if (currentHour == 14 && currentMinute == 0){
+      for (int i = 1 ; i <= 300; i++){
          double indexValue = iLow(Symbol(),sessionLevelTimeFrame,i);
+         Print("indexValue is", indexValue);
          if(indexValue < sessionSupport){
             sessionSupport = indexValue;
+            Print("sessionSupport is", sessionSupport);
             int index = i;
          }
          ArrayResize(sessionSupportArray,1);
          ArrayFill(sessionSupportArray,0,1,sessionSupport);
+         Print("sessionSupportArray is:",sessionSupportArray[0]);
          supportLevelCreationTime = currentDay;
          namE = NormalizeDouble((sessionSupport*Bid),1);
          Print(namE);

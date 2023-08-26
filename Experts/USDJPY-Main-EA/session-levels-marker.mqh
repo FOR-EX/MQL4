@@ -35,7 +35,7 @@ void findSessionResistance(){
       sessionResistance = 0;
    }
 
-   if (currentHour == 14){
+   if (currentHour == 14 && currentMinute == 0){
       for (int i = 1 ; i <= 5; i++){
          double indexValue = iHigh(Symbol(),sessionLevelTimeFrame,i);
          if(indexValue > sessionResistance){
@@ -63,7 +63,7 @@ void findSessionSupport(){
       
    }
 
-   if (currentHour == 14){
+   if (currentHour == 14 && currentMinute == 0){
       for (int i = 1 ; i <= 5; i++){
          double indexValue = iLow(Symbol(),sessionLevelTimeFrame,i);
          if(indexValue < sessionSupport){

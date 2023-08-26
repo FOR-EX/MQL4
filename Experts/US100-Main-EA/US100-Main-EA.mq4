@@ -1,5 +1,5 @@
 #include "divergence-monitor.mqh"
-#include "session-levels-marker.mqh"
+#include "us100-session-levels-marker.mqh"
 #include "engulfing-detector.mqh"
 #include "after-break-levels.mqh"
 #include "place-order-functions.mqh"
@@ -10,13 +10,13 @@ void OnTick() {
    // Day-light-saving-time-days means you will trade an hour earlier than days that are not in day light saving time.
    
    riskedAmount = 200; //risked money in USD
-   takeProfitMultiplier = 5; //
+   takeProfitMultiplier = 1.39; //
    engulferTimeFrame = 1; //Update the timeframe from engulferTimeFrame
    afterBreakLevelsTimeframe = engulferTimeFrame;
    placeOrderTimeframe = engulferTimeFrame;
    divergenceMonitorTimeFrame = 5; //Update the timeframe from divergenceMonitor
    lower_divergenceMonitorTimeFrame = engulferTimeFrame;
-   sessionLevelTimeFrame = 60; //Update the timeframe from sessionLevelMarker
+   sessionLevelTimeFrame = 1; //Update the timeframe from sessionLevelMarker 
    double lastMinute = currentMinute;
 
    // update the date&time vars on each tick...
