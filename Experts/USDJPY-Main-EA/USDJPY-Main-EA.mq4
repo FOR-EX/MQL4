@@ -3,17 +3,19 @@
 #include "engulfing-detector.mqh"
 #include "after-break-levels.mqh"
 #include "place-order-functions.mqh"
+#include "lower-divergence-monitor.mqh"
 
 void OnTick() {
 
    // Day-light-saving-time-days means you will trade an hour earlier than days that are not in day light saving time.
    
    riskedAmount = 200; //risked money in USD
-   takeProfitMultiplier = 2; //
+   takeProfitMultiplier = 5; //
    engulferTimeFrame = 1; //Update the timeframe from engulferTimeFrame
    afterBreakLevelsTimeframe = engulferTimeFrame;
    placeOrderTimeframe = engulferTimeFrame;
-   divergenceMonitorTimeFrame =5; //Update the timeframe from divergenceMonitor
+   divergenceMonitorTimeFrame = 5; //Update the timeframe from divergenceMonitor
+   lower_divergenceMonitorTimeFrame = engulferTimeFrame;
    sessionLevelTimeFrame = 60; //Update the timeframe from sessionLevelMarker
    double lastMinute = currentMinute;
 
@@ -23,7 +25,8 @@ void OnTick() {
    //This is to make codes reiterate only once per minute - making the code efficient.
    if (currentMinute != lastMinute){
       //run this to see if there is uncleared rsiDivergence....
-      runDivergenceMonitor(); 
+      runDivergenceMonitor();
+      runLowerDivergenceMonitor(); 
 
       //run this to see if it is tradingtime....
       checkTradingTime();
@@ -65,7 +68,7 @@ void OnTick() {
          "Last lowest low is:", lastLowestLowValue);
       
       //Condition to place a bullish order
-      if(!isDivergence && isTradingTime/*&& (AccountBalance()<10700)*/){
+      if(!isDivergence && isTradingTime && !isLowerDivergence/*&& (AccountBalance()<10700)*/){
          //this is the condition for placing order during bullish conditions
          if (isBullishEngulfing() && bullishEngulfingBase > lastHighestPeakValue && isBullBreak){
             placeBullishOrder();
@@ -91,7 +94,7 @@ void OnTick() {
          }
       }
       //Things to do if divergent and isTradingTime
-      if(isDivergence && isTradingTime) {
+      if((isDivergence && isTradingTime) || (isLowerDivergence && isTradingTime)) {
          if (isBullishEngulfing() && bullishEngulfingBase > lastHighestPeakValue && isBullBreak){
             updateLastHigh();
             } 

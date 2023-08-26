@@ -58,13 +58,13 @@ void runLowerDivergenceMonitor(){
       lower_lastPrice = lower_priceArray[j+1];
       lower_newPrice = lower_priceArray[j];
 
-      bool isBullish = false;
-      bool isBearish = false;
+      bool isLowerBullish = false;
+      bool isLowerBearish = false;
       
 
       if(lower_newRsi >= 50){               
-         isBearish = false;
-         isBullish = true;
+         isLowerBearish = false;
+         isLowerBullish = true;
          if(lower_lastRsi < 50){
             isLowerDivergence = false;
          }         
@@ -77,7 +77,7 @@ void runLowerDivergenceMonitor(){
          addlower_BullishPriceArray();  
       }
 
-      if (isBullish){
+      if (isLowerBullish){
          //This the condition for lower_newRsiPeaks...
          if(lower_lastRsi > lower_thirdRsi && lower_newRsi < lower_lastRsi && isLowerDivergence == 0){
             lower_newRsiPeak = lower_lastRsi;
@@ -100,8 +100,8 @@ void runLowerDivergenceMonitor(){
       }
       
       if (lower_newRsi < 50) {
-         isBullish =false;
-         isBearish = true;
+         isLowerBullish =false;
+         isLowerBearish = true;
          if(lower_lastRsi >= 50){
             isLowerDivergence = false;
          }    
@@ -114,7 +114,7 @@ void runLowerDivergenceMonitor(){
          addlower_BearishPriceArray();
       }
       
-      if (isBearish){
+      if (isLowerBearish){
          ////This the condition for lower_newRsiLows...
          if(lower_lastRsi<lower_thirdRsi && lower_newRsi > lower_lastRsi && isLowerDivergence == 0){
             lower_newRsiLow = lower_lastRsi;
