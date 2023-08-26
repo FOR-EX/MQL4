@@ -10,11 +10,11 @@ void OnTick() {
    // Day-light-saving-time-days means you will trade an hour earlier than days that are not in day light saving time.
    
    riskedAmount = 200; //risked money in USD
-   takeProfitMultiplier = 5; //
-   engulferTimeFrame = 1; //Update the timeframe from engulferTimeFrame
+   takeProfitMultiplier = 2; //
+   engulferTimeFrame = 5; //Update the timeframe from engulferTimeFrame
    afterBreakLevelsTimeframe = engulferTimeFrame;
    placeOrderTimeframe = engulferTimeFrame;
-   divergenceMonitorTimeFrame = 5; //Update the timeframe from divergenceMonitor
+   divergenceMonitorTimeFrame = 60; //Update the timeframe from divergenceMonitor
    lower_divergenceMonitorTimeFrame = engulferTimeFrame;
    sessionLevelTimeFrame = 60; //Update the timeframe from sessionLevelMarker
    double lastMinute = currentMinute;
