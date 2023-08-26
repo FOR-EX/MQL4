@@ -5,11 +5,15 @@
 #include <place-order-functions.mqh>
 
 void OnTick() {
-   riskedAmount = 60; //risked money in USD
+
+   // Day-light-saving-time-days means you will trade an hour earlier than days that are not in day light saving time.
+   
+   riskedAmount = 200; //risked money in USD
+   takeProfitMultiplier = 2; //
    engulferTimeFrame = 1; //Update the timeframe from engulferTimeFrame
    afterBreakLevelsTimeframe = engulferTimeFrame;
    placeOrderTimeframe = engulferTimeFrame;
-   divergenceMonitorTimeFrame =60; //Update the timeframe from divergenceMonitor
+   divergenceMonitorTimeFrame =5; //Update the timeframe from divergenceMonitor
    sessionLevelTimeFrame = 60; //Update the timeframe from sessionLevelMarker
    double lastMinute = currentMinute;
 
@@ -61,16 +65,16 @@ void OnTick() {
          "Last lowest low is:", lastLowestLowValue);
       
       //Condition to place a bullish order
-      if(!isDivergence && isTradingTime){
+      if(!isDivergence && isTradingTime/*&& (AccountBalance()<10700)*/){
          //this is the condition for placing order during bullish conditions
          if (isBullishEngulfing() && bullishEngulfingBase > lastHighestPeakValue && isBullBreak){
-            //placeBullishOrder();
+            placeBullishOrder();
             Print("Bullish Order Placed");
             updateLastHigh();
             } 
             
             //condition to update last high if no orderplaced
-         if (isBullishEngulfing() && bullishEngulfingBase < lastHighestPeakValue || isBearishEngulfing() || isLastandNewBear()){
+         if ((isBullishEngulfing() && (bullishEngulfingBase < lastHighestPeakValue)) || (isBearishEngulfing() && isBullBreak) || (isLastandNewBear() && isBullBreak)){
             updateLastHigh();
          }
          
@@ -78,12 +82,11 @@ void OnTick() {
 
          //this is the condition for placing order during bearish conditions
          if(isBearishEngulfing() && bearishEngulfingHead < lastLowestLowValue && isBearBreak){
-            createBearishFibo();
-            //placeBearishOrder();
+            placeBearishOrder();
             Print("Bearish Order Placed");
             updateLastLow();
          }
-         if(isBearishEngulfing() && bearishEngulfingHead > lastLowestLowValue || isBullishEngulfing() ||isLastandNewBull()){
+         if((isBearishEngulfing() && (bearishEngulfingHead > lastLowestLowValue)) || (isBullishEngulfing() && isBearBreak) || (isLastandNewBull() && isBearBreak)){
             updateLastLow();
          }
       }
@@ -108,7 +111,7 @@ void OnTick() {
       }
       
       lastMinute = currentMinute;
-      //deleteFibo();
+      deleteFibo();
    }
 
 }

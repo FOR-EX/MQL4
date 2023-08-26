@@ -43,12 +43,16 @@ void placeBullishOrder(){
         stopLossinPips = (Ask - bullStopLoss)*100;
         bullTakeProfit = stopLossinPips/100 * takeProfitMultiplier + Ask;
         riskPerPips = riskedAmount/stopLossinPips;
-        bullLotSize = NormalizeDouble(((riskPerPips*Ask)/contractSize),2);
+        bullLotSize = NormalizeDouble(((riskPerPips*Ask)/contractSize),2); //1 if us100 2if usdjpy
         Print("riskPerPips:", riskPerPips);
         Print ("bullLotSize is:", bullLotSize);
         Print("bullTakeProfit:", bullTakeProfit);
         Print("bullStopLoss:",bullStopLoss);
         Print("stopLossinPips:",stopLossinPips);
+        Print("currentSpreadValue:",currentSpreadValue);
+        Print("Allowed stop level is:", MarketInfo(Symbol(),MODE_STOPLEVEL));
+        Print("Minimum Lot Allowed:", MarketInfo(Symbol(),MODE_MINLOT));
+        Print("About lot size:", MarketInfo(Symbol(),MODE_LOTSIZE));
         OrderSend(Symbol(),OP_BUY,bullLotSize,Ask,3,bullStopLoss,bullTakeProfit,NULL,0,0,clrAquamarine);
     }
     
@@ -95,7 +99,7 @@ void placeBearishOrder(){
         stopLossinPips = NormalizeDouble(((bearStopLoss - Bid)*100),1);
         bearTakeProfit = (Bid - ((stopLossinPips/100) * takeProfitMultiplier));
         riskPerPips = riskedAmount/stopLossinPips;
-        bearLotSize =  NormalizeDouble(((riskPerPips*Bid)/contractSize),2);
+        bearLotSize =  NormalizeDouble(((riskPerPips*Bid)/contractSize),2);//1 if us100 2if usdjpy
         Print("riskPerPips:", riskPerPips);
         Print ("bearLotSize is:", bearLotSize);
         Print("bearTakeProfit:", bearTakeProfit);
