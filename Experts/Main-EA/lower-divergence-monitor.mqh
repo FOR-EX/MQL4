@@ -33,9 +33,9 @@ double lower_thirdPrice;
 double lower_lastPrice;
 double lower_newPrice;
 
-bool isDivergence = false;
+bool isLowerDivergence = false;
 //This is the price and rsi scanner wrapped in a function
-void runDivergenceMonitor(){
+void runLowerDivergenceMonitor(){
     for (int i=0; i<100;i++){
       //This is to push lower_rsiArray
       lower_indexValueRsi = iRSI(Symbol(),lower_divergenceMonitorTimeFrame,14,PRICE_CLOSE,(i+1));
@@ -66,7 +66,7 @@ void runDivergenceMonitor(){
          isBearish = false;
          isBullish = true;
          if(lower_lastRsi < 50){
-            isDivergence = false;
+            isLowerDivergence = false;
          }         
          //Impliment a function that deletes previous bearishArray's...
          resetlower_BearishPriceArray();
@@ -79,7 +79,7 @@ void runDivergenceMonitor(){
 
       if (isBullish){
          //This the condition for lower_newRsiPeaks...
-         if(lower_lastRsi > lower_thirdRsi && lower_newRsi < lower_lastRsi && isDivergence == 0){
+         if(lower_lastRsi > lower_thirdRsi && lower_newRsi < lower_lastRsi && isLowerDivergence == 0){
             lower_newRsiPeak = lower_lastRsi;
             lower_newPricePeak = lower_lastPrice;
          //Impliment a function that pushes lower_bullRsiPeaks...            
@@ -87,10 +87,10 @@ void runDivergenceMonitor(){
          //Impliment a function that pushes lower_bullPricePeaks...
             addlower_BullPricePeaks();
          //Impliment a function that checks if it's a new high...
-            // IsNewRsiHigh();
-            // IsNewPriceHigh();
-             if (IsNewRsiHigh() != IsNewPriceHigh()){
-                isDivergence = true;
+            // IsLowerNewRsiHigh();
+            // IsLowerNewPriceHigh();
+             if (IsLowerNewRsiHigh() != IsLowerNewPriceHigh()){
+                isLowerDivergence = true;
 
              } 
             // if there is a divergence, the code need to wait for it to reset before it allows to place an order
@@ -103,7 +103,7 @@ void runDivergenceMonitor(){
          isBullish =false;
          isBearish = true;
          if(lower_lastRsi >= 50){
-            isDivergence = false;
+            isLowerDivergence = false;
          }    
          //Impliment a function that deletes previous bullishArray's...
          resetlower_BullishRsiArray();
@@ -116,7 +116,7 @@ void runDivergenceMonitor(){
       
       if (isBearish){
          ////This the condition for lower_newRsiLows...
-         if(lower_lastRsi<lower_thirdRsi && lower_newRsi > lower_lastRsi && isDivergence == 0){
+         if(lower_lastRsi<lower_thirdRsi && lower_newRsi > lower_lastRsi && isLowerDivergence == 0){
             lower_newRsiLow = lower_lastRsi;
             lower_newPriceLow = lower_lastPrice;
          //Impliment a function that pushes lower_bearRsiPeaks...
@@ -127,7 +127,7 @@ void runDivergenceMonitor(){
             // islower_NewRsiLow();
             // islower_NewPriceLow();
              if(islower_NewRsiLow() != islower_NewPriceLow()){
-                isDivergence = true;
+                isLowerDivergence = true;
              }
 
          }
@@ -136,7 +136,7 @@ void runDivergenceMonitor(){
 }
 //CUSTOM FUNCTIONS
 
-bool IsNewPriceHigh(){
+bool IsLowerNewPriceHigh(){
    if(lower_bullPricePeaks[lower_startingPriceIndex] > lower_lastHighestPrice){
       lower_lastHighestPrice = lower_bullPricePeaks [lower_startingPriceIndex];
       //Print("This is the last highest PRICE:", lower_lastHighestPrice);
@@ -147,7 +147,7 @@ bool IsNewPriceHigh(){
    }
 }
 
-bool IsNewRsiHigh(){
+bool IsLowerNewRsiHigh(){
    if(lower_bullRsiPeaks[lower_startingRsiIndex] > lower_lastHighestRsi){
       lower_lastHighestRsi = lower_bullRsiPeaks[lower_startingRsiIndex];
       //Print("This is the last highest RSI:", lower_lastHighestRsi);
