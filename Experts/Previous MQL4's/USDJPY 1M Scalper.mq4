@@ -1,3 +1,6 @@
+#include "divergence-monitor.mqh"
+#include "lower-divergence-monitor.mqh"
+
 bool errOr = false;
 int ticket;
 int startIndex = 0;
@@ -18,40 +21,29 @@ bool conSec8 = false;
 
 
 void OnTick() 
-
 {
+  divergenceMonitorTimeFrame = 60;
+  lower_divergenceMonitorTimeFrame = 5;
+
+  runDivergenceMonitor();
+  runLowerDivergenceMonitor();
+
     startIndex = Bars - 1;
     if (orderPlaced) {
         if (OrderSelect(ticket, SELECT_BY_TICKET)) {
             if (OrderCloseTime() != 0) {
-            
-                
+  
                 orderPlaced = false;
                 orderClosed = true;
                
                 errOr = true;
-                
-              
-                
-                
-                
-                ObjectDelete("fibo");
-               
-                       
 
-               
+                ObjectDelete("fibo");
             }
-            
-            
-       
-    
+      }
     }
     
-    
-    
-    }
-    
-    
+  if (!isDivergence && !isLowerDivergence){
     if (!orderPlaced)
  
   {
@@ -846,6 +838,8 @@ void OnTick()
         
       
     }
+
+  }  
        
 }
 
