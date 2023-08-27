@@ -1,9 +1,8 @@
 #include "divergence-monitor.mqh"
 #include "us100-session-levels-marker.mqh"
-#include "engulfing-detector.mqh"
-#include "after-break-levels.mqh"
 #include "place-order-functions.mqh"
 #include "lower-divergence-monitor.mqh"
+#include "SMCMonitor.mqh"
 
 void OnTick() {
 
@@ -11,13 +10,15 @@ void OnTick() {
    
    riskedAmount = 200; //risked money in USD
    takeProfitMultiplier = 2; //
-   engulferTimeFrame = 1; //Update the timeframe from engulferTimeFrame
-   afterBreakLevelsTimeframe = engulferTimeFrame;
-   placeOrderTimeframe = engulferTimeFrame;
+   smcTimeFrame = 1; //Update the timeframe from engulferTimeFrame
+   placeOrderTimeframe = smcTimeFrame;
    divergenceMonitorTimeFrame = 5; //Update the timeframe from divergenceMonitor
-   lower_divergenceMonitorTimeFrame = engulferTimeFrame;
+   lower_divergenceMonitorTimeFrame = smcTimeFrame;
    sessionLevelTimeFrame = 1; //Update the timeframe from sessionLevelMarker 
    double lastMinute = currentMinute;
+
+   //manage existing pending order...
+   managePendingOrder();
 
    // update the date&time vars on each tick...
    runningTime();
@@ -34,88 +35,34 @@ void OnTick() {
       //run the sessionLevelsFinder
       findSessionResistance();
       findSessionSupport();
-      
-      
-      if (isBullishEngulfing()){
-         Print ("there is a bullish engulfing going on and the base is:", bullishEngulfingBase);
-      }
-      if (isBearishEngulfing()){
-         Print ("there is a bearish engulfing going on and the head is:", bearishEngulfingHead);
-      }
-
-      checkForBullBreaks ();
-      checkForBearBreaks();
-
-      pushBullishBreakPriceArrays();
-      pushBearishBreakPriceArrays ();
-
-      //establish the last highes peak and last lowest low...
-      establishLastHighestPeak();
-      establishLastLastLowestLow();
-
-      //resets the After Break Levels if !tradingTime
-      if (currentHour > 22){
-         resetTheAfterBreakLevels();
-      }
    
       Comment("Resistance is:",sessionResistanceArray[0],"Created on:",resistanceLevelCreationTime, "\n",
             "Support is:",sessionSupportArray[0], "Created on:",supportLevelCreationTime, "\n",
-         "0 means no divergence:" , isDivergence, "\n",
-         "0 means not time to trade:", isTradingTime, "\n",
-         "LastbullishBreakPriceArrays is:",bullishBreakPriceArrays[initialAfterBullBreakLevelsArray-1], "\n",
-         "Last highest peak is:", lastHighestPeakValue, "\n",
-         "LastbearishBreakPriceArrays is:",bearishBreakPriceArrays[initialAfterBearBreakLevelsArray-1], "\n",
-         "Last lowest low is:", lastLowestLowValue);
+            "0 means no divergence:" , isDivergence, "\n",
+            "0 means not time to trade:", isTradingTime);
+            
       
       //Condition to place a bullish order
-      if(!isDivergence && isTradingTime && !isLowerDivergence/*&& (AccountBalance()<10700)*/){
+      if(!isDivergence && isTradingTime && !isLowerDivergence){
+
+         runSMCMonitor();
          //this is the condition for placing order during bullish conditions
-         if (isBullishEngulfing() && bullishEngulfingBase > lastHighestPeakValue && isBullBreak){
+         if (isBullishSMCHere){
             placeBullishOrder();
             Print("Bullish Order Placed");
-            updateLastHigh();
             } 
-            
-            //condition to update last high if no orderplaced
-         if ((isBullishEngulfing() && (bullishEngulfingBase < lastHighestPeakValue)) || (isBearishEngulfing() && isBullBreak) || (isLastandNewBear() && isBullBreak)){
-            updateLastHigh();
-         }
-         
          // -------------------------------------------------------------------//
 
          //this is the condition for placing order during bearish conditions
-         if(isBearishEngulfing() && bearishEngulfingHead < lastLowestLowValue && isBearBreak){
+         if(isBearishSMCHere){
             placeBearishOrder();
             Print("Bearish Order Placed");
-            updateLastLow();
-         }
-         if((isBearishEngulfing() && (bearishEngulfingHead > lastLowestLowValue)) || (isBullishEngulfing() && isBearBreak) || (isLastandNewBull() && isBearBreak)){
-            updateLastLow();
          }
       }
       //Things to do if divergent and isTradingTime
-      if((isDivergence && isTradingTime) || (isLowerDivergence && isTradingTime)) {
-         if (isBullishEngulfing() && bullishEngulfingBase > lastHighestPeakValue && isBullBreak){
-            updateLastHigh();
-            } 
-            //condition to update last high if no orderplaced
-         if (isBullishEngulfing() && bullishEngulfingBase < lastHighestPeakValue) {
-            updateLastHigh();
-         }
-         
-         // -------------------------------------------------------------------//
-         //this is the condition for placing order during bearish conditions
-         if(isBearishEngulfing() && bearishEngulfingHead < lastLowestLowValue && isBearBreak){
-            updateLastLow();
-         }
-         if(isBearishEngulfing() && bearishEngulfingHead > lastLowestLowValue){
-            updateLastLow();
-         }
-      }
-      
       lastMinute = currentMinute;
       deleteFibo();
    }
-
 }
-//Custom Function
+
+// Custom Function

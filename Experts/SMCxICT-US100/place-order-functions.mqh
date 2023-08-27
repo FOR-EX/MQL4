@@ -1,6 +1,9 @@
-#include "after-break-levels.mqh"
 #include "us100-session-levels-marker.mqh"
-#include "engulfing-detector.mqh"
+#include "SMCMonitor.mqh"
+
+int ticket_buy = 0;
+int ticket_sell = 0;
+int lastDeletedOrder;
 
 double riskedAmount;
 int placeOrderTimeframe;
@@ -9,11 +12,13 @@ double takeProfitMultiplier;
 double bullStopLoss;
 double bullTakeProfit;
 double bullLotSize;
+double buyEntryPrice;
 
 //bearOrderVariables
 double bearStopLoss;
 double bearTakeProfit;
 double bearLotSize;
+double sellEntryPrice;
 
 //vars for fibo...
 double Level100;
@@ -40,8 +45,9 @@ void placeBullishOrder(){
         createBullishFibo();
         
         bullStopLoss = Level161_8 - currentSpreadValue;
-        stopLossinPips = (Ask - bullStopLoss)*100;
-        bullTakeProfit = stopLossinPips/100 * takeProfitMultiplier + Ask;
+        buyEntryPrice = NormalizeDouble(Level61_8,2);
+        stopLossinPips = (buyEntryPrice - bullStopLoss)*100;
+        bullTakeProfit = stopLossinPips/100 * takeProfitMultiplier + buyEntryPrice;
         riskPerPips = riskedAmount/stopLossinPips;
         bullLotSize = NormalizeDouble((riskPerPips*contractSize),1); //1 if us100 2if usdjpy
         Print("riskPerPips:", riskPerPips);
@@ -52,16 +58,25 @@ void placeBullishOrder(){
         Print("currentSpreadValue:",currentSpreadValue);
         Print("Allowed stop level is:", MarketInfo(Symbol(),MODE_STOPLEVEL));
         Print("Minimum Lot Allowed:", MarketInfo(Symbol(),MODE_MINLOT));
-        OrderSend(Symbol(),OP_BUY,bullLotSize,Ask,3,bullStopLoss,bullTakeProfit,NULL,0,0,clrAquamarine);
+        Print("startingCandle is:",startingCandle);
+        Print("startTime is:",startTime);
+
+        ticket_buy = OrderSend(Symbol(),OP_BUYLIMIT,bullLotSize,buyEntryPrice,3,bullStopLoss,bullTakeProfit,NULL,0,0,clrAquamarine);
+        count = 0;
+        isBullishSMC = false;
+        isBullishSMCHere = false;
+        ObjectDelete(0,"FibonacciRetracement");
     }
     
 }
 
+
+
 void createBullishFibo(){
-    double startPoint = iClose(Symbol(), placeOrderTimeframe, 2); // You can modify this based on your preference
-    double endPoint = iClose(Symbol(), placeOrderTimeframe, 1); // You can modify this based on your preference
+    double startPoint = startingCandle ; // You can modify this based on your preference
+    double endPoint = lastCandleClose ; // You can modify this based on your preference
     
-    ObjectCreate(0, "FibonacciRetracement", OBJ_FIBO, 0, Time[2], startPoint, Time[1], endPoint);
+    ObjectCreate(0, "FibonacciRetracement", OBJ_FIBO, 0, Time[startTime], startPoint, Time[endTime], endPoint);
 
     //get the level values
     Level100 = ObjectGetDouble(0,"FibonacciRetracement", OBJPROP_PRICE, 0);
@@ -74,6 +89,7 @@ void createBullishFibo(){
 
     Print("Level 0:", Level0 + "\n",
         "Level 50:", Level50 + "\n",
+        "Level 61.8:", Level61_8 + "\n",
         "Level 100:", Level100 + "\n",
         "Level 161.8:", Level161_8 + "\n",
         "NegativeLevel2:", NegativeLevel2 + "\n",
@@ -95,8 +111,9 @@ void placeBearishOrder(){
         createBearishFibo();
         
         bearStopLoss = Level161_8 + currentSpreadValue;
-        stopLossinPips = NormalizeDouble(((bearStopLoss - Bid)*100),1);
-        bearTakeProfit = (Bid - ((stopLossinPips/100) * takeProfitMultiplier));
+        sellEntryPrice = NormalizeDouble(Level61_8,2);
+        stopLossinPips = NormalizeDouble(((bearStopLoss - sellEntryPrice)*100),1);
+        bearTakeProfit = (sellEntryPrice - ((stopLossinPips/100) * takeProfitMultiplier));
         riskPerPips = riskedAmount/stopLossinPips;
         bearLotSize =  NormalizeDouble((riskPerPips*contractSize),1);//1 if us100 2if usdjpy
         Print("riskPerPips:", riskPerPips);
@@ -110,16 +127,40 @@ void placeBearishOrder(){
         Print("Minimum Lot Allowed:", MarketInfo(Symbol(),MODE_MINLOT));
         Print("About lot size:", MarketInfo(Symbol(),MODE_LOTSIZE));
         Print("bearLotSize", bearLotSize);
-        OrderSend(Symbol(),OP_SELL,bearLotSize,Bid,3,bearStopLoss,bearTakeProfit,NULL,0,0,clrAquamarine);
+        ticket_sell = OrderSend(Symbol(),OP_SELLLIMIT,bearLotSize,sellEntryPrice,3,bearStopLoss,bearTakeProfit,NULL,0,0,clrAquamarine);
+        count = 0;
+        isBearishSMC = false;
+        isBearishSMCHere = false;
+        ObjectDelete(0,"FibonacciRetracement");
     }
     
 }
 
+//manage existing pending order...
+void managePendingOrder(){
+    double currentNumberofOrder = OrdersTotal();
+    if (currentNumberofOrder && (Bid > sessionResistance)){
+        if(Bid >= bullTakeProfit || isDivergence || isLowerDivergence){
+            //delete the pending order...
+            lastDeletedOrder = OrderDelete(ticket_buy, clrCornsilk);
+            count = 0;
+        }
+    }
+    if (currentNumberofOrder && (Bid < sessionSupport)){
+        if(Bid <= bearTakeProfit || isDivergence || isLowerDivergence){
+            //delete the pending order...
+            lastDeletedOrder = OrderDelete(ticket_sell, clrCornsilk);
+            count = 0;
+        }
+    }
+}
+
+
 void createBearishFibo(){
-    double startPoint = iClose(Symbol(), placeOrderTimeframe, 2); // You can modify this based on your preference
-    double endPoint = iClose(Symbol(), placeOrderTimeframe, 1); // You can modify this based on your preference
+    double startPoint = startingCandle; // You can modify this based on your preference
+    double endPoint = lastCandleClose; // You can modify this based on your preference
     
-    ObjectCreate(0, "FibonacciRetracement", OBJ_FIBO, 0, Time[2], startPoint, Time[1], endPoint);
+    ObjectCreate(0, "FibonacciRetracement", OBJ_FIBO, 0, Time[startTime], startPoint, Time[endTime], endPoint);
 
     //get the level values
     Level100 = ObjectGetDouble(0,"FibonacciRetracement", OBJPROP_PRICE, 0);
@@ -132,6 +173,7 @@ void createBearishFibo(){
 
     Print("Level 0:", Level0 + "\n",
         "Level 50:", Level50 + "\n",
+        "Level 61.8:", Level61_8 + "\n",
         "Level 100:", Level100 + "\n",
         "Level61_8", Level61_8 + "\n",
         "Level 161.8:", Level161_8 + "\n",

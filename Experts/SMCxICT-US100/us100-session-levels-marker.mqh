@@ -38,10 +38,10 @@ void findSessionResistance(){
    if (currentHour == 14 && currentMinute == 0){
       for (int i = 1 ; i <= 300; i++){
          double indexValue = iHigh(Symbol(),sessionLevelTimeFrame,i);
-         Print("indexValue is", indexValue);
+         //Print("indexValue is", indexValue);
          if(indexValue > sessionResistance){
             sessionResistance = indexValue;
-            Print("sessionResistance is", sessionResistance);
+            //Print("sessionResistance is", sessionResistance);
             int index = i;
          }
          ArrayResize(sessionResistanceArray,1);
@@ -49,7 +49,7 @@ void findSessionResistance(){
          //Print("sessionResistanceArray is:",sessionResistanceArray[0]);
          resistanceLevelCreationTime = currentDay;
          namE = NormalizeDouble((sessionResistance*Bid),1);
-         Print(namE);
+         //Print(namE);
          string SessionRessistancelabelCreated = IntegerToString(namE,0);
       }
       ObjectCreate(0,SessionRessistancelabelCreated, OBJ_ARROW_RIGHT_PRICE, 0, Time[index], sessionResistance); 
@@ -69,18 +69,18 @@ void findSessionSupport(){
    if (currentHour == 14 && currentMinute == 0){
       for (int i = 1 ; i <= 300; i++){
          double indexValue = iLow(Symbol(),sessionLevelTimeFrame,i);
-         Print("indexValue is", indexValue);
+         //Print("indexValue is", indexValue);
          if(indexValue < sessionSupport){
             sessionSupport = indexValue;
-            Print("sessionSupport is", sessionSupport);
+            //Print("sessionSupport is", sessionSupport);
             int index = i;
          }
          ArrayResize(sessionSupportArray,1);
          ArrayFill(sessionSupportArray,0,1,sessionSupport);
-         Print("sessionSupportArray is:",sessionSupportArray[0]);
+         //Print("sessionSupportArray is:",sessionSupportArray[0]);
          supportLevelCreationTime = currentDay;
          namE = NormalizeDouble((sessionSupport*Bid),1);
-         Print(namE);
+         //Print(namE);
          string SessionSupportlabelCreated = IntegerToString(namE,0);
        
       }
