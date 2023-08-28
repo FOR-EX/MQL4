@@ -149,7 +149,7 @@ void placeBearishOrder(){
 void managePendingOrder(){
     double currentNumberofOrder = OrdersTotal();
     if (currentNumberofOrder && (Bid > sessionResistance)){
-        if(Bid >= bullTimesOne || isDivergence || isLowerDivergence || Bid > lastHighestPeakValue){
+        if(newCandle >= bullTimesOne || isDivergence || isLowerDivergence || newCandle > lastHighestPeakValue){
             //delete the pending order...
             lastDeletedOrder = OrderDelete(ticket_buy, clrCornsilk);
             count = 0;
@@ -157,7 +157,7 @@ void managePendingOrder(){
     }
     //function to set BE for Buy orders
     if (currentNumberofOrder && (Bid > sessionResistance)){
-        if(Bid >= bullTimesOne){
+        if(newCandle >= bullTimesOne){
             int bull_order_type;
             if(OrderSelect(ticket_buy, SELECT_BY_POS)==true){
                 bull_order_type=OrderType();
@@ -168,7 +168,7 @@ void managePendingOrder(){
         }
     }
     if (currentNumberofOrder && (Bid < sessionSupport)){
-        if(Bid <= BearTimesOne || isDivergence || isLowerDivergence || Bid < lastLowestLowValue){
+        if(newCandle <= BearTimesOne || isDivergence || isLowerDivergence || newCandle < lastLowestLowValue){
             //delete the pending order...
             lastDeletedOrder = OrderDelete(ticket_sell, clrCornsilk);
             count = 0;
@@ -176,7 +176,7 @@ void managePendingOrder(){
     }
     //function to set BE for Sell orders
     if (currentNumberofOrder && (Bid < sessionSupport)){
-        if(Bid <= BearTimesOne){
+        if(newCandle <= BearTimesOne){
             int bear_order_type;
             if(OrderSelect(ticket_sell, SELECT_BY_POS)==true){
                 bear_order_type = OrderType();
