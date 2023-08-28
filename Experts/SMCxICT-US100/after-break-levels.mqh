@@ -1,3 +1,4 @@
+#include "SMCMonitor.mqh"
 #include "us100-session-levels-marker.mqh"
 #include "engulfing-detector.mqh"
 
@@ -10,7 +11,7 @@ bool isBearBreak;
 double bullishBreakPriceArrays [];
 int initialAfterBullBreakLevelsArray = 0;
 int lastHighestPeakIndex = 0;
-double lastHighestPeakValue;
+double lastHighestPeakValue = 0;
 
 double bearishBreakPriceArrays [];
 int initialAfterBearBreakLevelsArray = 0;
@@ -20,7 +21,7 @@ double lastLowestLowValue = 999999;
 //push bullishBreakPriceArrays Function
 void pushBullishBreakPriceArrays (){
    if(isBullBreak) {
-      double newPriceAfterBreak = iOpen(Symbol(),afterBreakLevelsTimeframe,1);
+      double newPriceAfterBreak = iClose(Symbol(),afterBreakLevelsTimeframe,1);
       ArrayResize(bullishBreakPriceArrays, initialAfterBullBreakLevelsArray);
       ArrayFill(bullishBreakPriceArrays,initialAfterBullBreakLevelsArray-1,1,newPriceAfterBreak);
    }
@@ -43,7 +44,7 @@ void updateLastHigh(){
 
 
 bool checkForBullBreaks (){
-   if (iOpen(Symbol(),afterBreakLevelsTimeframe,1) > sessionResistance && currentHour >=14 && currentHour <= 22){
+   if (iClose(Symbol(),afterBreakLevelsTimeframe,1) > sessionResistance && currentHour >=14 && currentHour <= 22){
       Print("isBullishBreak");
       initialAfterBullBreakLevelsArray++;
       return isBullBreak = true;
@@ -52,7 +53,7 @@ bool checkForBullBreaks (){
    }
 }
 bool checkForBearBreaks(){
-   if (iOpen(Symbol(),afterBreakLevelsTimeframe,1) < sessionSupport && currentHour >=14 && currentHour <= 22){
+   if (iClose(Symbol(),afterBreakLevelsTimeframe,1) < sessionSupport && currentHour >=14 && currentHour <= 22){
       Print("isBearishBreak");
       initialAfterBearBreakLevelsArray++;
       return isBearBreak = true;
@@ -64,7 +65,7 @@ bool checkForBearBreaks(){
 //push bearishBreakPriceArrays Function
 void pushBearishBreakPriceArrays (){
    if(isBearBreak) {
-      double newPriceAfterBreak = iOpen(Symbol(),afterBreakLevelsTimeframe,1);
+      double newPriceAfterBreak = iClose(Symbol(),afterBreakLevelsTimeframe,1);
       ArrayResize(bearishBreakPriceArrays, initialAfterBearBreakLevelsArray);
       ArrayFill(bearishBreakPriceArrays,initialAfterBearBreakLevelsArray-1,1,newPriceAfterBreak);
    }

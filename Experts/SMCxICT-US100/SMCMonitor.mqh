@@ -1,4 +1,5 @@
 #include "us100-session-levels-marker.mqh"
+#include "after-break-levels.mqh"
 
 bool isBullishSMCHere = false;
 bool isBearishSMCHere = false;
@@ -28,7 +29,7 @@ void runSMCMonitor(){
     runBullishSMC();
     runBearishSMC();
     if(isBullishSMC){
-        if(lastCandleClose > sessionResistance){
+        if(lastCandleClose > lastHighestPeakValue){
             isBullishSMCHere = true;
         } else {
             isBullishSMCHere = false;
@@ -36,7 +37,7 @@ void runSMCMonitor(){
     }
 
     if(isBearishSMC){
-        if(lastCandleClose < sessionSupport){
+        if(lastCandleClose < lastLowestLowValue){
             isBearishSMCHere = true;
         } else {
             isBearishSMCHere = false;
@@ -59,6 +60,8 @@ void runBullishSMC(){
     if (newCandle < secondCandle && secondCandle > thirdCandle && thirdCandle > fourthCandle && fourthCandle > fifthCandle && OrdersTotal()==0){
         isBullishSMC = true;
         count = 0;
+        if(newCandle > lastHighestPeakValue){
+        }
     }
 }
 
@@ -77,5 +80,7 @@ void runBearishSMC(){
     if (newCandle > secondCandle && secondCandle < thirdCandle && thirdCandle < fourthCandle && fourthCandle < fifthCandle && OrdersTotal()==0){
         isBearishSMC = true;
         count = 0;
+        if(newCandle < lastLowestLowValue){
+        }
     }
 }

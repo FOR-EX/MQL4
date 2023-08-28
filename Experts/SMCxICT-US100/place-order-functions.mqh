@@ -1,5 +1,8 @@
 #include "us100-session-levels-marker.mqh"
 #include "SMCMonitor.mqh"
+#include "divergence-monitor.mqh"
+#include "lower-divergence-monitor.mqh"
+
 
 int ticket_buy = 0;
 int ticket_sell = 0;
@@ -63,6 +66,7 @@ void placeBullishOrder(){
 
         ticket_buy = OrderSend(Symbol(),OP_BUYLIMIT,bullLotSize,buyEntryPrice,3,bullStopLoss,bullTakeProfit,NULL,0,0,clrAquamarine);
         count = 0;
+        updateLastHigh();
         isBullishSMC = false;
         isBullishSMCHere = false;
         ObjectDelete(0,"FibonacciRetracement");
@@ -129,6 +133,7 @@ void placeBearishOrder(){
         Print("bearLotSize", bearLotSize);
         ticket_sell = OrderSend(Symbol(),OP_SELLLIMIT,bearLotSize,sellEntryPrice,3,bearStopLoss,bearTakeProfit,NULL,0,0,clrAquamarine);
         count = 0;
+        updateLastLow();
         isBearishSMC = false;
         isBearishSMCHere = false;
         ObjectDelete(0,"FibonacciRetracement");
