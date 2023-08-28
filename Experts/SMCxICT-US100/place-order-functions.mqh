@@ -44,7 +44,7 @@ void placeBullishOrder(){
         contractSize = 100;
     }
 
-    if (!currentNumberofOrder){
+    if (!currentNumberofOrder && (highCounter > 1)){
         createBullishFibo();
         
         bullStopLoss = Level161_8 - currentSpreadValue;
@@ -111,7 +111,7 @@ void placeBearishOrder(){
         contractSize = 100;
     }
 
-    if (!currentNumberofOrder){
+    if (!currentNumberofOrder && (lowCounter > 1)){
         createBearishFibo();
         
         bearStopLoss = Level161_8 + currentSpreadValue;

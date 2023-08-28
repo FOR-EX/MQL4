@@ -17,6 +17,8 @@ double bearishBreakPriceArrays [];
 int initialAfterBearBreakLevelsArray = 0;
 int lastLowestLowIndex = 0;
 double lastLowestLowValue = 999999;
+int highCounter = 0;
+int lowCounter = 0;
 
 //push bullishBreakPriceArrays Function
 void pushBullishBreakPriceArrays (){
@@ -39,7 +41,6 @@ void establishLastHighestPeak(){
 void updateLastHigh(){
    lastHighestPeakIndex = ArrayMaximum(bullishBreakPriceArrays, WHOLE_ARRAY, 0);
    lastHighestPeakValue = bullishBreakPriceArrays [lastHighestPeakIndex];
-   
 }
 
 
@@ -83,7 +84,6 @@ void establishLastLastLowestLow(){
 void updateLastLow(){
    lastLowestLowIndex = ArrayMinimum(bearishBreakPriceArrays, WHOLE_ARRAY, 0);
    lastLowestLowValue = bearishBreakPriceArrays[lastLowestLowIndex];
-   
 }
 
 
@@ -91,8 +91,10 @@ void resetTheAfterBreakLevels(){
    initialAfterBullBreakLevelsArray = 0;
    ArrayFree(bullishBreakPriceArrays);
    lastHighestPeakValue = 0;
+   highCounter = 0;
 
    initialAfterBearBreakLevelsArray = 0;
    ArrayFree(bearishBreakPriceArrays);
    lastLowestLowValue = 999999;
+   lowCounter = 0;
 }

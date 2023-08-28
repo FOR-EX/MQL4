@@ -56,11 +56,14 @@ void OnTick() {
       Comment("Resistance is:",sessionResistanceArray[0],"Created on:",resistanceLevelCreationTime, "\n",
             "Support is:",sessionSupportArray[0], "Created on:",supportLevelCreationTime, "\n",
             "0 means no divergence:" , isDivergence, "\n",
+            "0 means no lower-divergence:" , isLowerDivergence, "\n",
             "0 means not time to trade:", isTradingTime, "\n",
             "LastbullishBreakPriceArrays is:",bullishBreakPriceArrays[initialAfterBullBreakLevelsArray-1], "\n",
             "Last highest peak is:", lastHighestPeakValue, "\n",
             "LastbearishBreakPriceArrays is:",bearishBreakPriceArrays[initialAfterBearBreakLevelsArray-1], "\n",
-            "Last lowest low is:", lastLowestLowValue);
+            "Last lowest low is:", lastLowestLowValue, "\n",
+            "highCounter:", highCounter, "\n",
+            "lowCounter:", lowCounter);
             
       
       //Condition to place a bullish order
@@ -103,10 +106,12 @@ void OnTick() {
       //another condition to updating the afterbreak levels
       if(isTradingTime && isBullBreak && (newCandle < secondCandle) && (secondCandle > thirdCandle)){
          updateLastHigh();
+         highCounter++;
       }
 
       if(isTradingTime && isBearBreak && (newCandle > secondCandle) && (secondCandle < thirdCandle)){
          updateLastLow();
+         lowCounter++;
       }
 
       // if (isBullishSMCHere && isBullBreak || OrdersTotal == 0)
