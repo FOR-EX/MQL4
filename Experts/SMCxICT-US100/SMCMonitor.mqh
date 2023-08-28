@@ -50,8 +50,8 @@ void runBullishSMC(){
     //get the  lastCandleClose & startingCandle
     if (newCandle > secondCandle && secondCandle > thirdCandle && thirdCandle > fourthCandle){
         lastCandleClose = newCandle;
-        startingCandle = iOpen(Symbol(),smcTimeFrame,(4 + count));
-        startTime = 4 + count;
+        startingCandle = iOpen(Symbol(),smcTimeFrame,(3 + count));
+        startTime = 3 + count;
         count++;
         isBullishSMC = false;
     }
@@ -70,8 +70,8 @@ void runBearishSMC(){
     //get the  lastCandleClose & startingCandle
     if (newCandle < secondCandle && secondCandle < thirdCandle && thirdCandle < fourthCandle){
         lastCandleClose = newCandle;
-        startingCandle = iOpen(Symbol(),smcTimeFrame,(4 + count));
-        startTime = 4 + count;
+        startingCandle = iOpen(Symbol(),smcTimeFrame,(3 + count));
+        startTime = 3 + count;
         count++;
         isBearishSMC = false;
     }
