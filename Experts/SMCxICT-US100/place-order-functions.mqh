@@ -16,12 +16,14 @@ double bullStopLoss;
 double bullTakeProfit;
 double bullLotSize;
 double buyEntryPrice;
+double bullTimesOne;
 
 //bearOrderVariables
 double bearStopLoss;
 double bearTakeProfit;
 double bearLotSize;
 double sellEntryPrice;
+double BearTimesOne;
 
 //vars for fibo...
 double Level100;
@@ -51,6 +53,7 @@ void placeBullishOrder(){
         buyEntryPrice = NormalizeDouble(Level61_8,2);
         stopLossinPips = (buyEntryPrice - bullStopLoss)*100;
         bullTakeProfit = stopLossinPips/100 * takeProfitMultiplier + buyEntryPrice;
+        bullTimesOne = stopLossinPips/100 * 1 + buyEntryPrice;
         riskPerPips = riskedAmount/stopLossinPips;
         bullLotSize = NormalizeDouble((riskPerPips*contractSize),1); //1 if us100 2if usdjpy
         Print("riskPerPips:", riskPerPips);
@@ -118,6 +121,7 @@ void placeBearishOrder(){
         sellEntryPrice = NormalizeDouble(Level61_8,2);
         stopLossinPips = NormalizeDouble(((bearStopLoss - sellEntryPrice)*100),1);
         bearTakeProfit = (sellEntryPrice - ((stopLossinPips/100) * takeProfitMultiplier));
+        BearTimesOne = (sellEntryPrice - ((stopLossinPips/100) * 1));
         riskPerPips = riskedAmount/stopLossinPips;
         bearLotSize =  NormalizeDouble((riskPerPips*contractSize),1);//1 if us100 2if usdjpy
         Print("riskPerPips:", riskPerPips);
@@ -145,17 +149,41 @@ void placeBearishOrder(){
 void managePendingOrder(){
     double currentNumberofOrder = OrdersTotal();
     if (currentNumberofOrder && (Bid > sessionResistance)){
-        if(Bid >= bullTakeProfit || isDivergence || isLowerDivergence){
+        if(Bid >= bullTimesOne || isDivergence || isLowerDivergence || Bid > lastHighestPeakValue){
             //delete the pending order...
             lastDeletedOrder = OrderDelete(ticket_buy, clrCornsilk);
             count = 0;
         }
     }
+    //function to set BE for Buy orders
+    if (currentNumberofOrder && (Bid > sessionResistance)){
+        if(Bid >= bullTimesOne){
+            int bull_order_type;
+            if(OrderSelect(ticket_buy, SELECT_BY_POS)==true){
+                bull_order_type=OrderType();
+            }
+            if (bull_order_type == 0){
+                OrderModify(ticket_buy,buyEntryPrice, buyEntryPrice, bullTakeProfit, 0, clrAquamarine);
+            }
+        }
+    }
     if (currentNumberofOrder && (Bid < sessionSupport)){
-        if(Bid <= bearTakeProfit || isDivergence || isLowerDivergence){
+        if(Bid <= BearTimesOne || isDivergence || isLowerDivergence || Bid < lastLowestLowValue){
             //delete the pending order...
             lastDeletedOrder = OrderDelete(ticket_sell, clrCornsilk);
             count = 0;
+        }
+    }
+    //function to set BE for Sell orders
+    if (currentNumberofOrder && (Bid < sessionSupport)){
+        if(Bid <= BearTimesOne){
+            int bear_order_type;
+            if(OrderSelect(ticket_sell, SELECT_BY_POS)==true){
+                bear_order_type = OrderType();
+            }
+            if (bear_order_type == 1){
+                OrderModify(ticket_sell,sellEntryPrice, sellEntryPrice, bearTakeProfit, 0, clrAquamarine);
+            }
         }
     }
 }
