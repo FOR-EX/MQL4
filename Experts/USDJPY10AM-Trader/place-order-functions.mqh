@@ -1,4 +1,4 @@
-#include "us100-session-levels-marker.mqh"
+#include "usdjpy-session-levels-marker.mqh"
 #include "SMCMonitor.mqh"
 #include "divergence-monitor.mqh"
 #include "lower-divergence-monitor.mqh"
@@ -46,7 +46,7 @@ void placeBullishOrder(){
         contractSize = 100;
     }
 
-    if (!currentNumberofOrder && (highCounter > 1)){
+    if (!currentNumberofOrder){
         createBullishFibo();
         
         bullStopLoss = Level161_8 - currentSpreadValue;
@@ -55,7 +55,7 @@ void placeBullishOrder(){
         bullTakeProfit = stopLossinPips/100 * takeProfitMultiplier + buyEntryPrice;
         bullTimesOne = stopLossinPips/100 * 1 + buyEntryPrice;
         riskPerPips = riskedAmount/stopLossinPips;
-        bullLotSize = NormalizeDouble((riskPerPips*contractSize),1); //1 if us100 2if usdjpy
+        bullLotSize = NormalizeDouble(((riskPerPips*buyEntryPrice)/contractSize),2);
         Print("riskPerPips:", riskPerPips);
         Print ("bullLotSize is:", bullLotSize);
         Print("bullTakeProfit:", bullTakeProfit);
@@ -69,7 +69,6 @@ void placeBullishOrder(){
 
         ticket_buy = OrderSend(Symbol(),OP_BUYLIMIT,bullLotSize,buyEntryPrice,3,bullStopLoss,bullTakeProfit,NULL,0,0,clrAquamarine);
         count = 0;
-        updateLastHigh();
         isBullishSMC = false;
         isBullishSMCHere = false;
         ObjectDelete(0,"FibonacciRetracement");
@@ -114,7 +113,7 @@ void placeBearishOrder(){
         contractSize = 100;
     }
 
-    if (!currentNumberofOrder && (lowCounter > 1)){
+    if (!currentNumberofOrder){
         createBearishFibo();
         
         bearStopLoss = Level161_8 + currentSpreadValue;
@@ -123,7 +122,7 @@ void placeBearishOrder(){
         bearTakeProfit = (sellEntryPrice - ((stopLossinPips/100) * takeProfitMultiplier));
         BearTimesOne = (sellEntryPrice - ((stopLossinPips/100) * 1));
         riskPerPips = riskedAmount/stopLossinPips;
-        bearLotSize =  NormalizeDouble((riskPerPips*contractSize),1);//1 if us100 2if usdjpy
+        bearLotSize =  NormalizeDouble(((riskPerPips*sellEntryPrice)/contractSize),2);
         Print("riskPerPips:", riskPerPips);
         Print ("bearLotSize is:", bearLotSize);
         Print("bearTakeProfit:", bearTakeProfit);
@@ -137,7 +136,6 @@ void placeBearishOrder(){
         Print("bearLotSize", bearLotSize);
         ticket_sell = OrderSend(Symbol(),OP_SELLLIMIT,bearLotSize,sellEntryPrice,3,bearStopLoss,bearTakeProfit,NULL,0,0,clrAquamarine);
         count = 0;
-        updateLastLow();
         isBearishSMC = false;
         isBearishSMCHere = false;
         ObjectDelete(0,"FibonacciRetracement");
@@ -146,17 +144,18 @@ void placeBearishOrder(){
 }
 
 //manage existing pending order...
-void managePendingOrder(){
+void manageExistingOrder(){
     double currentNumberofOrder = OrdersTotal();
-    if (currentNumberofOrder && (Bid > sessionResistance)){
-        if(newCandle >= bullTimesOne || isDivergence || isLowerDivergence || newCandle > lastHighestPeakValue){
+
+    if (currentNumberofOrder){
+        if(newCandle >= bullTimesOne || isDivergence || isLowerDivergence){
             //delete the pending order...
             lastDeletedOrder = OrderDelete(ticket_buy, clrCornsilk);
             count = 0;
         }
     }
     //function to set BE for Buy orders
-    if (currentNumberofOrder && (Bid > sessionResistance)){
+    if (currentNumberofOrder){
         if(newCandle >= bullTimesOne){
             int bull_order_type;
             if(OrderSelect(ticket_buy, SELECT_BY_POS)==true){
@@ -167,15 +166,15 @@ void managePendingOrder(){
             }
         }
     }
-    if (currentNumberofOrder && (Bid < sessionSupport)){
-        if(newCandle <= BearTimesOne || isDivergence || isLowerDivergence || newCandle < lastLowestLowValue){
+    if (currentNumberofOrder){
+        if(newCandle <= BearTimesOne || isDivergence || isLowerDivergence){
             //delete the pending order...
             lastDeletedOrder = OrderDelete(ticket_sell, clrCornsilk);
             count = 0;
         }
     }
     //function to set BE for Sell orders
-    if (currentNumberofOrder && (Bid < sessionSupport)){
+    if (currentNumberofOrder){
         if(newCandle <= BearTimesOne){
             int bear_order_type;
             if(OrderSelect(ticket_sell, SELECT_BY_POS)==true){
