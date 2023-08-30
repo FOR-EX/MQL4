@@ -1,28 +1,33 @@
 int smmaTimeFrame;
 int smmaShift = 4;
-double oneSmma = iMA(Symbol(), smmaTimeFrame,21, 0, MODE_SMMA, PRICE_CLOSE, smmaShift);
-double twoSmma = iMA(Symbol(), smmaTimeFrame,50, 0, MODE_SMMA, PRICE_CLOSE, smmaShift); 
-double threeSmma = iMA(Symbol(), smmaTimeFrame,200, 0, MODE_SMMA, PRICE_CLOSE, smmaShift);
-bool isSmmaBear;
-bool isSmmaBull;
 
-void checkBullSmma(){
+double oneSmma;
+double twoSmma;
+double threeSmma;
+
+bool isSmmaBear = false;
+bool isSmmaBull = false;
+
+bool checkBullSmma(){
     if (oneSmma > twoSmma && twoSmma > threeSmma){
-        isSmmaBull = true;
+       return isSmmaBull = true;
     } else {
-        isSmmaBull = false;
+       return isSmmaBull = false;
     }
 }
 
-void checkBearSmma(){
+bool checkBearSmma(){
     if (oneSmma < twoSmma && twoSmma < threeSmma){
-        isSmmaBear = true;
+       return isSmmaBear = true;
     } else {
-        isSmmaBear = false;
+       return isSmmaBear = false;
     }
 }
 
 void runSmmaMonitor(){
-    checkBullSmma();
-    checkBearSmma();
+    oneSmma = iMA(Symbol(), smmaTimeFrame,21, 0, MODE_SMMA, PRICE_CLOSE, smmaShift);
+    twoSmma = iMA(Symbol(), smmaTimeFrame,50, 0, MODE_SMMA, PRICE_CLOSE, smmaShift); 
+    threeSmma = iMA(Symbol(), smmaTimeFrame,200, 0, MODE_SMMA, PRICE_CLOSE, smmaShift);
+        checkBullSmma();
+        checkBearSmma();
 }

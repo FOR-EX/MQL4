@@ -11,7 +11,7 @@ void OnTick() {
    smcTimeFrame = 1; //Update the timeframe from engulferTimeFrame
    placeOrderTimeframe = smcTimeFrame;
    divergenceMonitorTimeFrame = 5; //Update the timeframe from divergenceMonitor
-   smmaTimeFrame =divergenceMonitorTimeFrame;
+   smmaTimeFrame = divergenceMonitorTimeFrame;
    lower_divergenceMonitorTimeFrame = smcTimeFrame;
 
    double lastMinute = currentMinute;
@@ -28,15 +28,15 @@ void OnTick() {
       //run this to see if there is uncleared rsiDivergence....
       runDivergenceMonitor();
       runLowerDivergenceMonitor(); 
-   
-      //runComment for debugging purposes
-      runComment();
 
       // run SMC detector
       runSMCMonitor();
 
       //run the Smma Monitor
       runSmmaMonitor();
+
+      //runComment for debugging purposes
+      runComment();
 
       //10am trader logic for bull orders
       if (currentHour == 10 && !isDivergence && !isLowerDivergence && isSmmaBull && isBullishSMCHere){
